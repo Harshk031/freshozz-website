@@ -27,12 +27,14 @@ export default function Navbar() {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled 
-          ? 'bg-premium-black/98 backdrop-blur-xl border-b border-copper/20' 
-          : 'bg-premium-black/80 backdrop-blur-lg border-b border-copper/10'
+          ? 'bg-premium-black/98 backdrop-blur-xl border-b border-copper/20 shadow-xl' 
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
+        <div className={`flex justify-between items-center transition-all duration-700 ${
+          scrolled ? 'py-4' : 'py-8'
+        }`}>
           {/* Logo - Premium & Prominent */}
           <Link href="/" className="flex items-center group relative">
             <motion.div
@@ -46,9 +48,9 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Freshozz"
-                width={180}
-                height={90}
-                className={`transition-all duration-700 ${scrolled ? 'h-16' : 'h-20'} w-auto`}
+                width={200}
+                height={100}
+                className={`transition-all duration-700 ${scrolled ? 'h-14' : 'h-24'} w-auto`}
                 priority
               />
             </motion.div>
@@ -60,7 +62,9 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-warm/70 hover:text-copper transition-all duration-500 font-display text-sm tracking-[0.15em] uppercase relative group"
+                className={`transition-all duration-700 font-display text-sm tracking-[0.15em] uppercase relative group ${
+                  scrolled ? 'text-warm/70' : 'text-warm/90'
+                } hover:text-copper`}
               >
                 <span className="relative z-10">{link.label}</span>
                 {/* Minimal dot indicator */}
@@ -91,29 +95,34 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-bg-dark border-t border-copper/20"
-          >
-            <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="md:hidden bg-premium-black/98 backdrop-blur-xl border-b border-copper/20"
+        >
+          <div className="px-6 py-8 space-y-6">
+            {navLinks.map((item, index) => (
+              <motion.div
+                key={item.href}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-warm hover:text-gold transition-colors duration-200 py-2 font-body"
+                  className="block text-warm/70 hover:text-copper transition-all duration-500 font-display text-lg tracking-[0.15em] uppercase py-2"
                 >
-                  {link.label}
+                  {item.label}
                 </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </nav>
   );
 }
