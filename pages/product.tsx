@@ -67,10 +67,17 @@ export default function Product() {
               {/* Glow effects */}
               <div className="absolute inset-0 bg-gradient-radial from-gold/30 via-copper/20 to-transparent blur-3xl scale-110" />
               
-              <div className="relative aspect-[3/4] bg-gradient-to-b from-copper/30 to-soil/30 rounded-2xl shadow-2xl flex items-center justify-center border border-gold/20 overflow-hidden group">
+              <div className="relative aspect-[3/4] bg-gradient-to-b from-copper/5 to-soil/5 rounded-2xl shadow-2xl flex flex-col items-center justify-center border border-copper/20 overflow-hidden group backdrop-blur-xl p-8">
                 {/* Shimmer effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <span className="text-6xl relative z-10">🥤</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-copper/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+                <div className="relative z-10 text-center space-y-8">
+                  <div className="w-20 h-[1px] bg-copper/50 mx-auto" />
+                  <p className="text-8xl font-display font-light text-warm tracking-tighter">?</p>
+                  <div className="w-20 h-[1px] bg-copper/50 mx-auto" />
+                  <p className="text-base text-copper/70 font-display tracking-[0.3em] uppercase">
+                    Reveal Soon
+                  </p>
+                </div>
               </div>
               
               {/* Floating particles */}
