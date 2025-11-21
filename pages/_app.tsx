@@ -1,12 +1,15 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import ScrollProgress from '@/components/ScrollProgress';
 import dynamic from 'next/dynamic';
 import Layout from '@/components/Layout';
 
-// Import SplashScreen only on client side
+// Import client-only components
 const SplashScreen = dynamic(() => import('@/components/SplashScreen'), {
+  ssr: false,
+});
+
+const ScrollProgress = dynamic(() => import('@/components/ScrollProgress'), {
   ssr: false,
 });
 
