@@ -1,13 +1,16 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
-import Particles from '@/components/Particles';
 import ProductShowcase from '@/components/ProductShowcase';
 import dynamic from 'next/dynamic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { useRef } from 'react';
 
-// Import CountdownTimer only on client side
+// Import client-only components
+const Particles = dynamic(() => import('@/components/Particles'), {
+  ssr: false,
+});
+
 const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
   ssr: false,
 });
