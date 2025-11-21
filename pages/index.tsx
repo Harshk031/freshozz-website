@@ -121,9 +121,10 @@ export default function Home() {
             </motion.div>
           </div>
           
-          {/* Minimal scroll indicator */}
+          {/* Scroll indicator - fades on scroll */}
           <motion.div
             className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+            style={{ opacity: heroOpacity }}
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: [0.16, 1, 0.3, 1] }}
           >
