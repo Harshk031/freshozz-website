@@ -8,7 +8,7 @@ export default function SplashScreen() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
+    const hasSeenSplash = sessionStorage.getItem('freshozzSplashV2');
     
     if (hasSeenSplash) {
       setIsVisible(false);
@@ -27,7 +27,7 @@ export default function SplashScreen() {
   const hideSplash = () => {
     setIsVisible(false);
     if (typeof window !== 'undefined') {
-      sessionStorage.setItem('hasSeenSplash', 'true');
+      sessionStorage.setItem('freshozzSplashV2', 'true');
     }
   };
 
