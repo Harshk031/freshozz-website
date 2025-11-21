@@ -52,7 +52,7 @@ export default function SplashScreen() {
           onClick={handleInteraction}
         >
           {/* Background gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-soil/20 to-black opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-premium-black via-near-black to-bg-dark" />
           
           {/* Animated particles */}
           <div className="absolute inset-0 overflow-hidden">
@@ -82,16 +82,19 @@ export default function SplashScreen() {
 
           {/* Main content */}
           <div className="relative z-10 flex flex-col items-center">
-            {/* Bear image with animations */}
+            {/* Hero Image - Bear with Bottle */}
             <motion.div
-              initial={{ scale: 0.8, y: 20, opacity: 0 }}
-              animate={{ scale: 1, y: 0, opacity: 1 }}
-              transition={{ 
-                duration: 1, 
-                delay: 0.2,
-                ease: [0.22, 1, 0.36, 1]
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0,
               }}
-              className="relative w-[90vw] max-w-[600px] h-auto"
+              transition={{ 
+                duration: 1.5,
+                delay: 0.4,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="relative z-10 max-w-xl mx-auto px-4"
             >
               <Image
                 src="/splash-hero.jpg"
@@ -116,26 +119,23 @@ export default function SplashScreen() {
               />
             </motion.div>
 
-            {/* Animated text */}
+            {/* Brand Name - Minimal */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-8 text-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ 
+                duration: 1.5,
+                delay: 1,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="relative z-10 text-center mt-16"
             >
-              <motion.h1 
-                className="text-5xl md:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-copper to-gold"
-                animate={{ 
-                  backgroundPosition: ['0%', '100%', '0%'],
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: 'linear'
-                }}
-                style={{ backgroundSize: '200% auto' }}
-              >
+              <h1 className="text-4xl md:text-6xl font-display font-bold mb-3 text-warm tracking-tight">
                 FRESHOZZ
+              </h1>
+              <p className="text-sm md:text-base text-copper/70 font-display tracking-[0.2em] uppercase">
+                Launching Soon
+              </p>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0 }}
@@ -163,18 +163,7 @@ export default function SplashScreen() {
             </motion.div>
           </div>
 
-          {/* Shimmer effect overlay */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: '200%' }}
-            transition={{ 
-              duration: 2,
-              delay: 0.5,
-              ease: 'easeInOut'
-            }}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none"
-            style={{ width: '50%' }}
-          />
+              {/* Removed shimmer for cleaner look */}
         </motion.div>
       )}
     </AnimatePresence>
