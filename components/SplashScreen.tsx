@@ -136,34 +136,23 @@ export default function SplashScreen() {
               <p className="text-sm md:text-base text-copper/70 font-display tracking-[0.2em] uppercase">
                 Launching Soon
               </p>
-              </motion.h1>
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2, duration: 0.6 }}
-                className="text-xl md:text-2xl text-warm mt-4 font-body"
-              >
-                Sip the Freshness
-              </motion.p>
             </motion.div>
 
-            {/* Click to continue hint */}
+            {/* Click to continue hint - Minimal */}
             <motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 1, 0] }}
+              animate={{ opacity: 1 }}
               transition={{ 
-                duration: 2,
-                delay: 2,
-                repeat: Infinity,
-                repeatDelay: 1
+                duration: 1.5,
+                delay: 2
               }}
-              className="absolute bottom-10 text-warm/60 text-sm font-body"
+              className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10"
             >
-              Click anywhere to continue
+              <p className="text-copper/30 text-xs font-body tracking-[0.2em] uppercase">
+                Click to Enter
+              </p>
             </motion.div>
           </div>
-
-              {/* Removed shimmer for cleaner look */}
         </motion.div>
       )}
     </AnimatePresence>
