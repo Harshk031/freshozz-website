@@ -13,8 +13,9 @@ export default function CountdownTimer() {
   useEffect(() => {
     setMounted(true);
     
-    // Set launch date - adjust this to your actual launch date
-    const launchDate = new Date('2025-01-01T00:00:00').getTime();
+    // Set launch date to 45 days from now
+    const today = new Date();
+    const launchDate = new Date(today.getTime() + (45 * 24 * 60 * 60 * 1000)).getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
