@@ -81,33 +81,30 @@ export default function Home() {
                 </span>
               </motion.h1>
               
-              <motion.p 
-                className="text-xl sm:text-2xl md:text-3xl text-copper mb-4 font-display font-light tracking-wide"
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                className="max-w-3xl mx-auto mb-12"
               >
-                The Modern Mojito with an Indian Soul
-              </motion.p>
-              
-              <motion.p 
-                className="text-base sm:text-lg text-muted-warm max-w-2xl mx-auto mb-12 font-body leading-relaxed"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              >
-                Premium fizz. Authentic masala. Copper-toned identity.
-              </motion.p>
-              
-              <motion.p 
-                className="text-lg sm:text-xl text-warm/70 max-w-3xl mx-auto mb-12 font-body leading-relaxed"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-              >
-                Something extraordinary is brewing. A revolutionary drink that combines centuries-old traditions 
-                with cutting-edge innovation. An all-rounder beverage experience unlike anything you've tasted before.
-              </motion.p>
+                <p className="text-2xl sm:text-3xl md:text-4xl text-copper mb-8 font-display font-light italic leading-tight">
+                  A mystery is brewing
+                </p>
+                
+                <div className="space-y-4 text-muted-warm">
+                  <p className="text-lg sm:text-xl font-body leading-relaxed">
+                    Imagine a beverage that defies categories.<br className="hidden md:block" />
+                    Where ancient spices meet modern fizz.
+                  </p>
+                  
+                  <div className="w-16 h-[1px] bg-copper/30 mx-auto my-8" />
+                  
+                  <p className="text-base sm:text-lg text-warm/60 font-body leading-relaxed">
+                    Not a soft drink. Not a soda. Not a traditional beverage.<br className="hidden md:block" />
+                    Something entirely new. Something unmistakably <span className="text-copper italic">Freshozz</span>.
+                  </p>
+                </div>
+              </motion.div>
               
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -116,9 +113,9 @@ export default function Home() {
               >
                 <Link 
                   href="/product"
-                  className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
+                  className="inline-block px-12 py-4 border border-copper/40 text-copper font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/10 hover:border-copper transition-all duration-500 hover:tracking-[0.25em]"
                 >
-                  Taste the Threshold
+                  Uncover the Mystery
                 </Link>
               </motion.div>
             </motion.div>
@@ -161,19 +158,19 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase text-center">
-                The Concept
+                The Mystery Deepens
               </p>
               <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 text-center leading-tight tracking-tight">
-                Thresholds
+                What is Freshozz?
               </h2>
               <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-12" />
               <p className="text-lg md:text-xl text-muted-warm leading-relaxed text-center mb-8">
-                The point where modern fizz meets authentic Indian masala. <br className="hidden md:block" />
-                A new category between traditional jeera drinks and global functional beverages.
+                A silhouette in copper and gold. <br className="hidden md:block" />
+                A whisper of spice. A promise of fizz.
               </p>
               <p className="text-base text-muted-warm/70 leading-relaxed text-center max-w-2xl mx-auto">
-                Not just a drink. A movement. Freshozz is set to redefine what a beverage can be — 
-                combining tradition, innovation, and uncompromising quality.
+                Some things are worth waiting for. Some experiences can't be rushed. <br className="hidden md:block" />
+                Soon, you'll understand why we kept it hidden.
               </p>
             </motion.div>
           </div>
