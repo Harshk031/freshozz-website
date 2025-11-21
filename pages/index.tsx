@@ -199,18 +199,15 @@ export default function Home() {
               {[
                 {
                   title: 'High Fizz',
-                  description: 'Perfectly carbonated for that satisfying kick',
-                  icon: '✨'
+                  description: 'Perfectly carbonated for that satisfying kick'
                 },
                 {
                   title: 'Authentic Masala',
-                  description: 'Traditional spices, modern execution',
-                  icon: '🌶️'
+                  description: 'Traditional spices, modern execution'
                 },
                 {
                   title: 'Clean Taste',
-                  description: 'No artificial flavours, just pure quality',
-                  icon: '🍃'
+                  description: 'No artificial flavours, just pure quality'
                 }
               ].map((feature, index) => (
                 <motion.div
@@ -231,8 +228,8 @@ export default function Home() {
                   className="bg-soil/20 backdrop-blur-sm border border-copper/30 rounded-xl p-8 text-center shadow-soft-gold cursor-pointer relative overflow-hidden group"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="text-5xl mb-4">{feature.icon}</div>
-                  <h3 className="text-2xl font-display font-semibold text-gold mb-3">
+                  <div className="w-12 h-[1px] bg-copper/50 mx-auto mb-6" />
+                  <h3 className="text-2xl font-display font-semibold text-copper mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-muted-warm">
