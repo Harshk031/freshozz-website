@@ -8,16 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'bg-dark': '#0A0908',
-        'soil': '#4A3F35',
-        'copper': '#8B6F47',
-        'gold': '#C9A961',
-        'warm': '#E8DCC4',
-        'muted-warm': '#B8A88A',
-        'premium-black': '#1A1614',
-        'soft-copper': '#A67C52',
-        'pale-gold': '#D4C5A9',
-        'charcoal': '#2C2825',
+        'bg-dark': '#121212',
+        'soil': '#6B4C3B',
+        'copper': '#B86B2C',
+        'gold': '#D4AF37',
+        'warm': '#F5EFE6',
+        'muted-warm': '#C9B896',
+        'premium-black': '#0A0A0A',
+        'near-black': '#1A1A1A',
       },
       boxShadow: {
         'soft-gold': '0 8px 30px rgba(212,175,55,0.10)',

@@ -40,18 +40,16 @@ export default function Home() {
       <Layout>
         <Particles />
         
-        {/* Hero Section - Premium Launch Vibe */}
+        {/* Hero Section - Ultra Premium Cinematic */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          {/* Background with parallax effect */}
+          {/* Cinematic background */}
           <motion.div 
             style={{ y: scrollYProgress }}
-            className="absolute inset-0 bg-gradient-to-br from-bg-dark via-soil/20 to-bg-dark"
+            className="absolute inset-0 bg-gradient-to-b from-premium-black via-near-black to-bg-dark"
           />
           
-          {/* Overlay for premium feel */}
-          <div className="absolute inset-0 bg-black/40" />
-          
-          <Particles />
+          {/* Subtle copper glow overlay */}
+          <div className="absolute inset-0 bg-gradient-radial from-copper/5 via-transparent to-transparent" />
           
           <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
             <motion.div
@@ -59,46 +57,46 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
-              {/* Coming Soon Badge */}
+              {/* Premium Badge */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="inline-block mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="inline-block mb-8"
               >
-                <span className="px-6 py-2 bg-gradient-to-r from-gold/20 to-copper/20 border border-gold/50 rounded-full text-gold font-display text-sm tracking-widest backdrop-blur-sm">
-                  LAUNCHING SOON
+                <span className="px-8 py-3 bg-copper/5 border border-copper/20 text-copper font-display text-xs tracking-[0.3em] uppercase">
+                  Launching Soon
                 </span>
               </motion.div>
               
               <motion.h1 
-                className="text-6xl sm:text-7xl md:text-9xl font-display font-bold mb-6"
+                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold mb-8 leading-[0.9]"
                 style={{ 
                   scale: heroScale,
                   opacity: heroOpacity 
                 }}
               >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-copper to-gold">
+                <span className="block text-warm tracking-tight">
                   FRESHOZZ
                 </span>
               </motion.h1>
               
               <motion.p 
-                className="text-2xl sm:text-3xl md:text-5xl text-warm mb-6 font-display font-light tracking-wide"
+                className="text-xl sm:text-2xl md:text-3xl text-copper mb-4 font-display font-light tracking-wide"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
+                transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                The Future of Refreshment
+                The Modern Mojito with an Indian Soul
               </motion.p>
               
               <motion.p 
-                className="text-xl sm:text-2xl text-gold/90 max-w-3xl mx-auto mb-8 font-display italic"
+                className="text-base sm:text-lg text-muted-warm max-w-2xl mx-auto mb-12 font-body leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
+                transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
-                Redefining the Beverage Industry
+                Premium fizz. Authentic masala. Copper-toned identity.
               </motion.p>
               
               <motion.p 
@@ -114,77 +112,66 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                transition={{ delay: 0.7, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <Link 
-                  href="/about"
-                  className="inline-block px-10 py-5 bg-gradient-to-r from-gold to-copper text-bg-dark font-display font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-gold/50 transition-all duration-300 hover:scale-105"
-                >
-                  Be the First to Know
-                </Link>
-                <Link 
                   href="/product"
-                  className="inline-block px-10 py-5 border-2 border-gold/50 text-gold font-display font-semibold text-lg rounded-full hover:bg-gold/10 hover:border-gold transition-all duration-300 hover:scale-105"
+                  className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
                 >
-                  Sneak Peek
+                  Taste the Threshold
                 </Link>
               </motion.div>
             </motion.div>
           </div>
           
-          {/* Animated scroll indicator */}
+          {/* Minimal scroll indicator */}
           <motion.div
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-            animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="w-6 h-12 border-2 border-gold/50 rounded-full flex justify-center backdrop-blur-sm">
-              <motion.div 
-                className="w-2 h-4 bg-gradient-to-b from-gold to-copper rounded-full mt-2"
-                animate={{ y: [0, 16, 0], opacity: [1, 0.3, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-            </div>
+            <div className="w-[2px] h-16 bg-gradient-to-b from-transparent via-copper/40 to-transparent" />
           </motion.div>
         </section>
 
-        {/* Countdown Section */}
-        <section className="py-24 px-4 bg-gradient-to-b from-bg-dark via-soil/10 to-bg-dark relative overflow-hidden">
-          <div className="max-w-6xl mx-auto text-center">
+        {/* Countdown Section - Ultra Minimal */}
+        <section className="py-32 px-4 bg-near-black relative overflow-hidden border-y border-copper/10">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-display font-bold text-warm mb-4">
-                The Wait is Almost Over
-              </h2>
-              <p className="text-lg text-warm/60 mb-12 font-body">
-                Something revolutionary is coming to the beverage industry
+              <p className="text-xs text-copper/60 mb-8 font-display tracking-[0.3em] uppercase">
+                Launching Soon
               </p>
               <CountdownTimer />
             </motion.div>
           </div>
         </section>
 
-        {/* Brand Statement */}
-        <section className="py-32 px-4 bg-bg-dark relative overflow-hidden">
-          <div className="max-w-5xl mx-auto text-center">
+        {/* Brand Philosophy - Thresholds Concept */}
+        <section className="py-40 px-4 bg-bg-dark relative overflow-hidden">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
             >
-              <span className="inline-block px-4 py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-sm tracking-widest mb-6">
-                INDUSTRY GAME-CHANGER
-              </span>
-              <h2 className="text-5xl md:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-copper to-gold mb-8">
-                The All-Rounder Beverage
+              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase text-center">
+                The Concept
+              </p>
+              <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 text-center leading-tight tracking-tight">
+                Thresholds
               </h2>
-              <p className="text-xl md:text-2xl text-muted-warm leading-relaxed max-w-3xl mx-auto">
+              <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-12" />
+              <p className="text-lg md:text-xl text-muted-warm leading-relaxed text-center mb-8">
+                The point where modern fizz meets authentic Indian masala. <br className="hidden md:block" />
+                A new category between traditional jeera drinks and global functional beverages.
+              </p>
+              <p className="text-base text-muted-warm/70 leading-relaxed text-center max-w-2xl mx-auto">
                 Not just a drink. A movement. Freshozz is set to redefine what a beverage can be — 
                 combining tradition, innovation, and uncompromising quality.
               </p>

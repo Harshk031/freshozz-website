@@ -38,16 +38,14 @@ export default function CountdownTimer() {
 
   if (!mounted) {
     return (
-      <div className="flex gap-4 sm:gap-8 justify-center flex-wrap">
+      <div className="flex gap-8 sm:gap-16 justify-center">
         {[{ label: 'Days', value: 0 }, { label: 'Hours', value: 0 }, { label: 'Minutes', value: 0 }, { label: 'Seconds', value: 0 }].map((unit) => (
           <div key={unit.label} className="text-center">
-            <div className="bg-gradient-to-br from-gold/20 to-copper/20 backdrop-blur-md border border-gold/30 rounded-lg p-4 sm:p-6 min-w-[80px] sm:min-w-[100px] shadow-lg">
-              <div className="text-4xl sm:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-gold to-copper">
-                00
-              </div>
-              <div className="text-warm/70 text-sm sm:text-base font-body mt-2 tracking-wider uppercase">
-                {unit.label}
-              </div>
+            <div className="text-5xl sm:text-7xl font-display font-light text-warm tracking-tight mb-2">
+              00
+            </div>
+            <div className="text-copper/50 text-xs font-body tracking-[0.2em] uppercase">
+              {unit.label}
             </div>
           </div>
         ))}
@@ -63,32 +61,27 @@ export default function CountdownTimer() {
   ];
 
   return (
-    <div className="flex gap-4 sm:gap-8 justify-center flex-wrap">
+    <div className="flex gap-8 sm:gap-16 justify-center">
       {timeUnits.map((unit, index) => (
         <motion.div
           key={unit.label}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1, duration: 0.6 }}
+          transition={{ delay: index * 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
           <motion.div
             key={unit.value}
-            initial={{ scale: 1.2, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="relative"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className="bg-gradient-to-br from-gold/20 to-copper/20 backdrop-blur-md border border-gold/30 rounded-lg p-4 sm:p-6 min-w-[80px] sm:min-w-[100px] shadow-lg">
-              <div className="text-4xl sm:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-br from-gold to-copper">
-                {String(unit.value).padStart(2, '0')}
-              </div>
-              <div className="text-warm/70 text-sm sm:text-base font-body mt-2 tracking-wider uppercase">
-                {unit.label}
-              </div>
+            <div className="text-5xl sm:text-7xl font-display font-light text-warm tracking-tight mb-2">
+              {String(unit.value).padStart(2, '0')}
             </div>
-            {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-copper/10 rounded-lg blur-xl -z-10" />
+            <div className="text-copper/50 text-xs font-body tracking-[0.2em] uppercase">
+              {unit.label}
+            </div>
           </motion.div>
         </motion.div>
       ))}
