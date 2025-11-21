@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,12 +35,19 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <motion.span 
+            <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold to-copper group-hover:from-copper group-hover:to-gold transition-all duration-300"
+              className="relative"
             >
-              FRESHOZZ
-            </motion.span>
+              <Image
+                src="/logo.png"
+                alt="Freshozz Logo"
+                width={120}
+                height={60}
+                className="h-12 w-auto"
+                priority
+              />
+            </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
