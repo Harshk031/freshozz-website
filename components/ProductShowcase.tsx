@@ -85,10 +85,17 @@ export default function ProductShowcase() {
               {/* Glow effect behind product */}
               <div className="absolute inset-0 bg-gradient-radial from-gold/20 via-copper/10 to-transparent blur-3xl" />
               
-              {/* Product placeholder */}
+              {/* Premium Mystery Product */}
               <div className="relative z-10 w-full h-full flex items-center justify-center">
-                <div className="w-64 h-96 bg-gradient-to-br from-copper/30 to-soil/30 rounded-3xl shadow-2xl backdrop-blur-sm border border-gold/20 flex items-center justify-center">
-                  <span className="text-8xl">🥤</span>
+                <div className="w-64 h-96 bg-gradient-to-br from-copper/5 to-soil/5 rounded-lg backdrop-blur-xl border border-copper/20 flex flex-col items-center justify-center p-8 shadow-2xl">
+                  <div className="text-center space-y-6">
+                    <div className="w-16 h-[1px] bg-copper/50 mx-auto" />
+                    <p className="text-6xl font-display font-light text-warm tracking-tighter">?</p>
+                    <div className="w-16 h-[1px] bg-copper/50 mx-auto" />
+                    <p className="text-sm text-copper/60 font-display tracking-[0.3em] uppercase">
+                      Coming Soon
+                    </p>
+                  </div>
                 </div>
               </div>
 
