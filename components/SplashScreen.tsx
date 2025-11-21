@@ -8,12 +8,12 @@ export default function SplashScreen() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const hasSeenSplash = sessionStorage.getItem('freshozzSplashV2');
-    
-    if (hasSeenSplash) {
-      setIsVisible(false);
-      return;
-    }
+    // TEMPORARILY DISABLED - Always show splash for testing
+    // const hasSeenSplash = sessionStorage.getItem('freshozzSplashV2');
+    // if (hasSeenSplash) {
+    //   setIsVisible(false);
+    //   return;
+    // }
 
     const timer = setTimeout(() => {
       if (!hasInteracted) {
