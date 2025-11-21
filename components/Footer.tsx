@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-bg-dark to-black border-t border-gold/20 py-16 px-4">
+    <footer className="bg-gradient-to-b from-premium-black to-bg-dark border-t border-soft-copper/15 py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Newsletter Signup */}
         <div className="text-center mb-16 max-w-2xl mx-auto">

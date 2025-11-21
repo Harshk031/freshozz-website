@@ -8,12 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        soil: '#6B4C3B',
-        copper: '#B86B2C',
-        gold: '#D4AF37',
-        'bg-dark': '#121212',
-        warm: '#F5E9D0',
-        'muted-warm': '#D0C7BE',
+        'bg-dark': '#0A0908',
+        'soil': '#4A3F35',
+        'copper': '#8B6F47',
+        'gold': '#C9A961',
+        'warm': '#E8DCC4',
+        'muted-warm': '#B8A88A',
+        'premium-black': '#1A1614',
+        'soft-copper': '#A67C52',
+        'pale-gold': '#D4C5A9',
+        'charcoal': '#2C2825',
       },
       boxShadow: {
         'soft-gold': '0 8px 30px rgba(212,175,55,0.10)',
