@@ -7,6 +7,9 @@ export default function SplashScreen() {
   const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+    
     // Check if user has seen splash before (in this session)
     const hasSeenSplash = sessionStorage.getItem('hasSeenSplash');
     
@@ -27,7 +30,9 @@ export default function SplashScreen() {
 
   const hideSplash = () => {
     setIsVisible(false);
-    sessionStorage.setItem('hasSeenSplash', 'true');
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('hasSeenSplash', 'true');
+    }
   };
 
   const handleInteraction = () => {
@@ -51,12 +56,12 @@ export default function SplashScreen() {
           
           {/* Animated particles */}
           <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
+            {typeof window !== 'undefined' && [...Array(20)].map((_, i) => (
               <motion.div
                 key={i}
                 initial={{ 
-                  x: Math.random() * window.innerWidth, 
-                  y: window.innerHeight + 50,
+                  x: Math.random() * (window?.innerWidth || 1920), 
+                  y: (window?.innerHeight || 1080) + 50,
                   opacity: 0 
                 }}
                 animate={{ 
