@@ -2,10 +2,15 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Particles from '@/components/Particles';
 import ProductShowcase from '@/components/ProductShowcase';
-import CountdownTimer from '@/components/CountdownTimer';
+import dynamic from 'next/dynamic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { useRef } from 'react';
+
+// Import CountdownTimer only on client side
+const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
+  ssr: false,
+});
 
 export default function Home() {
   const heroRef = useRef(null);
