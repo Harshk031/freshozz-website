@@ -249,27 +249,33 @@ export default function Home() {
         {/* Product Showcase */}
         <ProductShowcase />
 
-        {/* Call to Action */}
-        <section className="py-20 px-4 gradient-bg">
+        {/* Instagram CTA Section */}
+        <section className="py-32 px-4 bg-near-black border-t border-copper/10">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-warm mb-6">
-              Stay Curious. Stay Thirsty.
-            </h2>
-            <p className="text-lg text-muted-warm mb-8">
-              Be the first to experience Masala Cola like never before.
+            <p className="text-xs text-copper/60 mb-6 font-display tracking-[0.3em] uppercase">
+              Follow Our Journey
             </p>
-            <Link
-              href="/where-to-buy"
-              className="inline-block px-10 py-5 bg-gold hover:bg-gold/90 text-bg-dark font-display font-bold text-lg rounded-lg transition-all transform hover:scale-105 shadow-soft-gold"
+            <h2 className="text-4xl md:text-5xl font-display font-light text-warm mb-8 leading-tight">
+              Behind the Scenes
+            </h2>
+            <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-10" />
+            <p className="text-lg text-muted-warm mb-12 leading-relaxed">
+              Get exclusive sneak peeks, product teasers, and be part of the Freshozz story as we prepare to launch.
+            </p>
+            <a
+              href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
             >
-              Find Near You
-            </Link>
+              Follow @fresh_ozz19
+            </a>
           </motion.div>
         </section>
       </Layout>
