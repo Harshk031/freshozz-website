@@ -4,7 +4,7 @@ import ProductShowcase from '@/components/ProductShowcase';
 import dynamic from 'next/dynamic';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 // Import client-only components
 const Particles = dynamic(() => import('@/components/Particles'), {
@@ -16,6 +16,7 @@ const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
 });
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState(0);
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -25,6 +26,33 @@ export default function Home() {
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+
+  const whyTabs = [
+    {
+      question: "6-Month Shelf Life?",
+      problem: "Other brands promise long shelf life",
+      answer: "The Truth About Preservatives",
+      content: "Most masala sodas use chemical preservatives to last 6+ months on shelves. Real masala settles. Real flavors fade. That's nature. We chose freshness over fake stability. Our spices are real, so they behave like real ingredients should."
+    },
+    {
+      question: "Masala Never Settles?",
+      problem: "Your masala soda looks cloudy at the bottom",
+      answer: "We Solved The Science",
+      content: "Traditional masala sodas let spices sink because they use crude grinding methods. We use micro-emulsion technology that suspends authentic masala particles evenly. Shake once. Perfect pour. No sediment. Just pure, distributed flavor in every sip."
+    },
+    {
+      question: "Upset Stomach Solution?",
+      problem: "What do you drink when bloated?",
+      answer: "Ayurvedic Meets Fizz",
+      content: "Ginger. Cumin. Black salt. The same trio your grandmother used for digestion, now in a sophisticated fizzy form. Not medicine. Not soda. A functional refreshment that actually helps your gut while tasting incredible."
+    },
+    {
+      question: "Premium Flavored Cola?",
+      problem: "Name one sophisticated Indian fizzy drink",
+      answer: "The Category Didn't Exist",
+      content: "You can't. Because until now, India had mass-market colas or cheap masala sodas. Nothing premium. Nothing cultural yet contemporary. Freshozz created the category that should have existed: a premium Indian fizzy drink worth ₹100+."
+    }
+  ];
 
   return (
     <>
@@ -223,6 +251,160 @@ export default function Home() {
                 <p className="text-sm text-copper/70 leading-relaxed italic">
                   Not to compete.<br />
                   To replace.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* WHY Freshozz - USP & Trust Section */}
+        <section className="py-40 px-4 bg-gradient-to-b from-near-black via-premium-black to-bg-dark relative overflow-hidden">
+          {/* Premium background elements */}
+          <div className="absolute inset-0 bg-gradient-radial from-copper/5 via-transparent to-transparent opacity-40" />
+          
+          <div className="max-w-6xl mx-auto relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-center mb-20"
+            >
+              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                The Heart of Our Brand
+              </p>
+              <h2 className="text-5xl md:text-7xl font-display font-light text-warm mb-8 leading-tight tracking-tight">
+                WHY Freshozz
+              </h2>
+              <div className="w-20 h-[1px] bg-copper/40 mx-auto mb-10" />
+              <p className="text-xl text-muted-warm max-w-3xl mx-auto leading-relaxed">
+                Questions you've asked. Truths the industry hides.<br className="hidden md:block" />
+                This is why we exist.
+              </p>
+            </motion.div>
+
+            {/* Interactive Premium Tabs */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+              className="mb-16"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
+                {whyTabs.map((tab, index) => (
+                  <motion.button
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    whileHover={{ scale: 1.03, y: -4 }}
+                    whileTap={{ scale: 0.97 }}
+                    className={`relative p-8 rounded-2xl border-2 transition-all duration-700 text-left group ${
+                      activeTab === index
+                        ? 'bg-gradient-to-br from-copper/15 to-gold/10 border-copper shadow-[0_0_40px_rgba(184,107,44,0.4)] backdrop-blur-xl scale-105'
+                        : 'bg-soil/10 border-copper/15 hover:border-copper/30 backdrop-blur-sm'
+                    }`}
+                  >
+                    {/* Arrow indicator for active tab */}
+                    {activeTab === index && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: [0, -3, 0] }}
+                        transition={{ 
+                          opacity: { duration: 0.3 },
+                          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                        }}
+                        className="absolute -top-4 left-1/2 transform -translate-x-1/2"
+                      >
+                        <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-b-[10px] border-b-copper drop-shadow-[0_0_8px_rgba(184,107,44,0.6)]" />
+                      </motion.div>
+                    )}
+
+                    <p className="text-xs text-copper/50 mb-3 font-display tracking-[0.2em] uppercase">
+                      {tab.problem}
+                    </p>
+                    <h3 className={`text-lg md:text-xl font-display font-semibold transition-all duration-500 ${
+                      activeTab === index ? 'text-copper' : 'text-warm/70 group-hover:text-warm'
+                    }`}>
+                      {tab.question}
+                    </h3>
+
+                    {/* Animated glow effect for active tab */}
+                    {activeTab === index && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: [0.3, 0.6, 0.3] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute inset-0 bg-gradient-to-br from-copper/10 to-gold/10 rounded-2xl pointer-events-none"
+                      />
+                    )}
+
+                    {/* Hover line effect */}
+                    <div className={`absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-copper to-gold transition-all duration-500 ${
+                      activeTab === index ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`} />
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Tab Content - Premium Glass Card */}
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="relative"
+            >
+              {/* Background glow */}
+              <div className="absolute inset-0 bg-gradient-radial from-copper/20 via-transparent to-transparent blur-3xl scale-150" />
+              
+              <div className="relative bg-gradient-to-br from-soil/30 via-copper/10 to-soil/20 backdrop-blur-2xl border-2 border-copper/30 rounded-3xl p-12 md:p-16 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+                <div className="max-w-4xl mx-auto text-center space-y-8">
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="space-y-6"
+                  >
+                    <h3 className="text-3xl md:text-5xl font-display font-light text-copper leading-tight">
+                      {whyTabs[activeTab].answer}
+                    </h3>
+                    
+                    <div className="flex items-center justify-center gap-3">
+                      <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-copper/50" />
+                      <div className="w-2 h-2 rounded-full bg-copper/50" />
+                      <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-copper/50" />
+                    </div>
+                  </motion.div>
+                  
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="text-xl md:text-2xl text-warm/90 leading-relaxed font-body"
+                  >
+                    {whyTabs[activeTab].content}
+                  </motion.p>
+                </div>
+
+                {/* Corner accents */}
+                <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-copper/40 rounded-tl-3xl" />
+                <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-copper/40 rounded-br-3xl" />
+              </div>
+            </motion.div>
+
+            {/* Bottom Trust Statement */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="text-center mt-20"
+            >
+              <div className="inline-block px-8 py-4 bg-copper/5 border border-copper/20 rounded-full">
+                <p className="text-sm text-copper/80 font-display italic tracking-wide">
+                  This is why Freshozz isn't just another drink.<br className="hidden md:inline" />
+                  <span className="text-copper font-semibold"> It's a category that needed to exist.</span>
                 </p>
               </div>
             </motion.div>
