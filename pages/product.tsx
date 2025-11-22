@@ -45,8 +45,48 @@ export default function Product() {
   return (
     <>
       <Head>
-        <title>The Soda India Was Missing | Freshozz</title>
-        <meta name="description" content="Not inspiration. Necessity. Freshozz is India's first mojito-style masala fizz. A new category." />
+        <title>Premium Flavoured Soda | Clean Caffeine Mojito Masala - Freshozz</title>
+        <meta name="description" content="Low-sugar mojito masala soda with clean caffeine. Triple-filtered fizz, micro-emulsion spice tech. Premium Indian fizzy drink worth ₹100+." />
+        <meta name="keywords" content="mojito masala soda, clean caffeine drink india, low sugar soda, premium fizzy drink, flavoured soda india, party beverage" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="product" />
+        <meta property="og:url" content="https://freshozz.in/product" />
+        <meta property="og:title" content="The Soda India Was Missing - Freshozz Product" />
+        <meta property="og:description" content="Mojito energy × Masala soul × High-fizz texture. Not syrup. Not mocktail. A modern Indian flavour experience." />
+        <meta property="og:image" content="https://freshozz.in/og-product.jpg" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://freshozz.in/product" />
+        <meta property="twitter:title" content="The Soda India Was Missing - Freshozz" />
+        <meta property="twitter:description" content="Premium Indian fizzy drink. Clean caffeine, low sugar, high masala." />
+        <meta property="twitter:image" content="https://freshozz.in/og-product.jpg" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://freshozz.in/product" />
+        
+        {/* Product Schema */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Freshozz Premium Mojito Masala Soda",
+            "description": "India's first mojito-style masala soda with clean caffeine, low sugar, and micro-emulsion spice technology. Triple-filtered high-fizz premium beverage.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Freshozz"
+            },
+            "category": "Beverages > Soda > Flavoured Soda",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/PreOrder",
+              "price": "120",
+              "priceCurrency": "INR",
+              "url": "https://freshozz.in/product"
+            }
+          }`}
+        </script>
       </Head>
 
       <Layout>

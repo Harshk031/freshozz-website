@@ -19,6 +19,32 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        
+        {/* Organization Schema - Global SEO */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Freshozz",
+            "alternateName": "Freshozz India",
+            "url": "https://freshozz.in",
+            "logo": "https://freshozz.in/logo.png",
+            "description": "India's first premium mojito-style masala soda. Clean caffeine, low sugar, high fizz beverage brand.",
+            "foundingDate": "2024",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            },
+            "sameAs": [
+              "https://www.instagram.com/fresh_ozz19"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "email": "hello@freshozz.in"
+            }
+          }`}
+        </script>
       </Head>
       <SplashScreen />
       <Layout>

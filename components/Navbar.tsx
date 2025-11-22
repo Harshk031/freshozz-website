@@ -47,7 +47,7 @@ export default function Navbar() {
               
               <Image
                 src="/logo.png"
-                alt="Freshozz"
+                alt="Freshozz premium flavoured soda India logo with copper design"
                 width={200}
                 height={100}
                 className={`transition-all duration-700 ${scrolled ? 'h-14' : 'h-24'} w-auto`}

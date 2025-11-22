@@ -57,12 +57,26 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Freshozz - A New Category</title>
-        <meta name="description" content="India has drinks. It doesn't have a vibe. Soon." />
-        <meta property="og:title" content="Freshozz - Coming Soon" />
-        <meta property="og:description" content="You've tasted everything. Except this." />
+        <title>Freshozz - Premium Flavoured Soda India | Mojito Masala Fizz</title>
+        <meta name="description" content="India's first premium mojito-style masala soda. Clean caffeine, low sugar, high fizz. A new category of flavoured drinks. Join the waitlist." />
+        <meta name="keywords" content="premium soda india, mojito masala soda, flavoured soda drink, low sugar fizzy drink, clean caffeine beverage, party drink india" />
+        
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://freshozz.in" />
+        <meta property="og:title" content="Freshozz - Premium Soda India Never Had" />
+        <meta property="og:description" content="Mojito energy × Masala soul × High fizz. India's first flavoured soda culture. Coming soon." />
+        <meta property="og:image" content="https://freshozz.in/og-home.jpg" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://freshozz.in" />
+        <meta property="twitter:title" content="Freshozz - Premium Soda India Never Had" />
+        <meta property="twitter:description" content="Mojito energy × Masala soul × High fizz. Coming soon." />
+        <meta property="twitter:image" content="https://freshozz.in/og-home.jpg" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://freshozz.in" />
       </Head>
 
       <Layout>
@@ -107,6 +121,9 @@ export default function Home() {
                 <span className="block text-warm tracking-tight">
                   FRESHOZZ
                 </span>
+                <span className="block text-copper text-4xl md:text-5xl mt-6 tracking-wide font-light">
+                  India's First Premium Flavoured Soda
+                </span>
               </motion.h1>
               
               <motion.div
@@ -116,19 +133,19 @@ export default function Home() {
                 className="max-w-3xl mx-auto mb-12"
               >
                 <p className="text-2xl sm:text-3xl md:text-4xl text-copper mb-8 font-display font-light leading-tight">
-                  You've tasted everything.
+                  Mojito energy. Masala soul. Clean caffeine.
                 </p>
                 
                 <div className="space-y-6 text-muted-warm">
                   <p className="text-lg sm:text-xl font-body leading-relaxed">
-                    Except this.
+                    You've tasted everything. Except this.
                   </p>
                   
                   <div className="w-16 h-[1px] bg-copper/30 mx-auto my-8" />
                   
                   <p className="text-base sm:text-lg text-warm/70 font-body leading-relaxed">
-                    India has drinks.<br className="hidden md:block" />
-                    It doesn't have a vibe.
+                    Low-sugar fizzy drink with identity.<br className="hidden md:block" />
+                    The party beverage India was missing.
                   </p>
                 </div>
               </motion.div>
