@@ -18,25 +18,25 @@ export default function Product() {
   const whyTabs = [
     {
       question: "Production Approach",
-      problem: "How is your carbonation different?",
+      problem: "Triple-filtered vs standard carbonation",
       answer: "More Steps, Finer Control",
       content: "Standard carbonation involves single-pass injection. We use a multi-stage filtration process for smaller, more uniform bubbles. Does it make a dramatic difference? Moderate—but it creates a slightly smoother mouthfeel and better retention. It's one of several refinements we believe justifies the premium positioning."
     },
     {
       question: "Spice Suspension",
-      problem: "Why doesn't masala sink as much?",
+      problem: "Masala particles that don't sink immediately",
       answer: "Finer Grinding, Specific Density",
       content: "Reducing spice particle size and maintaining proper liquid density helps suspension. Our process creates smaller particles that settle more slowly. Complete suspension indefinitely isn't physically possible with real spices—some will eventually settle. But the difference from conventional grinding is noticeable. Shake gently if stored long."
     },
     {
       question: "Sugar Content",
-      problem: "How does lower sugar still taste balanced?",
+      problem: "18g sugar vs 30g+ in typical sodas",
       answer: "Spice Complexity Adds Depth",
       content: "We use 18g sugar instead of the typical 30g+ in most sodas. The reduction is possible because aromatic spices—ginger, cumin, fennel—add flavor complexity that makes sweetness feel more complete. You're not just tasting sugar; you're tasting layers. Does everyone perceive it the same? No. But many find it satisfying at this level."
     },
     {
       question: "Shelf Life Choice",
-      problem: "Why not extend beyond 90 days?",
+      problem: "90 days instead of 6 months",
       answer: "Preservative Trade-Off",
       content: "Longer shelf life means more preservatives. While safe and approved, they can dull spice aromatics over time. We chose 90 days as a balance—long enough for distribution and reasonable storage, short enough to maintain better flavor character. It's honest about what fresh ingredients demand. Not perfect, but intentional."
     }
