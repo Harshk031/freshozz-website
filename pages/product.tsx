@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
+import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useState } from 'react';
 
@@ -41,126 +42,368 @@ export default function Product() {
     }
   ];
 
-  const features = [
-    { title: 'Premium Carbonation', description: 'Triple-filtered for perfect fizz that lasts' },
-    { title: 'Authentic Masala Blend', description: 'Cumin, black salt, chili, and secret spices' },
-    { title: 'Natural Cola Extract', description: 'No artificial colors or preservatives' },
-    { title: 'Low Sugar', description: '30% less sugar than traditional sodas' },
-    { title: 'FSSAI Certified', description: 'Meets all safety and quality standards' },
-    { title: 'Made in India', description: 'Proudly crafted for Indian taste buds' },
-  ];
-
-  const nutrition = [
-    { label: 'Serving Size', value: '330ml' },
-    { label: 'Calories', value: '110' },
-    { label: 'Total Sugar', value: '18g' },
-    { label: 'Sodium', value: '35mg' },
-    { label: 'Caffeine', value: '0mg' },
-  ];
-
   return (
     <>
       <Head>
-        <title>Product | Freshozz Masala Cola</title>
-        <meta name="description" content="Discover Freshozz Masala Cola - premium carbonation, authentic masala blend, and natural ingredients. Sip the Freshness." />
+        <title>The Soda India Was Missing | Freshozz</title>
+        <meta name="description" content="Not inspiration. Necessity. Freshozz is India's first mojito-style masala fizz. A new category." />
       </Head>
 
       <Layout>
         {/* Hero */}
-        <section className="py-20 px-4 gradient-bg">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-32 px-4 bg-gradient-to-b from-black via-premium-black to-bg-dark">
+          <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-center space-y-12"
             >
-              <h1 className="text-5xl md:text-6xl font-display font-bold text-warm mb-6">
-                The <span className="text-gold">Freshozz</span> Experience
-              </h1>
-              <p className="text-xl text-muted-warm max-w-3xl mx-auto">
-                Sip the Freshness. Every bottle brings tradition and innovation in perfect harmony.
-              </p>
+              <div>
+                <h1 className="text-5xl md:text-7xl font-display font-light text-warm mb-8 leading-tight tracking-tight">
+                  The soda India<br className="hidden md:inline" /> was missing.
+                </h1>
+                <div className="w-16 h-[1px] bg-copper/40 mx-auto mb-8" />
+                <p className="text-2xl md:text-3xl text-copper font-display font-light leading-tight">
+                  Not inspiration.<br />
+                  Necessity.
+                </p>
+              </div>
             </motion.div>
 
-            {/* Product Image Placeholder with Parallax */}
+          </div>
+        </section>
+
+        {/* The Gap We Stepped Into */}
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              ref={productRef}
-              style={{ y: productY, rotate: productRotate }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              className="max-w-lg mx-auto mb-16 relative"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="space-y-16"
             >
-              {/* Glow effects */}
-              <div className="absolute inset-0 bg-gradient-radial from-gold/30 via-copper/20 to-transparent blur-3xl scale-110" />
-              
-              <div className="relative aspect-[3/4] bg-gradient-to-b from-copper/5 to-soil/5 rounded-2xl shadow-2xl flex flex-col items-center justify-center border border-copper/20 overflow-hidden group backdrop-blur-xl p-8">
-                {/* Shimmer effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-copper/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <div className="relative z-10 text-center space-y-8">
-                  <div className="w-20 h-[1px] bg-copper/50 mx-auto" />
-                  <p className="text-8xl font-display font-light text-warm tracking-tighter">?</p>
-                  <div className="w-20 h-[1px] bg-copper/50 mx-auto" />
-                  <p className="text-base text-copper/70 font-display tracking-[0.3em] uppercase">
-                    Reveal Soon
+              <div className="text-center">
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  Category Creation
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  The Gap We Stepped Into
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto text-center">
+                <p className="text-xl text-muted-warm leading-relaxed">
+                  India had a choice:
+                </p>
+                
+                <div className="space-y-4 text-lg text-warm/70">
+                  <p>Sugary colas</p>
+                  <p>Masala drinks without soul</p>
+                  <p>Energy drinks that burn out the mind</p>
+                </div>
+
+                <div className="py-8">
+                  <div className="w-12 h-[1px] bg-copper/40 mx-auto mb-8" />
+                  <p className="text-xl text-copper/80 leading-relaxed">
+                    What India didn't have was obvious:
+                  </p>
+                </div>
+
+                <div className="space-y-3 text-2xl md:text-3xl font-display font-light text-copper leading-tight">
+                  <p>A flavoured soda culture.</p>
+                  <p>Fizz with taste.</p>
+                  <p>Fizz with identity.</p>
+                  <p>Fizz with intention.</p>
+                </div>
+
+                <div className="pt-8">
+                  <p className="text-base text-warm/60 italic">
+                    Freshozz exists because nobody built that lane.
                   </p>
                 </div>
               </div>
-              
-              {/* Floating particles */}
-              <motion.div
-                animate={{ y: [0, -15, 0], opacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-10 -right-10 w-20 h-20 bg-gold/20 rounded-full blur-2xl"
-              />
-              <motion.div
-                animate={{ y: [0, 15, 0], opacity: [0.3, 0.6, 0.3] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-10 -left-10 w-24 h-24 bg-copper/20 rounded-full blur-2xl"
-              />
             </motion.div>
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-20 px-4 bg-bg-dark">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+        {/* The First of Its Kind */}
+        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-display font-bold text-center text-warm mb-16"
+              className="text-center space-y-16"
             >
-              What Makes It <span className="text-copper">Special</span>
-            </motion.h2>
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  Innovation
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  The First of Its Kind
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.7, 
-                    delay: index * 0.1,
-                    ease: [0.22, 1, 0.36, 1]
-                  }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  whileHover={{ scale: 1.03, y: -5 }}
-                  className="bg-soil/10 border border-copper/20 rounded-xl p-6 shadow-soft-gold cursor-pointer relative overflow-hidden group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <h3 className="text-xl font-display font-semibold text-gold mb-3 relative z-10">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-warm relative z-10">
-                    {feature.description}
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-3xl md:text-4xl font-display font-light text-copper leading-tight">
+                  Mojito energy × Masala soul × High-fizz texture<br />
+                  In the form of a soda.
+                </p>
+
+                <div className="space-y-4 text-lg text-warm/70 leading-relaxed">
+                  <p>Not syrup in sparkling water.</p>
+                  <p>Not mocktail flavouring.</p>
+                  <p>Not nostalgia in a bottle.</p>
+                </div>
+
+                <div className="pt-6">
+                  <p className="text-xl text-muted-warm leading-relaxed">
+                    A modern Indian flavour experience<br />
+                    built on carbonation, spice structure and sensory balance.
                   </p>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Taste That Thinks */}
+        <section className="py-40 px-4 bg-gradient-to-b from-premium-black to-bg-dark">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="text-center space-y-16"
+            >
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  Sensory Design
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  Taste That Thinks
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-xl text-muted-warm leading-relaxed">
+                  Flavour isn't loud.<br />
+                  Flavour is layered.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+                  <div className="space-y-3">
+                    <p className="text-2xl text-copper font-display">Bright lime</p>
+                    <p className="text-sm text-warm/50 uppercase tracking-wider">top note</p>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-2xl text-copper font-display">Warm spice</p>
+                    <p className="text-sm text-warm/50 uppercase tracking-wider">mid note</p>
+                  </div>
+                  <div className="space-y-3">
+                    <p className="text-2xl text-copper font-display">Clean fizz</p>
+                    <p className="text-sm text-warm/50 uppercase tracking-wider">finish</p>
+                  </div>
+                </div>
+
+                <div className="pt-6">
+                  <p className="text-base text-warm/70 leading-relaxed">
+                    A taste that doesn't shout.<br />
+                    A taste that stays.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Clean Caffeine */}
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="text-center space-y-16"
+            >
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  Energy Redefined
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  Clean Caffeine<br />
+                  <span className="text-copper text-3xl md:text-4xl">(The Right Kind)</span>
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-2xl text-muted-warm leading-relaxed">
+                  Energy drinks force you awake.<br />
+                  Freshozz brings you alive.
+                </p>
+
+                <div className="space-y-4 text-lg text-warm/80 leading-relaxed">
+                  <p>Caffeine without bitterness</p>
+                  <p>Alertness without jitters</p>
+                  <p>Focus without crash</p>
+                </div>
+
+                <div className="pt-6">
+                  <p className="text-base text-copper/70 italic">
+                    Because energy doesn't need to be violent.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Low-Sugar Intelligence */}
+        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="text-center space-y-16"
+            >
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  Smart Sweetness
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  Low-Sugar by Intelligence,<br />
+                  Not Compromise
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-xl text-muted-warm leading-relaxed">
+                  Sweetness doesn't have to dominate.<br />
+                  It has to belong.
+                </p>
+
+                <div className="space-y-4 text-lg text-warm/80 leading-relaxed">
+                  <p>Just enough sugar to support the palate</p>
+                  <p>Zero-spike sweetness curve</p>
+                  <p>No aftertaste masking</p>
+                  <p>No heavy tongue-coat sensation</p>
+                </div>
+
+                <div className="pt-6">
+                  <p className="text-2xl text-copper font-display font-light">
+                    Light, refined, modern.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Why This Category Matters */}
+        <section className="py-40 px-4 bg-gradient-to-b from-premium-black to-bg-dark">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="text-center space-y-16"
+            >
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  The Answer
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  Why This Category Matters
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-xl text-muted-warm leading-relaxed">
+                  People are done choosing between:
+                </p>
+
+                <div className="space-y-4 text-2xl text-warm/70 leading-relaxed">
+                  <p>Taste or health</p>
+                  <p>Soda or energy</p>
+                  <p>Masala or mojito</p>
+                </div>
+
+                <div className="py-8">
+                  <div className="w-12 h-[1px] bg-copper/40 mx-auto mb-8" />
+                </div>
+
+                <p className="text-xl text-copper leading-relaxed">
+                  Freshozz is the answer to the question<br />
+                  no brand bothered to ask:
+                </p>
+
+                <p className="text-3xl md:text-4xl font-display font-light text-warm leading-tight">
+                  "Why can't a drink do all three?"
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* What This Says About You */}
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="text-center space-y-16"
+            >
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  Identity
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  What This Says About You
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-2xl md:text-3xl font-display font-light text-copper leading-tight">
+                  You didn't settle for what already existed.<br />
+                  So neither did we.
+                </p>
+
+                <div className="py-8">
+                  <div className="w-12 h-[1px] bg-copper/40 mx-auto mb-8" />
+                </div>
+
+                <p className="text-xl text-muted-warm leading-relaxed">
+                  Premium isn't price.<br />
+                  Premium is preference.
+                </p>
+
+                <div className="pt-12">
+                  <Link 
+                    href="/#waitlist"
+                    className="inline-block px-16 py-5 bg-copper text-warm font-display font-medium text-base tracking-[0.25em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.3em]"
+                  >
+                    Taste the Threshold
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </section>
 
