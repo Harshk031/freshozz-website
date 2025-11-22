@@ -32,7 +32,7 @@ export default function Home() {
       question: "Why Shorter Shelf Life?",
       problem: "You last 90 days, not 6 months like others",
       answer: "Fresher Spices",
-      content: "Six months needs heavy preservatives—sodium benzoate, potassium sorbate. They keep liquid stable but degrade spice aromatics. By month 3, you're drinking preserved water, not fresh flavor. We chose 90 days: that's how long real spices stay vibrant with minimal intervention."
+      content: "Six months needs heavy preservatives—sodium benzoate, potassium sorbate. They keep liquid stable but degrade spice aromatics. By month 3, you're drinking preserved water, not fresh flavour. We chose 90 days: that's how long real spices stay vibrant with minimal intervention."
     },
     {
       question: "Settling vs Clarity",
@@ -50,7 +50,7 @@ export default function Home() {
       question: "Market Positioning",
       problem: "What makes this category different?",
       answer: "The Middle Ground",
-      content: "Indian soda aisle: cheap colas or masala drinks with artificial flavors and high sugar. No middle ground. Nothing culturally authentic AND premium quality. We fill that gap. Real spices, thoughtful process, lower sugar. Not ₹20 cheap. Not ₹300 luxury. ₹120 for choices you can taste."
+      content: "Indian soda aisle: cheap colas or masala drinks with artificial flavours and high sugar. No middle ground. Nothing culturally authentic AND premium quality. We fill that gap. Real spices, thoughtful process, lower sugar. Not ₹20 cheap. Not ₹300 luxury. ₹120 for choices you can taste."
     }
   ];
 

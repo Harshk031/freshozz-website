@@ -129,7 +129,7 @@ export default function About() {
                 {
                   number: '02',
                   title: 'Cultural Respect',
-                  description: 'Indian flavors deserve premium treatment. Not nostalgia. Not shortcuts. Real ingredients interpreted with precision.'
+                  description: 'Indian flavours deserve premium treatment. Not nostalgia. Not shortcuts. Real ingredients interpreted with precision.'
                 },
                 {
                   number: '03',

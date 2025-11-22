@@ -26,7 +26,7 @@ export default function Product() {
       question: "Spice Suspension",
       problem: "Why doesn't masala sink as much?",
       answer: "Finer Grinding",
-      content: "Traditional grinding creates large chunks that sink fast. We grind finer—particles stay suspended longer while keeping authentic flavor. Some settling is natural. But no heavy sediment like conventional masala sodas."
+      content: "Traditional grinding creates large chunks that sink fast. We grind finer—particles stay suspended longer while keeping authentic flavour. Some settling is natural. But no heavy sediment like conventional masala sodas."
     },
     {
       question: "Sugar Content",
@@ -38,7 +38,7 @@ export default function Product() {
       question: "Shelf Life Choice",
       problem: "Why not extend beyond 90 days?",
       answer: "Fresher Aromatics",
-      content: "Six months requires sodium benzoate and potassium sorbate—safe, but they mute spice aromatics over time. At 90 days with minimal preservatives, spices stay sharp. Trade-off: shorter shelf life, better flavor."
+      content: "Six months requires sodium benzoate and potassium sorbate—safe, but they mute spice aromatics over time. At 90 days with minimal preservatives, spices stay sharp. Trade-off: shorter shelf life, better flavour."
     }
   ];
 
@@ -162,7 +162,7 @@ export default function Product() {
               },
               {
                 "@type": "PropertyValue",
-                "name": "Flavor Profile",
+                "name": "Flavour Profile",
                 "value": "Mojito Masala Fusion"
               }
             ]
