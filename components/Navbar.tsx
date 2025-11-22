@@ -58,21 +58,62 @@ export default function Navbar() {
 
           {/* Desktop Navigation - Premium Minimal */}
           <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`transition-all duration-700 font-display text-sm tracking-[0.15em] uppercase relative group ${
-                  scrolled ? 'text-warm/70' : 'text-warm/90'
-                } hover:text-copper`}
-              >
-                <span className="relative z-10">{link.label}</span>
-                {/* Minimal dot indicator */}
-                <motion.span 
-                  className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-copper rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                />
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isProduct = link.href === '/product';
+              
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`transition-all duration-700 font-display text-sm tracking-[0.15em] uppercase relative group ${
+                    isProduct
+                      ? 'text-warm px-6 py-3 bg-gradient-to-r from-copper/20 to-gold/20 border border-copper/40 rounded-lg hover:from-copper/30 hover:to-gold/30 hover:border-copper/60 hover:shadow-[0_0_20px_rgba(184,107,44,0.4)]'
+                      : scrolled ? 'text-warm/70' : 'text-warm/90'
+                  } ${!isProduct && 'hover:text-copper'}`}
+                >
+                  <span className="relative z-10">
+                    {link.label}
+                    {/* Special badge for Product */}
+                    {isProduct && (
+                      <motion.span
+                        animate={{ 
+                          opacity: [0.5, 1, 0.5],
+                          scale: [1, 1.05, 1]
+                        }}
+                        transition={{ 
+                          duration: 2, 
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                        className="absolute -top-1 -right-1 w-2 h-2 bg-copper rounded-full shadow-[0_0_8px_rgba(184,107,44,0.8)]"
+                      />
+                    )}
+                  </span>
+                  
+                  {/* Regular dot indicator for non-product links */}
+                  {!isProduct && (
+                    <motion.span 
+                      className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-copper rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    />
+                  )}
+
+                  {/* Glowing background for Product */}
+                  {isProduct && (
+                    <motion.div
+                      animate={{ 
+                        opacity: [0.3, 0.5, 0.3]
+                      }}
+                      transition={{ 
+                        duration: 3, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                      className="absolute inset-0 bg-gradient-to-r from-copper/10 to-gold/10 rounded-lg blur-sm -z-10"
+                    />
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button - Premium */}
@@ -104,22 +145,45 @@ export default function Navbar() {
           className="md:hidden bg-premium-black/98 backdrop-blur-xl border-b border-copper/20"
         >
           <div className="px-6 py-8 space-y-6">
-            {navLinks.map((item, index) => (
-              <motion.div
-                key={item.href}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <Link
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="block text-warm/70 hover:text-copper transition-all duration-500 font-display text-lg tracking-[0.15em] uppercase py-2"
+            {navLinks.map((item, index) => {
+              const isProduct = item.href === '/product';
+              
+              return (
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  {item.label}
-                </Link>
-              </motion.div>
-            ))}
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`block transition-all duration-500 font-display text-lg tracking-[0.15em] uppercase py-3 relative ${
+                      isProduct
+                        ? 'text-warm px-6 bg-gradient-to-r from-copper/20 to-gold/20 border border-copper/40 rounded-lg shadow-[0_0_15px_rgba(184,107,44,0.3)]'
+                        : 'text-warm/70 hover:text-copper py-2'
+                    }`}
+                  >
+                    {item.label}
+                    {/* Glowing badge for mobile Product */}
+                    {isProduct && (
+                      <motion.span
+                        animate={{ 
+                          opacity: [0.5, 1, 0.5],
+                          scale: [1, 1.1, 1]
+                        }}
+                        transition={{ 
+                          duration: 2, 
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                        className="absolute top-2 right-2 w-2 h-2 bg-copper rounded-full shadow-[0_0_8px_rgba(184,107,44,0.8)]"
+                      />
+                    )}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       )}
