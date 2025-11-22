@@ -75,49 +75,48 @@ export default function WhereToBuy() {
           </div>
         </section>
 
-        {/* Coming Soon */}
-        <section className="py-20 px-4 bg-bg-dark">
-          <div className="max-w-5xl mx-auto">
+        {/* Waitlist */}
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-center space-y-16"
             >
-              <h2 className="text-4xl font-display font-bold text-warm mb-6">
-                Launching Soon
-              </h2>
-              <p className="text-lg text-muted-warm max-w-2xl mx-auto">
-                We're partnering with premium retailers, cafes, and modern trade outlets across India. 
-                Check back soon for locations near you.
-              </p>
-            </motion.div>
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  The Waitlist
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  Join for first access
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-10" />
+                <p className="text-lg text-muted-warm max-w-2xl mx-auto">
+                  Be among the first to experience<br className="hidden md:inline" /> what India was missing.
+                </p>
+              </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="bg-soil/20 border border-copper/30 rounded-2xl p-12 text-center"
-            >
-              <h3 className="text-2xl font-display font-semibold text-gold mb-4">
-                Want to be notified when we launch?
-              </h3>
-              <p className="text-muted-warm mb-6">
-                Drop your email and we'll let you know as soon as Freshozz hits stores in your area.
-              </p>
-              <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="flex-grow px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold"
-                />
-                <button
-                  type="submit"
-                  className="px-8 py-3 bg-gold hover:bg-gold/90 text-bg-dark font-display font-semibold rounded-lg transition-all"
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-soil/10 border border-copper/20 rounded-2xl p-12"
+              >
+                <a
+                  href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
                 >
-                  Notify Me
-                </button>
-              </form>
+                  Join the Waitlist
+                </a>
+                <p className="text-xs text-copper/30 tracking-[0.2em] uppercase mt-6">
+                  First access. No spam.
+                </p>
+              </motion.div>
             </motion.div>
           </div>
         </section>
