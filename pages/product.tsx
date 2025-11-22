@@ -17,28 +17,28 @@ export default function Product() {
   
   const whyTabs = [
     {
-      question: "Market Comparison",
-      problem: "What makes Freshozz different?",
-      answer: "Triple-Filtered vs Mass Production",
-      content: "Market brands carbonate water once and bottle. We triple-filter carbonation through precision micro-bubble technology. Each bubble is 40% smaller than standard sodas, creating a smoother fizz that lasts 3x longer after opening. The difference? They optimize for cost. We optimize for experience. That's why one sip feels different."
+      question: "Production Approach",
+      problem: "How is your carbonation different?",
+      answer: "More Steps, Finer Control",
+      content: "Standard carbonation involves single-pass injection. We use a multi-stage filtration process for smaller, more uniform bubbles. Does it make a dramatic difference? Moderate—but it creates a slightly smoother mouthfeel and better retention. It's one of several refinements we believe justifies the premium positioning."
     },
     {
-      question: "Spice Engineering",
-      problem: "Why doesn't your masala settle?",
-      answer: "Micro-Emulsion vs Crude Grinding",
-      content: "Traditional masala sodas grind spices at 2000 RPM. Particles stay large (100+ microns), sink fast, create sediment. Our cold-press micro-emulsion process operates at 12000 RPM with temperature control, creating 5-micron masala particles that remain suspended. Result: uniform distribution, no cloudiness, authentic taste in every sip without the shake-and-pray ritual."
+      question: "Spice Suspension",
+      problem: "Why doesn't masala sink as much?",
+      answer: "Finer Grinding, Specific Density",
+      content: "Reducing spice particle size and maintaining proper liquid density helps suspension. Our process creates smaller particles that settle more slowly. Complete suspension indefinitely isn't physically possible with real spices—some will eventually settle. But the difference from conventional grinding is noticeable. Shake gently if stored long."
     },
     {
-      question: "Sugar Reality",
-      problem: "How do you taste sweet with less sugar?",
-      answer: "Natural Balance vs Artificial Spikes",
-      content: "Mass sodas use 30g+ sugar per bottle to mask cheap ingredients. We use 18g organic cane sugar paired with natural spice aromatics (ginger, cumin, fennel) that activate sweetness receptors naturally. Your brain perceives full flavor without the sugar crash. It's sensory science, not chemistry shortcuts. That's why you don't feel thirsty after."
+      question: "Sugar Content",
+      problem: "How does lower sugar still taste balanced?",
+      answer: "Spice Complexity Adds Depth",
+      content: "We use 18g sugar instead of the typical 30g+ in most sodas. The reduction is possible because aromatic spices—ginger, cumin, fennel—add flavor complexity that makes sweetness feel more complete. You're not just tasting sugar; you're tasting layers. Does everyone perceive it the same? No. But many find it satisfying at this level."
     },
     {
-      question: "Shelf Life Truth",
-      problem: "Why only 90 days vs 6 months?",
-      answer: "Freshness vs Preservative Overload",
-      content: "Industry secret: 6-month shelf life requires sodium benzoate, potassium sorbate, and stabilizers. These preserve the liquid but kill the spice aromatics within 60 days. We chose 90-day freshness with natural preservation (citric acid + CO2 pressure). You get real spice flavor that's alive, not a preserved memory of taste. Premium products expire. Cheap ones don't."
+      question: "Shelf Life Choice",
+      problem: "Why not extend beyond 90 days?",
+      answer: "Preservative Trade-Off",
+      content: "Longer shelf life means more preservatives. While safe and approved, they can dull spice aromatics over time. We chose 90 days as a balance—long enough for distribution and reasonable storage, short enough to maintain better flavor character. It's honest about what fresh ingredients demand. Not perfect, but intentional."
     }
   ];
 

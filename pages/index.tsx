@@ -29,28 +29,28 @@ export default function Home() {
 
   const whyTabs = [
     {
-      question: "6-Month Shelf Life?",
-      problem: "Other brands promise long shelf life",
-      answer: "The Truth About Preservatives",
-      content: "Most masala sodas use chemical preservatives to last 6+ months on shelves. Real masala settles. Real flavors fade. That's nature. We chose freshness over fake stability. Our spices are real, so they behave like real ingredients should."
+      question: "Why Shorter Shelf Life?",
+      problem: "You last 90 days, not 6 months like others",
+      answer: "We Chose Quality Over Longevity",
+      content: "Extended shelf life requires heavy preservatives. While effective for distribution, they gradually diminish authentic spice character. We use minimal natural preservation, accepting a shorter lifespan to maintain true flavor integrity. It's a trade-off: longer sitting on shelves, or better in your glass."
     },
     {
-      question: "Masala Never Settles?",
-      problem: "Your masala soda looks cloudy at the bottom",
-      answer: "We Solved The Science",
-      content: "Traditional masala sodas let spices sink because they use crude grinding methods. We use micro-emulsion technology that suspends authentic masala particles evenly. Shake once. Perfect pour. No sediment. Just pure, distributed flavor in every sip."
+      question: "Settling vs Clarity",
+      problem: "How do you keep masala suspended?",
+      answer: "Better Processing, Not Magic",
+      content: "Spices naturally want to settle—it's physics. We reduce this through finer particle processing and specific carbonation pressure. Some minimal settling may still occur over time, but it's significantly less than conventional methods. A gentle shake before opening ensures even distribution."
     },
     {
-      question: "Upset Stomach Solution?",
-      problem: "What do you drink when bloated?",
-      answer: "Ayurvedic Meets Fizz",
-      content: "Ginger. Cumin. Black salt. The same trio your grandmother used for digestion, now in a sophisticated fizzy form. Not medicine. Not soda. A functional refreshment that actually helps your gut while tasting incredible."
+      question: "Digestive Benefits?",
+      problem: "Can soda actually help digestion?",
+      answer: "Traditional Ingredients, Modern Form",
+      content: "Ginger, cumin, and black salt have been used in Indian households for digestive comfort for generations. We're not claiming medical benefits—we're simply incorporating these time-tested ingredients into a fizzy format. Whether it helps is subjective; what we promise is authentic ingredient use."
     },
     {
-      question: "Premium Flavored Cola?",
-      problem: "Name one sophisticated Indian fizzy drink",
-      answer: "The Category Didn't Exist",
-      content: "You can't. Because until now, India had mass-market colas or cheap masala sodas. Nothing premium. Nothing cultural yet contemporary. Freshozz created the category that should have existed: a premium Indian fizzy drink worth ₹100+."
+      question: "Market Positioning",
+      problem: "What makes this category different?",
+      answer: "Between Mass Market and Craft",
+      content: "Most Indian sodas are either mass-produced colas or budget masala drinks. There's been a gap for something premium yet culturally rooted—quality ingredients, thoughtful processing, refined taste. Not luxury for luxury's sake, but intentional choices that justify the price."
     }
   ];
 
