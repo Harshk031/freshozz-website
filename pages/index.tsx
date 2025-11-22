@@ -271,7 +271,7 @@ export default function Home() {
               className="text-center mb-20"
             >
               <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
-                The Heart of Our Brand
+                The Foundation
               </p>
               <h2 className="text-5xl md:text-7xl font-display font-light text-warm mb-8 leading-tight tracking-tight">
                 WHY Freshozz

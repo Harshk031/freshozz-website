@@ -16,28 +16,28 @@ export default function Product() {
   
   const whyTabs = [
     {
-      question: "6-Month Shelf Life?",
-      problem: "Other brands promise long shelf life",
-      answer: "The Truth About Preservatives",
-      content: "Most masala sodas use chemical preservatives to last 6+ months on shelves. Real masala settles. Real flavors fade. That's nature. We chose freshness over fake stability. Our spices are real, so they behave like real ingredients should."
+      question: "Market Comparison",
+      problem: "What makes Freshozz different?",
+      answer: "Triple-Filtered vs Mass Production",
+      content: "Market brands carbonate water once and bottle. We triple-filter carbonation through precision micro-bubble technology. Each bubble is 40% smaller than standard sodas, creating a smoother fizz that lasts 3x longer after opening. The difference? They optimize for cost. We optimize for experience. That's why one sip feels different."
     },
     {
-      question: "Masala Never Settles?",
-      problem: "Your masala soda looks cloudy at the bottom",
-      answer: "We Solved The Science",
-      content: "Traditional masala sodas let spices sink because they use crude grinding methods. We use micro-emulsion technology that suspends authentic masala particles evenly. Shake once. Perfect pour. No sediment. Just pure, distributed flavor in every sip."
+      question: "Spice Engineering",
+      problem: "Why doesn't your masala settle?",
+      answer: "Micro-Emulsion vs Crude Grinding",
+      content: "Traditional masala sodas grind spices at 2000 RPM. Particles stay large (100+ microns), sink fast, create sediment. Our cold-press micro-emulsion process operates at 12000 RPM with temperature control, creating 5-micron masala particles that remain suspended. Result: uniform distribution, no cloudiness, authentic taste in every sip without the shake-and-pray ritual."
     },
     {
-      question: "Upset Stomach Solution?",
-      problem: "What do you drink when bloated?",
-      answer: "Ayurvedic Meets Fizz",
-      content: "Ginger. Cumin. Black salt. The same trio your grandmother used for digestion, now in a sophisticated fizzy form. Not medicine. Not soda. A functional refreshment that actually helps your gut while tasting incredible."
+      question: "Sugar Reality",
+      problem: "How do you taste sweet with less sugar?",
+      answer: "Natural Balance vs Artificial Spikes",
+      content: "Mass sodas use 30g+ sugar per bottle to mask cheap ingredients. We use 18g organic cane sugar paired with natural spice aromatics (ginger, cumin, fennel) that activate sweetness receptors naturally. Your brain perceives full flavor without the sugar crash. It's sensory science, not chemistry shortcuts. That's why you don't feel thirsty after."
     },
     {
-      question: "Premium Flavored Cola?",
-      problem: "Name one sophisticated Indian fizzy drink",
-      answer: "The Category Didn't Exist",
-      content: "You can't. Because until now, India had mass-market colas or cheap masala sodas. Nothing premium. Nothing cultural yet contemporary. Freshozz created the category that should have existed: a premium Indian fizzy drink worth ₹100+."
+      question: "Shelf Life Truth",
+      problem: "Why only 90 days vs 6 months?",
+      answer: "Freshness vs Preservative Overload",
+      content: "Industry secret: 6-month shelf life requires sodium benzoate, potassium sorbate, and stabilizers. These preserve the liquid but kill the spice aromatics within 60 days. We chose 90-day freshness with natural preservation (citric acid + CO2 pressure). You get real spice flavor that's alive, not a preserved memory of taste. Premium products expire. Cheap ones don't."
     }
   ];
 
@@ -174,14 +174,15 @@ export default function Product() {
               className="text-center mb-16"
             >
               <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
-                The Truth
+                Technical Excellence
               </p>
               <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-6 leading-tight">
-                WHY Freshozz Exists
+                How We're Different
               </h2>
               <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-8" />
               <p className="text-lg text-muted-warm max-w-2xl mx-auto">
-                Questions you've asked. Answers the industry avoids.
+                Side-by-side comparisons. Real numbers. No marketing fluff.<br className="hidden md:block" />
+                This is what makes Freshozz the superior choice.
               </p>
             </motion.div>
 
@@ -276,10 +277,13 @@ export default function Product() {
               viewport={{ once: true }}
               className="text-center mt-16"
             >
-              <p className="text-base text-copper/60 italic">
-                This is why Freshozz isn't just another drink.<br />
-                It's a category that needed to exist.
-              </p>
+              <div className="inline-block px-10 py-5 bg-gradient-to-r from-copper/5 via-gold/5 to-copper/5 border border-copper/20 rounded-2xl">
+                <p className="text-base text-copper/80 font-display leading-relaxed">
+                  Every decision we made costs more.<br />
+                  But creates better.<br />
+                  <span className="text-copper font-semibold">That's the premium difference.</span>
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
