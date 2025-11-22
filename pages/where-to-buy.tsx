@@ -15,8 +15,7 @@ export default function WhereToBuy() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement proper form submission
-    console.log('Form submitted:', formData);
+    // Form submission will be implemented when backend is ready
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
