@@ -20,25 +20,25 @@ export default function Product() {
       question: "Production Approach",
       problem: "How is your carbonation different?",
       answer: "Multi-Stage Filtration for Finer Bubbles",
-      content: "Standard carbonation involves single-pass injection. We use a multi-stage filtration process for smaller, more uniform bubbles. Does it make a dramatic difference? Moderate—but it creates a slightly smoother mouthfeel and better retention. It's one of several refinements we believe justifies the premium positioning."
+      content: "Most brands carbonate in one step—inject CO2, bottle, done. We run carbonation through three separate filtration stages. First stage creates the bubbles. Second stage filters for uniformity. Third stage fine-tunes pressure. Result: bubbles are smaller and more consistent. You'll notice it stays fizzy longer after opening and feels smoother on your tongue. Not revolutionary, but noticeably better than single-pass carbonation."
     },
     {
       question: "Spice Suspension",
       problem: "Why doesn't masala sink as much?",
       answer: "Smaller Particles Settle Slower",
-      content: "Reducing spice particle size and maintaining proper liquid density helps suspension. Our process creates smaller particles that settle more slowly. Complete suspension indefinitely isn't physically possible with real spices—some will eventually settle. But the difference from conventional grinding is noticeable. Shake gently if stored long."
+      content: "Traditional grinding leaves large spice chunks that sink fast. We grind spices at a much finer level—small enough to stay suspended longer but large enough to retain authentic flavor. Physics still applies: eventually some settling occurs. But you won't see heavy sediment at the bottom like in conventional masala sodas. A gentle shake before pouring distributes everything evenly."
     },
     {
       question: "Sugar Content",
       problem: "How does lower sugar still taste balanced?",
       answer: "Aromatic Spices Enhance Sweetness Perception",
-      content: "We use 18g sugar instead of the typical 30g+ in most sodas. The reduction is possible because aromatic spices—ginger, cumin, fennel—add flavor complexity that makes sweetness feel more complete. You're not just tasting sugar; you're tasting layers. Does everyone perceive it the same? No. But many find it satisfying at this level."
+      content: "Here's the trick: we use 18g sugar—40% less than typical sodas—but pair it with ginger, cumin, and fennel aromatics. Your taste buds pick up both sweetness AND spice complexity, so the overall flavor feels fuller than the sugar content alone would suggest. Not everyone perceives it identically, but most people don't miss the extra sugar because there's more happening flavor-wise."
     },
     {
       question: "Shelf Life Choice",
       problem: "Why not extend beyond 90 days?",
       answer: "Preservatives Dull Spice Aromatics Over Time",
-      content: "Longer shelf life means more preservatives. While safe and approved, they can dull spice aromatics over time. We chose 90 days as a balance—long enough for distribution and reasonable storage, short enough to maintain better flavor character. It's honest about what fresh ingredients demand. Not perfect, but intentional."
+      content: "Six-month shelf life requires sodium benzoate and potassium sorbate. They're safe and approved, but they gradually mute the volatile compounds in spices—the aromatics that make ginger smell like ginger and cumin taste like cumin. At 90 days with minimal preservatives (just citric acid and CO2), the spices stay aromatic. It's a conscious trade-off: we accept shorter shelf life to keep the flavor sharp."
     }
   ];
 
