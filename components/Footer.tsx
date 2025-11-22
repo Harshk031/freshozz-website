@@ -32,7 +32,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="mailto:contact@freshozz.in" 
+                  href="mailto:hello@freshozz.in" 
                   className="text-warm/70 hover:text-copper transition-colors text-sm font-body"
                 >
                   Email
