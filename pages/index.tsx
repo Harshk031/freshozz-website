@@ -29,10 +29,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Freshozz - Revolutionary Beverage Coming Soon | The Future of Refreshment</title>
-        <meta name="description" content="Something extraordinary is brewing. Freshozz is set to revolutionize the beverage industry. Get ready to experience the future of refreshment. Launching Soon." />
-        <meta property="og:title" content="Freshozz - The Next Big Thing in Beverages" />
-        <meta property="og:description" content="Revolutionary beverage experience. Launching Soon." />
+        <title>Freshozz - A New Category</title>
+        <meta name="description" content="India has drinks. It doesn't have a vibe. Soon." />
+        <meta property="og:title" content="Freshozz - Coming Soon" />
+        <meta property="og:description" content="You've tasted everything. Except this." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://freshozz.in" />
       </Head>
@@ -65,7 +65,7 @@ export default function Home() {
                 className="inline-block mb-8"
               >
                 <span className="px-8 py-3 bg-copper/5 border border-copper/20 text-copper font-display text-xs tracking-[0.3em] uppercase">
-                  Launching Soon
+                  A New Category
                 </span>
               </motion.div>
               
@@ -87,21 +87,20 @@ export default function Home() {
                 transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
                 className="max-w-3xl mx-auto mb-12"
               >
-                <p className="text-2xl sm:text-3xl md:text-4xl text-copper mb-8 font-display font-light italic leading-tight">
-                  A mystery is brewing
+                <p className="text-2xl sm:text-3xl md:text-4xl text-copper mb-8 font-display font-light leading-tight">
+                  You've tasted everything.
                 </p>
                 
-                <div className="space-y-4 text-muted-warm">
+                <div className="space-y-6 text-muted-warm">
                   <p className="text-lg sm:text-xl font-body leading-relaxed">
-                    Imagine a beverage that defies categories.<br className="hidden md:block" />
-                    Where ancient spices meet modern fizz.
+                    Except this.
                   </p>
                   
                   <div className="w-16 h-[1px] bg-copper/30 mx-auto my-8" />
                   
-                  <p className="text-base sm:text-lg text-warm/60 font-body leading-relaxed">
-                    Not a soft drink. Not a soda. Not a traditional beverage.<br className="hidden md:block" />
-                    Something entirely new. Something unmistakably <span className="text-copper italic">Freshozz</span>.
+                  <p className="text-base sm:text-lg text-warm/70 font-body leading-relaxed">
+                    India has drinks.<br className="hidden md:block" />
+                    It doesn't have a vibe.
                   </p>
                 </div>
               </motion.div>
@@ -112,10 +111,10 @@ export default function Home() {
                 transition={{ delay: 0.7, duration: 1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <Link 
-                  href="/product"
+                  href="#waitlist"
                   className="inline-block px-12 py-4 border border-copper/40 text-copper font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/10 hover:border-copper transition-all duration-500 hover:tracking-[0.25em]"
                 >
-                  Uncover the Mystery
+                  Join the Waitlist
                 </Link>
               </motion.div>
             </motion.div>
@@ -149,7 +148,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Brand Philosophy - Thresholds Concept */}
+        {/* The Market Gap */}
         <section className="py-40 px-4 bg-bg-dark relative overflow-hidden">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -157,120 +156,126 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
               viewport={{ once: true }}
+              className="space-y-12"
             >
-              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase text-center">
-                The Mystery Deepens
-              </p>
-              <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 text-center leading-tight tracking-tight">
-                What is Freshozz?
-              </h2>
-              <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-12" />
-              <p className="text-lg md:text-xl text-muted-warm leading-relaxed text-center mb-8">
-                A silhouette in copper and gold. <br className="hidden md:block" />
-                A whisper of spice. A promise of fizz.
-              </p>
-              <p className="text-base text-muted-warm/70 leading-relaxed text-center max-w-2xl mx-auto">
-                Some things are worth waiting for. Some experiences can't be rushed. <br className="hidden md:block" />
-                Soon, you'll understand why we kept it hidden.
-              </p>
+              <div className="text-center">
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  The Problem
+                </p>
+                <h2 className="text-3xl md:text-5xl font-display font-light text-warm mb-8 leading-tight">
+                  Why do all drinks feel the same?
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-12" />
+              </div>
+
+              <div className="space-y-10 max-w-2xl mx-auto">
+                <p className="text-lg text-muted-warm leading-relaxed">
+                  Colas repeat themselves.<br />
+                  Masala sodas lost their soul to sugar.<br />
+                  Energy drinks hurt more than they help.
+                </p>
+
+                <p className="text-base text-warm/60 leading-relaxed">
+                  Somewhere between tradition and innovation,<br className="hidden md:block" />
+                  the beverage world forgot to evolve.
+                </p>
+
+                <p className="text-sm text-copper/50 leading-relaxed italic">
+                  Real flavour has a soul.<br />
+                  A soul never stays still.
+                </p>
+              </div>
             </motion.div>
           </div>
         </section>
 
-        {/* Product Teaser Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-bg-dark to-soil/10 relative">
-          <div className="max-w-6xl mx-auto">
+        {/* The Freshozz Mindset */}
+        <section className="py-32 px-4 bg-gradient-to-b from-bg-dark to-near-black relative">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center space-y-16"
             >
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-warm mb-4">
-                The Perfect <span className="text-copper">Balance</span>
-              </h2>
-              <p className="text-lg text-muted-warm max-w-2xl mx-auto">
-                Where traditional masala meets modern fizz. Every sip is an experience.
-              </p>
-            </motion.div>
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  The Vision
+                </p>
+                <h2 className="text-3xl md:text-5xl font-display font-light text-warm mb-8 leading-tight">
+                  We saw the gap
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-12" />
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-              {[
-                {
-                  title: 'High Fizz',
-                  description: 'Perfectly carbonated for that satisfying kick'
-                },
-                {
-                  title: 'Authentic Masala',
-                  description: 'Traditional spices, modern execution'
-                },
-                {
-                  title: 'Clean Taste',
-                  description: 'No artificial flavours, just pure quality'
-                }
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{ 
-                    duration: 0.8, 
-                    delay: index * 0.15,
-                    ease: [0.22, 1, 0.36, 1]
-                  }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    y: -10,
-                    transition: { duration: 0.3 }
-                  }}
-                  className="bg-soil/20 backdrop-blur-sm border border-copper/30 rounded-xl p-8 text-center shadow-soft-gold cursor-pointer relative overflow-hidden group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-12 h-[1px] bg-copper/50 mx-auto mb-6" />
-                  <h3 className="text-2xl font-display font-semibold text-copper mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-warm">
-                    {feature.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
+              <div className="space-y-8 max-w-2xl mx-auto">
+                <p className="text-lg text-muted-warm leading-relaxed">
+                  Between heritage and hype.<br />
+                  Between spice and sophistication.<br />
+                  Between ritual and rebellion.
+                </p>
+
+                <p className="text-base text-warm/60 leading-relaxed">
+                  A new lane needed to exist.
+                </p>
+
+                <p className="text-sm text-copper/70 leading-relaxed italic">
+                  Not to compete.<br />
+                  To replace.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Product Showcase */}
         <ProductShowcase />
 
-        {/* Instagram CTA Section */}
-        <section className="py-32 px-4 bg-near-black border-t border-copper/10">
+        {/* Tribe Call */}
+        <section id="waitlist" className="py-40 px-4 bg-near-black border-t border-copper/10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-3xl mx-auto text-center space-y-12"
           >
-            <p className="text-xs text-copper/60 mb-6 font-display tracking-[0.3em] uppercase">
-              Follow Our Journey
-            </p>
-            <h2 className="text-4xl md:text-5xl font-display font-light text-warm mb-8 leading-tight">
-              Behind the Scenes
-            </h2>
-            <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-10" />
-            <p className="text-lg text-muted-warm mb-12 leading-relaxed">
-              Get exclusive sneak peeks, product teasers, and be part of the Freshozz story as we prepare to launch.
-            </p>
-            <a
-              href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
-            >
-              Follow @fresh_ozz19
-            </a>
+            <div>
+              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                The Threshold
+              </p>
+              <h2 className="text-3xl md:text-5xl font-display font-light text-warm mb-8 leading-tight">
+                This is not for everyone
+              </h2>
+              <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-10" />
+            </div>
+
+            <div className="space-y-8">
+              <p className="text-lg text-muted-warm leading-relaxed">
+                If you crave difference.<br />
+                If taste matters more than trends.<br />
+                If you know there's something missing.
+              </p>
+
+              <p className="text-base text-warm/60 leading-relaxed">
+                You're exactly who we made this for.
+              </p>
+            </div>
+
+            <div className="space-y-6 pt-8">
+              <a
+                href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
+              >
+                Join the Waitlist
+              </a>
+              <p className="text-xs text-copper/30 tracking-[0.2em] uppercase">
+                First access. No spam.
+              </p>
+            </div>
           </motion.div>
         </section>
       </Layout>

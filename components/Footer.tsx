@@ -2,84 +2,65 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-premium-black to-bg-dark border-t border-soft-copper/15 py-16 px-4">
+    <footer className="bg-gradient-to-b from-premium-black to-bg-dark border-t border-copper/10 py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Instagram Follow CTA */}
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-display font-bold text-warm mb-4">
-            Stay Updated
-          </h3>
-          <p className="text-muted-warm mb-8 font-body">
-            Follow us on Instagram for exclusive sneak peeks, behind-the-scenes, and launch updates
-          </p>
-          <a 
-            href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-10 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500"
-          >
-            Follow @fresh_ozz19
-          </a>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Brand Section */}
-          <div>
-            <h3 className="text-2xl font-display font-bold text-gold mb-4">
+          <div className="md:col-span-2">
+            <h3 className="text-3xl font-display font-bold text-copper mb-4 tracking-tight">
               FRESHOZZ
             </h3>
-            <p className="text-muted-warm mb-4 font-body italic">
-              The Future of Refreshment
-            </p>
-            <p className="text-muted-warm text-sm font-body">
-              Redefining the beverage industry, one sip at a time.
+            <p className="text-warm/60 text-sm font-body leading-relaxed max-w-md">
+              A new category.<br />
+              Not to compete. To replace.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Connect */}
           <div>
-            <h4 className="text-warm font-display font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="/product" className="text-muted-warm hover:text-gold transition-colors text-sm">Product</Link></li>
-              <li><Link href="/about" className="text-muted-warm hover:text-gold transition-colors text-sm">About</Link></li>
-              <li><Link href="/how" className="text-muted-warm hover:text-gold transition-colors text-sm">How It's Made</Link></li>
-              <li><Link href="/where-to-buy" className="text-muted-warm hover:text-gold transition-colors text-sm">Where to Buy</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-warm font-display font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li><Link href="/contact" className="text-muted-warm hover:text-gold transition-colors text-sm">Contact</Link></li>
-              <li><Link href="/legal/privacy" className="text-muted-warm hover:text-gold transition-colors text-sm">Privacy Policy</Link></li>
-              <li><Link href="/legal/terms" className="text-muted-warm hover:text-gold transition-colors text-sm">Terms of Service</Link></li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="text-warm font-display font-semibold mb-4">Follow Us</h4>
-            <ul className="space-y-2">
+            <h4 className="text-warm/40 font-display text-xs tracking-[0.3em] uppercase mb-6">Connect</h4>
+            <ul className="space-y-3">
               <li>
                 <a 
                   href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-warm hover:text-copper transition-colors text-sm"
+                  className="text-warm/70 hover:text-copper transition-colors text-sm font-body"
                 >
-                  Instagram @fresh_ozz19
+                  Instagram
                 </a>
               </li>
-              <li><a href="mailto:contact@freshozz.in" className="text-muted-warm hover:text-copper transition-colors text-sm">contact@freshozz.in</a></li>
+              <li>
+                <a 
+                  href="mailto:contact@freshozz.in" 
+                  className="text-warm/70 hover:text-copper transition-colors text-sm font-body"
+                >
+                  Email
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="text-warm/40 font-display text-xs tracking-[0.3em] uppercase mb-6">Legal</h4>
+            <ul className="space-y-3">
+              <li><Link href="/contact" className="text-warm/70 hover:text-copper transition-colors text-sm font-body">Contact</Link></li>
+              <li><Link href="/legal/privacy" className="text-warm/70 hover:text-copper transition-colors text-sm font-body">Privacy</Link></li>
+              <li><Link href="/legal/terms" className="text-warm/70 hover:text-copper transition-colors text-sm font-body">Terms</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-copper/20 text-center">
-          <p className="text-muted-warm text-sm">
-            © {new Date().getFullYear()} Freshozz. All rights reserved.
-          </p>
+        <div className="pt-8 border-t border-copper/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-warm/40 text-xs font-body tracking-wider">
+              © {new Date().getFullYear()} Freshozz. All rights reserved.
+            </p>
+            <p className="text-copper/30 text-xs font-display italic tracking-wide">
+              Taste the Threshold
+            </p>
+          </div>
         </div>
       </div>
     </footer>

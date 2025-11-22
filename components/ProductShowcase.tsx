@@ -30,45 +30,40 @@ export default function ProductShowcase() {
               viewport={{ once: true }}
               className="inline-block text-copper uppercase tracking-widest text-sm font-semibold mb-4"
             >
-              Premium Quality
+              Taste Tease
             </motion.span>
             
-            <h2 className="text-5xl md:text-6xl font-display font-bold text-warm mb-6">
-              Crafted for the
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-gold to-copper">
-                Discerning Palate
+            <h2 className="text-4xl md:text-5xl font-display font-light text-warm mb-6 leading-tight">
+              Copper in color.
+              <span className="block text-copper mt-2">
+                Complex in character.
               </span>
             </h2>
             
             <p className="text-lg text-muted-warm leading-relaxed mb-8">
-              Every bottle is a masterpiece. From the perfect carbonation to the authentic masala blend, 
-              we've obsessed over every detail to deliver an experience that's nothing short of extraordinary.
+              Warmth meets chill.<br />
+              Spice meets smooth.<br />
+              Memory meets moment.
             </p>
 
             <motion.div
-              className="space-y-4"
+              className="space-y-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
             >
-              {[
-                { label: 'FSSAI Certified', value: '100%' },
-                { label: 'Natural Ingredients', value: 'Yes' },
-                { label: 'Premium Carbonation', value: 'Triple Filtered' }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex justify-between items-center border-b border-copper/20 pb-3"
-                >
-                  <span className="text-muted-warm">{item.label}</span>
-                  <span className="text-gold font-semibold">{item.value}</span>
-                </motion.div>
-              ))}
+              <div className="space-y-4">
+                <p className="text-base text-warm/60 leading-relaxed">
+                  Not sweet.<br />
+                  Not sour.<br />
+                  Not simple.
+                </p>
+                
+                <p className="text-sm text-copper/70 italic">
+                  A mood you drink.
+                </p>
+              </div>
             </motion.div>
           </motion.div>
 
