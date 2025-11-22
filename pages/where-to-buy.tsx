@@ -15,8 +15,8 @@ export default function WhereToBuy() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    alert('Thank you! We will contact you soon.');
+    // TODO: Implement proper form submission
+    console.log('Form submitted:', formData);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -29,29 +29,49 @@ export default function WhereToBuy() {
   return (
     <>
       <Head>
-        <title>Where to Buy | Freshozz</title>
-        <meta name="description" content="Find Freshozz Masala Cola near you or inquire about wholesale partnerships. Sip the Freshness." />
+        {/* SEO Meta Tags */}
+        <title>Where to Buy Freshozz | Premium Soda Locations India - Coming Soon</title>
+        <meta name="description" content="Freshozz launches soon. Join the waitlist for exclusive first access. Premium flavoured soda coming to India." />
+        <meta name="keywords" content="where to buy freshozz, freshozz locations, buy premium soda india, freshozz launch, freshozz waitlist, freshozz stockists" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://freshozz.in/where-to-buy" />
+        <meta property="og:title" content="Where to Buy Freshozz - Launching Soon" />
+        <meta property="og:description" content="Join the waitlist. Be first to experience India's premium flavoured soda culture." />
+        <meta property="og:image" content="https://freshozz.in/og-where.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://freshozz.in/where-to-buy" />
+        <meta name="twitter:title" content="Where to Buy Freshozz" />
+        <meta name="twitter:description" content="Launching soon. Join the waitlist for exclusive access." />
+        <meta name="twitter:image" content="https://freshozz.in/og-where.jpg" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://freshozz.in/where-to-buy" />
       </Head>
 
       <Layout>
         {/* Hero */}
-        <section className="py-20 px-4 gradient-bg">
+        <section className="py-40 px-4 bg-gradient-to-b from-black via-premium-black to-bg-dark">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-display font-bold text-warm mb-6"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              Find <span className="text-gold">Freshozz</span> Near You
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-xl text-muted-warm"
-            >
-              Available soon at select retailers. Be among the first to experience it.
-            </motion.p>
+              <p className="text-xs text-copper/40 mb-8 font-display tracking-[0.3em] uppercase">
+                Coming Soon
+              </p>
+              <h1 className="text-5xl md:text-7xl font-display font-light text-warm mb-8 leading-tight tracking-tight">
+                Launching soon
+              </h1>
+              <div className="w-16 h-[1px] bg-copper/40 mx-auto mb-10" />
+              <p className="text-xl text-muted-warm">
+                First access for those who join early.
+              </p>
+            </motion.div>
           </div>
         </section>
 
@@ -103,20 +123,25 @@ export default function WhereToBuy() {
         </section>
 
         {/* Wholesale Inquiry */}
-        <section className="py-20 px-4 gradient-bg">
+        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-warm mb-6">
-                Wholesale & <span className="text-copper">Partnership</span> Inquiries
+              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                Partnerships
+              </p>
+              <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-8 leading-tight">
+                Stock Freshozz
               </h2>
+              <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-10" />
               <p className="text-lg text-muted-warm">
-                Interested in stocking Freshozz at your store, cafe, or distribution network? 
-                Let's talk.
+                Interested in stocking Freshozz?<br className="hidden md:inline" />
+                Reach out for wholesale and distribution.
               </p>
             </motion.div>
 
@@ -124,8 +149,9 @@ export default function WhereToBuy() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
               onSubmit={handleSubmit}
-              className="bg-soil/10 border border-copper/30 rounded-2xl p-8 space-y-6"
+              className="bg-soil/10 border border-copper/20 rounded-2xl p-10 space-y-6"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
@@ -135,7 +161,7 @@ export default function WhereToBuy() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold"
+                  className="px-6 py-4 rounded-lg bg-bg-dark border border-copper/30 text-warm placeholder:text-warm/40 focus:outline-none focus:border-copper transition-colors"
                 />
                 <input
                   type="email"
@@ -144,7 +170,7 @@ export default function WhereToBuy() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold"
+                  className="px-6 py-4 rounded-lg bg-bg-dark border border-copper/30 text-warm placeholder:text-warm/40 focus:outline-none focus:border-copper transition-colors"
                 />
               </div>
 
@@ -156,7 +182,7 @@ export default function WhereToBuy() {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold"
+                  className="px-6 py-4 rounded-lg bg-bg-dark border border-copper/30 text-warm placeholder:text-warm/40 focus:outline-none focus:border-copper transition-colors"
                 />
                 <input
                   type="text"
@@ -165,7 +191,7 @@ export default function WhereToBuy() {
                   required
                   value={formData.city}
                   onChange={handleChange}
-                  className="px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold"
+                  className="px-6 py-4 rounded-lg bg-bg-dark border border-copper/30 text-warm placeholder:text-warm/40 focus:outline-none focus:border-copper transition-colors"
                 />
               </div>
 
@@ -174,7 +200,7 @@ export default function WhereToBuy() {
                 value={formData.businessType}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold"
+                className="w-full px-6 py-4 rounded-lg bg-bg-dark border border-copper/30 text-warm focus:outline-none focus:border-copper transition-colors"
               >
                 <option value="">Business Type *</option>
                 <option value="retail">Retail Store</option>
@@ -190,16 +216,22 @@ export default function WhereToBuy() {
                 rows={4}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-6 py-3 rounded-lg bg-bg-dark border border-copper/40 text-warm focus:outline-none focus:border-gold resize-none"
+                className="w-full px-6 py-4 rounded-lg bg-bg-dark border border-copper/30 text-warm placeholder:text-warm/40 focus:outline-none focus:border-copper transition-colors resize-none"
               />
 
               <button
                 type="submit"
-                className="w-full py-4 bg-gold hover:bg-gold/90 text-bg-dark font-display font-bold text-lg rounded-lg transition-all transform hover:scale-[1.02]"
+                className="w-full py-4 bg-copper hover:bg-copper/90 text-warm font-display font-medium text-sm tracking-[0.2em] uppercase rounded-lg transition-all duration-500 hover:tracking-[0.25em]"
               >
                 Submit Inquiry
               </button>
             </motion.form>
+
+            <div className="text-center mt-16">
+              <p className="text-xs text-copper/30 tracking-[0.2em] uppercase">
+                Taste the Threshold
+              </p>
+            </div>
           </div>
         </section>
       </Layout>

@@ -1,93 +1,163 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function How() {
-  const steps = [
-    {
-      title: 'Sourcing',
-      description: 'We source premium spices from trusted suppliers across India. Every ingredient is tested for purity and potency.',
-    },
-    {
-      title: 'Formulation',
-      description: 'Our proprietary masala blend is crafted through months of R&D, balancing heat, tang, and aroma perfectly.',
-    },
-    {
-      title: 'Carbonation',
-      description: 'Triple-filtered water undergoes precision carbonation to achieve the perfect fizz level that lasts.',
-    },
-    {
-      title: 'Bottling',
-      description: 'Each bottle is filled in a controlled environment, sealed for freshness, and quality-checked before distribution.',
-    },
-    {
-      title: 'Quality Control',
-      description: 'FSSAI certified processes ensure every batch meets our exacting standards. Zero compromise.',
-    },
-  ];
-
   return (
     <>
       <Head>
-        <title>How It's Made | Freshozz</title>
-        <meta name="description" content="Discover the craft behind every bottle of Freshozz Masala Cola. Sip the Freshness." />
+        {/* SEO Meta Tags */}
+        <title>The Process - Premium Craftsmanship | Freshozz</title>
+        <meta name="description" content="Behind Freshozz. Choices over shortcuts. Quality over scale. The premium difference explained." />
+        <meta name="keywords" content="premium beverage process, craft soda making, quality carbonation, indian soda production, premium drink manufacturing" />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://freshozz.in/how" />
+        <meta property="og:title" content="How Premium Happens - Freshozz Process" />
+        <meta property="og:description" content="Not a factory tour. The philosophy behind every choice that makes Freshozz different." />
+        <meta property="og:image" content="https://freshozz.in/og-how.jpg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://freshozz.in/how" />
+        <meta name="twitter:title" content="How Premium Happens - Freshozz" />
+        <meta name="twitter:description" content="Every decision costs more. Every decision creates better." />
+        <meta name="twitter:image" content="https://freshozz.in/og-how.jpg" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href="https://freshozz.in/how" />
       </Head>
 
       <Layout>
         {/* Hero */}
-        <section className="py-20 px-4 gradient-bg min-h-[50vh] flex items-center">
+        <section className="py-40 px-4 bg-gradient-to-b from-black via-premium-black to-bg-dark">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-display font-bold text-warm mb-6"
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              Crafted with <span className="text-gold">Precision</span>
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-xl text-muted-warm max-w-2xl mx-auto"
-            >
-              Every bottle of Freshozz is the result of meticulous research, 
-              premium ingredients, and unwavering commitment to quality.
-            </motion.p>
+              <p className="text-xs text-copper/40 mb-8 font-display tracking-[0.3em] uppercase">
+                The Method
+              </p>
+              <h1 className="text-5xl md:text-7xl font-display font-light text-warm mb-8 leading-tight tracking-tight">
+                How premium<br className="hidden md:inline" /> actually happens
+              </h1>
+              <div className="w-16 h-[1px] bg-copper/40 mx-auto mb-10" />
+              <p className="text-xl md:text-2xl text-copper font-display font-light leading-tight">
+                Choices over shortcuts.<br />
+                Quality over scale.
+              </p>
+            </motion.div>
           </div>
         </section>
 
-        {/* Process Steps */}
-        <section className="py-20 px-4 bg-bg-dark">
-          <div className="max-w-5xl mx-auto">
-            <motion.h2
+        {/* Philosophy */}
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              className="space-y-16 text-center"
+            >
+              <div>
+                <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                  The Approach
+                </p>
+                <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-12 leading-tight">
+                  Not what we do.<br />
+                  Why we do it.
+                </h2>
+                <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+              </div>
+
+              <div className="space-y-12 max-w-2xl mx-auto">
+                <p className="text-xl text-muted-warm leading-relaxed">
+                  Mass production optimizes for cost.<br />
+                  We optimize for experience.
+                </p>
+
+                <div className="py-8">
+                  <div className="w-12 h-[1px] bg-copper/40 mx-auto mb-8" />
+                </div>
+
+                <p className="text-base text-warm/70 leading-relaxed">
+                  Every decision we make costs more.<br />
+                  Every decision we make creates better.
+                </p>
+
+                <div className="border-l-2 border-copper/30 pl-8 my-12 text-left">
+                  <p className="text-2xl font-display font-light text-copper italic leading-tight">
+                    "Premium isn't about revealing secrets.<br className="hidden md:inline" />
+                    It's about making choices<br className="hidden md:inline" /> others won't."
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* The Differences */}
+        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-display font-bold text-center text-warm mb-16"
+              className="text-center mb-20"
             >
-              Our <span className="text-copper">5-Step Process</span>
-            </motion.h2>
+              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                The Premium Difference
+              </p>
+              <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-8 leading-tight">
+                Where we diverge
+              </h2>
+              <div className="w-16 h-[1px] bg-copper/30 mx-auto" />
+            </motion.div>
 
-            <div className="space-y-12">
-              {steps.map((step, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              {[
+                {
+                  aspect: 'Time',
+                  standard: 'Fast to market',
+                  ours: 'Worth the wait'
+                },
+                {
+                  aspect: 'Scale',
+                  standard: 'Volume first',
+                  ours: 'Precision first'
+                },
+                {
+                  aspect: 'Ingredients',
+                  standard: 'Cost-effective',
+                  ours: 'Experience-effective'
+                }
+              ].map((item, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
                   viewport={{ once: true }}
-                  className="flex flex-col md:flex-row items-start gap-6 bg-soil/10 border border-copper/20 rounded-xl p-8"
+                  className="bg-soil/10 border border-copper/20 rounded-2xl p-10 text-center hover:border-copper/40 transition-all duration-500"
                 >
-                  <div className="flex-shrink-0 w-16 h-16 bg-gold/20 border-2 border-gold rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-display font-bold text-gold">{index + 1}</span>
-                  </div>
-                  <div className="flex-grow">
-                    <h3 className="text-2xl font-display font-bold text-copper mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-muted-warm text-lg">
-                      {step.description}
-                    </p>
+                  <p className="text-xs text-copper/50 mb-6 font-display tracking-[0.3em] uppercase">
+                    {item.aspect}
+                  </p>
+                  <div className="space-y-8">
+                    <div>
+                      <p className="text-sm text-warm/40 mb-2">Standard</p>
+                      <p className="text-lg text-warm/60">{item.standard}</p>
+                    </div>
+                    <div className="w-12 h-[1px] bg-copper/30 mx-auto" />
+                    <div>
+                      <p className="text-sm text-copper/60 mb-2">Freshozz</p>
+                      <p className="text-xl text-copper font-display">{item.ours}</p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
@@ -95,27 +165,47 @@ export default function How() {
           </div>
         </section>
 
-        {/* R&D Section */}
-        <section className="py-20 px-4 gradient-bg">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-warm mb-8">
-                Built on <span className="text-gold">Research & Development</span>
+        {/* What This Means */}
+        <section className="py-40 px-4 bg-gradient-to-b from-premium-black to-bg-dark">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center space-y-12"
+          >
+            <div>
+              <p className="text-xs text-copper/40 mb-6 font-display tracking-[0.3em] uppercase">
+                The Result
+              </p>
+              <h2 className="text-4xl md:text-5xl font-display font-light text-warm mb-8 leading-tight">
+                What you actually get
               </h2>
-              <p className="text-lg text-muted-warm leading-relaxed mb-6">
-                Freshozz wasn't created overnight. It took months of experimentation, 
-                taste tests, and refinement. We worked with food scientists, beverage experts, 
-                and most importantly — real people with real Indian palates.
-              </p>
-              <p className="text-lg text-warm">
-                The result? A masala cola that honors tradition while setting new standards for quality.
-              </p>
-            </motion.div>
-          </div>
+              <div className="w-16 h-[1px] bg-copper/30 mx-auto mb-10" />
+            </div>
+
+            <p className="text-xl text-muted-warm leading-relaxed">
+              A drink made with intention.<br />
+              Not just efficiency.
+            </p>
+
+            <p className="text-base text-warm/70 leading-relaxed">
+              Premium doesn't mean expensive.<br />
+              It means deliberate.
+            </p>
+
+            <div className="pt-12">
+              <Link 
+                href="/product"
+                className="inline-block px-12 py-4 border border-copper/40 text-copper font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/10 hover:border-copper transition-all duration-500 hover:tracking-[0.25em]"
+              >
+                See What's Different
+              </Link>
+            </div>
+
+            <p className="text-xs text-copper/30 tracking-[0.2em] uppercase pt-8">
+              Taste the Threshold
+            </p>
+          </motion.div>
         </section>
       </Layout>
     </>
