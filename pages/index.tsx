@@ -31,25 +31,25 @@ export default function Home() {
     {
       question: "Why Shorter Shelf Life?",
       problem: "You last 90 days, not 6 months like others",
-      answer: "Quality Over Longevity",
+      answer: "Fewer Preservatives Mean Fresher Taste",
       content: "Extended shelf life requires heavy preservatives. While effective for distribution, they gradually diminish authentic spice character. We use minimal natural preservation, accepting a shorter lifespan to maintain true flavor integrity. It's a trade-off: longer sitting on shelves, or better in your glass."
     },
     {
       question: "Settling vs Clarity",
-      problem: "Masala looks cloudy at the bottom",
-      answer: "Better Processing, Not Magic",
+      problem: "Why does masala look cloudy at the bottom?",
+      answer: "Real Spices Naturally Settle—We Just Slow It Down",
       content: "Spices naturally want to settle—it's physics. We reduce this through finer particle processing and specific carbonation pressure. Some minimal settling may still occur over time, but it's significantly less than conventional methods. A gentle shake before opening ensures even distribution."
     },
     {
       question: "Digestive Benefits?",
-      problem: "Ginger, cumin, and black salt in soda",
-      answer: "Traditional Ingredients, Modern Form",
-      content: "These ingredients have been used in Indian households for digestive comfort for generations. We're not claiming medical benefits—we're simply incorporating time-tested elements into a fizzy format. Whether it helps is subjective; what we promise is authentic ingredient use."
+      problem: "Can soda actually help digestion?",
+      answer: "We Use Ingredients Known for Digestive Comfort",
+      content: "Ginger, cumin, and black salt have been used in Indian households for digestive comfort for generations. We're not claiming medical benefits—we're simply incorporating these time-tested ingredients into a fizzy format. Whether it helps is subjective; what we promise is authentic ingredient use."
     },
     {
       question: "Market Positioning",
-      problem: "Premium soda that's actually Indian",
-      answer: "Between Mass Market and Craft",
+      problem: "What makes this category different?",
+      answer: "Premium Quality Meets Indian Cultural Roots",
       content: "Most Indian sodas are either mass-produced colas or budget masala drinks. There's been a gap for something premium yet culturally rooted—quality ingredients, thoughtful processing, refined taste. Not luxury for luxury's sake, but intentional choices that justify the price."
     }
   ];
