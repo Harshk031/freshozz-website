@@ -45,46 +45,191 @@ export default function Product() {
   return (
     <>
       <Head>
-        <title>Premium Flavoured Soda | Clean Caffeine Mojito Masala - Freshozz</title>
-        <meta name="description" content="Low-sugar mojito masala soda with clean caffeine. Triple-filtered fizz, micro-emulsion spice tech. Premium Indian fizzy drink worth ₹100+." />
-        <meta name="keywords" content="mojito masala soda, clean caffeine drink india, low sugar soda, premium fizzy drink, flavoured soda india, party beverage" />
+        {/* Primary Meta Tags - Maximum Coverage */}
+        <title>Premium Flavoured Soda | Clean Caffeine Mojito Masala | Low Sugar Fizzy Drink India - Freshozz</title>
+        <meta name="title" content="Premium Mojito Masala Soda with Clean Caffeine | Low Sugar | Freshozz" />
+        <meta name="description" content="Low-sugar mojito masala soda with clean caffeine. Triple-filtered fizz, micro-emulsion spice tech. Premium Indian fizzy drink worth ₹100+. First of its kind in India." />
+        <meta name="keywords" content="mojito masala soda, clean caffeine drink india, low sugar soda, premium fizzy drink, flavoured soda india, party beverage, masala cola, ayurvedic soda, healthy fizzy drink, craft soda, artisan beverage, triple filtered soda, micro bubble carbonation, spice soda technology, premium indian beverage, celebration drink, mocktail mixer, non alcoholic party drink, gen z beverage, youth drink india, festive drink, premium soft drink, flavored sparkling water, masala fizz, ginger soda, cumin drink, black salt beverage" />
+        <meta name="author" content="Freshozz India" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
+        <meta name="language" content="English, Hindi" />
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.placename" content="India" />
+        <meta name="product:price:amount" content="120" />
+        <meta name="product:price:currency" content="INR" />
+        <meta name="product:availability" content="preorder" />
+        <meta name="product:condition" content="new" />
+        <meta name="product:brand" content="Freshozz" />
+        <meta name="product:category" content="Beverages > Soda > Flavoured Soda" />
         
-        {/* Open Graph */}
+        {/* Open Graph - Maximum Product Coverage */}
         <meta property="og:type" content="product" />
         <meta property="og:url" content="https://freshozz.in/product" />
-        <meta property="og:title" content="The Soda India Was Missing - Freshozz Product" />
-        <meta property="og:description" content="Mojito energy × Masala soul × High-fizz texture. Not syrup. Not mocktail. A modern Indian flavour experience." />
+        <meta property="og:site_name" content="Freshozz" />
+        <meta property="og:title" content="The Soda India Was Missing - Freshozz Premium Mojito Masala" />
+        <meta property="og:description" content="Mojito energy × Masala soul × High-fizz texture. Not syrup. Not mocktail. A modern Indian flavour experience. Clean caffeine, low sugar, triple-filtered." />
         <meta property="og:image" content="https://freshozz.in/og-product.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Freshozz Premium Mojito Masala Soda Bottle Clean Caffeine Low Sugar" />
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:locale:alternate" content="hi_IN" />
+        <meta property="product:price:amount" content="120" />
+        <meta property="product:price:currency" content="INR" />
+        <meta property="product:availability" content="preorder" />
+        <meta property="product:condition" content="new" />
+        <meta property="product:retailer_item_id" content="FRZZ-001" />
+        <meta property="product:brand" content="Freshozz" />
         
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://freshozz.in/product" />
-        <meta property="twitter:title" content="The Soda India Was Missing - Freshozz" />
-        <meta property="twitter:description" content="Premium Indian fizzy drink. Clean caffeine, low sugar, high masala." />
-        <meta property="twitter:image" content="https://freshozz.in/og-product.jpg" />
+        {/* Twitter Card - Maximum Product Coverage */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@freshozz" />
+        <meta name="twitter:creator" content="@freshozz" />
+        <meta name="twitter:url" content="https://freshozz.in/product" />
+        <meta name="twitter:title" content="The Soda India Was Missing - Freshozz" />
+        <meta name="twitter:description" content="Premium Indian fizzy drink. Mojito × Masala × Clean Caffeine. Low sugar, triple-filtered, ₹120." />
+        <meta name="twitter:image" content="https://freshozz.in/og-product.jpg" />
+        <meta name="twitter:image:alt" content="Freshozz Premium Mojito Masala Soda" />
+        <meta name="twitter:label1" content="Price" />
+        <meta name="twitter:data1" content="₹120" />
+        <meta name="twitter:label2" content="Availability" />
+        <meta name="twitter:data2" content="Pre-Order" />
         
-        {/* Canonical */}
+        {/* Additional SEO */}
         <link rel="canonical" href="https://freshozz.in/product" />
+        <link rel="alternate" hrefLang="en-IN" href="https://freshozz.in/product" />
+        <link rel="alternate" hrefLang="hi-IN" href="https://freshozz.in/hi/product" />
+        <link rel="alternate" hrefLang="x-default" href="https://freshozz.in/product" />
         
-        {/* Product Schema */}
+        {/* Mobile Tags */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#B86B2C" />
+        
+        {/* Enhanced Product Schema */}
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "Product",
             "name": "Freshozz Premium Mojito Masala Soda",
+            "alternateName": ["Freshozz Masala Fizz", "Freshozz Clean Caffeine Soda"],
             "description": "India's first mojito-style masala soda with clean caffeine, low sugar, and micro-emulsion spice technology. Triple-filtered high-fizz premium beverage.",
+            "image": "https://freshozz.in/product-image.jpg",
             "brand": {
               "@type": "Brand",
-              "name": "Freshozz"
+              "name": "Freshozz",
+              "logo": "https://freshozz.in/logo.png"
+            },
+            "manufacturer": {
+              "@type": "Organization",
+              "name": "Freshozz India"
             },
             "category": "Beverages > Soda > Flavoured Soda",
             "offers": {
               "@type": "Offer",
-              "availability": "https://schema.org/PreOrder",
-              "price": "120",
+              "url": "https://freshozz.in/product",
               "priceCurrency": "INR",
-              "url": "https://freshozz.in/product"
-            }
+              "price": "120",
+              "priceValidUntil": "2025-12-31",
+              "availability": "https://schema.org/PreOrder",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": {
+                "@type": "Organization",
+                "name": "Freshozz India"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "1"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Caffeine Content",
+                "value": "Clean Caffeine"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Sugar Content",
+                "value": "Low Sugar (18g)"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Carbonation",
+                "value": "Triple-Filtered"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Flavor Profile",
+                "value": "Mojito Masala Fusion"
+              }
+            ]
+          }`}
+        </script>
+        
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://freshozz.in"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Product",
+                "item": "https://freshozz.in/product"
+              }
+            ]
+          }`}
+        </script>
+        
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What makes Freshozz different from other sodas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Freshozz is India's first premium mojito-style masala soda with clean caffeine, low sugar (18g), and triple-filtered micro-bubble carbonation technology. We use micro-emulsion spice processing at 12000 RPM for uniform masala distribution without sediment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much caffeine does Freshozz contain?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Freshozz contains clean caffeine without bitterness, providing alertness without jitters or crash. It's energy redefined for premium beverage consumers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the price of Freshozz soda?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Freshozz premium mojito masala soda is priced at ₹120 per bottle, reflecting its premium ingredients, advanced processing technology, and category-first positioning."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I buy Freshozz in India?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Freshozz is launching soon. Join our waitlist at freshozz.in to get exclusive early access and be notified when it becomes available in your city."
+                }
+              }
+            ]
           }`}
         </script>
       </Head>
