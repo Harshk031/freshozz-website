@@ -20,25 +20,25 @@ export default function Product() {
       question: "Production Approach",
       problem: "How is your carbonation different?",
       answer: "Three-Stage Process",
-      content: "Most brands carbonate in one step—inject CO2, bottle, done. We run carbonation through three separate filtration stages. First stage creates the bubbles. Second stage filters for uniformity. Third stage fine-tunes pressure. Result: bubbles are smaller and more consistent. You'll notice it stays fizzy longer after opening and feels smoother on your tongue. Not revolutionary, but noticeably better than single-pass carbonation."
+      content: "Most brands: inject CO2, bottle, done. We run three filtration stages—create, filter, refine. Smaller bubbles. Smoother feel. Stays fizzy longer after opening."
     },
     {
       question: "Spice Suspension",
       problem: "Why doesn't masala sink as much?",
       answer: "Finer Grinding",
-      content: "Traditional grinding leaves large spice chunks that sink fast. We grind spices at a much finer level—small enough to stay suspended longer but large enough to retain authentic flavor. Physics still applies: eventually some settling occurs. But you won't see heavy sediment at the bottom like in conventional masala sodas. A gentle shake before pouring distributes everything evenly."
+      content: "Traditional grinding creates large chunks that sink fast. We grind finer—particles stay suspended longer while keeping authentic flavor. Some settling is natural. But no heavy sediment like conventional masala sodas."
     },
     {
       question: "Sugar Content",
       problem: "How does lower sugar still taste balanced?",
       answer: "Spice Complexity",
-      content: "Here's the trick: we use 18g sugar—40% less than typical sodas—but pair it with ginger, cumin, and fennel aromatics. Your taste buds pick up both sweetness AND spice complexity, so the overall flavor feels fuller than the sugar content alone would suggest. Not everyone perceives it identically, but most people don't miss the extra sugar because there's more happening flavor-wise."
+      content: "18g sugar (40% less than typical) paired with ginger, cumin, fennel aromatics. Your taste buds register sweetness + spice layers. The complexity makes up for lower sugar. Most don't miss it."
     },
     {
       question: "Shelf Life Choice",
       problem: "Why not extend beyond 90 days?",
       answer: "Fresher Aromatics",
-      content: "Six-month shelf life requires sodium benzoate and potassium sorbate. They're safe and approved, but they gradually mute the volatile compounds in spices—the aromatics that make ginger smell like ginger and cumin taste like cumin. At 90 days with minimal preservatives (just citric acid and CO2), the spices stay aromatic. It's a conscious trade-off: we accept shorter shelf life to keep the flavor sharp."
+      content: "Six months requires sodium benzoate and potassium sorbate—safe, but they mute spice aromatics over time. At 90 days with minimal preservatives, spices stay sharp. Trade-off: shorter shelf life, better flavor."
     }
   ];
 

@@ -32,25 +32,25 @@ export default function Home() {
       question: "Why Shorter Shelf Life?",
       problem: "You last 90 days, not 6 months like others",
       answer: "Fresher Spices",
-      content: "Here's what 6-month shelf life actually means: sodium benzoate, potassium sorbate, and stabilizers. These chemicals keep the liquid stable but slowly degrade the natural aromatics in spices. By month 3, you're drinking preserved liquid, not fresh spice flavor. We chose 90 days because that's how long real spices stay vibrant with minimal preservation (just citric acid). Yes, it's less convenient for long storage. But when you open a bottle, the spices actually smell and taste alive."
+      content: "Six months needs heavy preservatives—sodium benzoate, potassium sorbate. They keep liquid stable but degrade spice aromatics. By month 3, you're drinking preserved water, not fresh flavor. We chose 90 days: that's how long real spices stay vibrant with minimal intervention."
     },
     {
       question: "Settling vs Clarity",
       problem: "Why does masala look cloudy at the bottom?",
       answer: "Real Ingredients",
-      content: "If spices never settle, they're either synthetic or so heavily processed they've lost character. Real ginger, cumin, and black salt have natural weight—they will eventually settle. What we do: grind them fine enough and control liquid density so they stay suspended much longer than typical masala sodas. You might see light cloudiness over time, which is normal. A quick shake redistributes everything. If it's perfectly clear forever, question what's actually in it."
+      content: "If spices never settle, they're synthetic or over-processed. Real ginger, cumin, black salt have natural weight. We grind fine and control density—they stay suspended much longer. Light cloudiness over time is normal. Quick shake fixes it. Perfectly clear forever? Question what's in it."
     },
     {
       question: "Digestive Benefits?",
       problem: "Can soda actually help digestion?",
       answer: "Traditional Function",
-      content: "Ginger helps with nausea and bloating. Cumin aids digestion. Black salt is used in traditional digestive drinks. These aren't our claims—they're how Indian households have used these ingredients for centuries. We're not selling medicine; we're putting familiar, functional ingredients into a modern fizzy format. Does it work for everyone? No. But if you already use these spices for digestive comfort, you're getting them here in a refreshing form."
+      content: "Ginger for nausea. Cumin for digestion. Black salt in traditional drinks. Not our claims—how Indian households have used these for centuries. We're putting familiar, functional ingredients into fizzy form. Works for some, not all. If you already use these spices, you're getting them here."
     },
     {
       question: "Market Positioning",
       problem: "What makes this category different?",
       answer: "The Middle Ground",
-      content: "Look at the Indian soda aisle: mass-market colas engineered for cheapness, or masala sodas made with artificial flavors and high sugar to cover it up. There's been no middle ground—nothing that's both culturally authentic AND made with premium ingredients and processes. We're filling that gap: real spices, thoughtful carbonation, lower sugar, priced to reflect actual quality. Not ₹20 cheap, not ₹300 luxury. ₹120 for intentional choices you can taste."
+      content: "Indian soda aisle: cheap colas or masala drinks with artificial flavors and high sugar. No middle ground. Nothing culturally authentic AND premium quality. We fill that gap. Real spices, thoughtful process, lower sugar. Not ₹20 cheap. Not ₹300 luxury. ₹120 for choices you can taste."
     }
   ];
 
