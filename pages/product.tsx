@@ -20,25 +20,25 @@ export default function Product() {
       question: "Production Approach",
       problem: "How is your carbonation different?",
       answer: "Three-Stage Process",
-      content: "Most brands: inject CO2, bottle, done. We run three filtration stages—create, filter, refine. Smaller bubbles. Smoother feel. Stays fizzy longer after opening."
+      content: "Standard process: inject gas, seal, ship. We filter three times. Smaller bubbles. Finer texture. The fizz you feel an hour after opening? That's the difference. Most brands lose it in minutes."
     },
     {
       question: "Spice Suspension",
       problem: "Why doesn't masala sink as much?",
       answer: "Finer Grinding",
-      content: "Traditional grinding creates large chunks that sink fast. We grind finer—particles stay suspended longer while keeping authentic flavour. Some settling is natural. But no heavy sediment like conventional masala sodas."
+      content: "Large chunks sink fast. Look cheap. Taste uneven. We grind finer—masala stays where it belongs. In the liquid. Not at the bottom. Some settling is physics. Heavy sludge is laziness."
     },
     {
       question: "Sugar Content",
       problem: "How does lower sugar still taste balanced?",
       answer: "Spice Complexity",
-      content: "18g sugar (40% less than typical) paired with ginger, cumin, fennel aromatics. Your taste buds register sweetness + spice layers. The complexity makes up for lower sugar. Most don't miss it."
+      content: "Most brands use 30g sugar to mask cheap ingredients. We use 18g because ginger, cumin and fennel create their own complexity. Your palate registers layers, not just sweetness. Lower sugar. Richer taste. That's the trade."
     },
     {
       question: "Shelf Life Choice",
       problem: "Why not extend beyond 90 days?",
       answer: "Fresher Aromatics",
-      content: "Six months requires sodium benzoate and potassium sorbate—safe, but they mute spice aromatics over time. At 90 days with minimal preservatives, spices stay sharp. Trade-off: shorter shelf life, better flavour."
+      content: "Six-month shelf life needs harsh preservatives. They work. They also deaden aromatics by week 12. We chose 90 days. Fresh spices over long storage. If you want it to last forever, buy synthetic."
     }
   ];
 

@@ -32,25 +32,25 @@ export default function Home() {
       question: "Why Shorter Shelf Life?",
       problem: "You last 90 days, not 6 months like others",
       answer: "Fresher Spices",
-      content: "Six months needs heavy preservatives—sodium benzoate, potassium sorbate. They keep liquid stable but degrade spice aromatics. By month 3, you're drinking preserved water, not fresh flavour. We chose 90 days: that's how long real spices stay vibrant with minimal intervention."
+      content: "Preservatives keep drinks shelf-stable for months. They also kill what makes spices worth drinking. We chose 90 days. That's how long real aromatics stay real. After that? Most brands are serving you memory, not flavour."
     },
     {
       question: "Settling vs Clarity",
       problem: "Why does masala look cloudy at the bottom?",
       answer: "Real Ingredients",
-      content: "If spices never settle, they're synthetic or over-processed. Real ginger, cumin, black salt have natural weight. We grind fine and control density—they stay suspended much longer. Light cloudiness over time is normal. Quick shake fixes it. Perfectly clear forever? Question what's in it."
+      content: "Crystal clear forever means chemicals, not spices. Real ginger settles. Real cumin has weight. That cloudiness you see? Proof we didn't fake it. A quick shake brings it back. If your drink never changes, question what's actually in it."
     },
     {
       question: "Digestive Benefits?",
       problem: "Can soda actually help digestion?",
       answer: "Traditional Function",
-      content: "Ginger for nausea. Cumin for digestion. Black salt in traditional drinks. Not our claims—how Indian households have used these for centuries. We're putting familiar, functional ingredients into fizzy form. Works for some, not all. If you already use these spices, you're getting them here."
+      content: "Your grandmother knew ginger settles nausea. Your kitchen has cumin for digestion. Black salt's been in Indian drinks for generations. We're not inventing benefits. We're bottling what already works. If you trust these spices at home, you're getting them here."
     },
     {
       question: "Market Positioning",
       problem: "What makes this category different?",
       answer: "The Middle Ground",
-      content: "Indian soda aisle: cheap colas or masala drinks with artificial flavours and high sugar. No middle ground. Nothing culturally authentic AND premium quality. We fill that gap. Real spices, thoughtful process, lower sugar. Not ₹20 cheap. Not ₹300 luxury. ₹120 for choices you can taste."
+      content: "₹20 gets you corn syrup with bubbles. ₹300 gets you imported pretension. Nothing in between respected Indian flavours AND premium execution. We built that space. Real spices. Lower sugar. Actual craft. ₹120 for something that didn't exist before."
     }
   ];
 
