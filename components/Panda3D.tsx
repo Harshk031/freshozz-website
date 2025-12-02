@@ -2,23 +2,8 @@
 
 import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, Float, Environment } from '@react-three/drei';
+import { Float } from '@react-three/drei';
 import * as THREE from 'three';
-
-// Panda Body Part Component
-function PandaPart({ position, args, color = '#FAF7F2', rotation = [0, 0, 0] }: {
-  position: [number, number, number];
-  args: [number, number, number] | [number, number, number, number];
-  color?: string;
-  rotation?: [number, number, number];
-}) {
-  return (
-    <mesh position={position} rotation={rotation as THREE.Euler}>
-      <sphereGeometry args={args as [number, number, number]} />
-      <meshStandardMaterial color={color} roughness={0.4} metalness={0.1} />
-    </mesh>
-  );
-}
 
 // Animated Panda Model
 function PandaModel() {
@@ -243,24 +228,14 @@ export default function Panda3D({ className = '' }: { className?: string }) {
       <Canvas
         camera={{ position: [0, 0, 4], fov: 45 }}
         style={{ background: 'transparent' }}
+        gl={{ alpha: true, antialias: true }}
       >
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
-        <directionalLight position={[-3, 3, 2]} intensity={0.4} color="#9C7B5C" />
-        <pointLight position={[0, 2, 3]} intensity={0.3} color="#E8B4A0" />
+        <ambientLight intensity={0.8} />
+        <directionalLight position={[5, 5, 5]} intensity={1.2} />
+        <directionalLight position={[-3, 3, 2]} intensity={0.5} color="#9C7B5C" />
+        <pointLight position={[0, 2, 3]} intensity={0.4} color="#E8B4A0" />
         
         <PandaModel />
-        
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          minPolarAngle={Math.PI / 3}
-          maxPolarAngle={Math.PI / 2}
-          autoRotate
-          autoRotateSpeed={0.5}
-        />
-        
-        <Environment preset="studio" />
       </Canvas>
     </div>
   );
