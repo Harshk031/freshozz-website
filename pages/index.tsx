@@ -21,10 +21,10 @@ export default function Home() {
     <>
       <Head>
         {/* Primary Meta Tags - Maximum Coverage */}
-        <title>Freshozz - Premium Flavoured Soda India | Mojito Masala Fizz | Clean Caffeine Low Sugar Drink</title>
+        <title>Freshozz - Premium Flavoured Soda India | Mojito Masala Fizz | zero sugar Low Sugar Drink</title>
         <meta name="title" content="Freshozz - Premium Flavoured Soda India | Mojito Masala Fizz" />
-        <meta name="description" content="India's first premium mojito-style masala soda. Clean caffeine, low sugar, high fizz. A new category of flavoured drinks. Join the waitlist for exclusive access." />
-        <meta name="keywords" content="premium soda india, mojito masala soda, flavoured soda drink, low sugar fizzy drink, clean caffeine beverage, party drink india, masala cola, indian fizzy drink, premium beverage brand, ayurvedic soda, healthy soda alternative, craft soda india, artisan beverages, gen z drinks, youth beverage, premium mixer, mocktail base, party beverage, celebration drink, festive drink india, new age beverage, modern indian drink" />
+        <meta name="description" content="India's first premium mojito-style masala soda. zero sugar, low sugar, high fizz. A new category of flavoured drinks. Join the waitlist for exclusive access." />
+        <meta name="keywords" content="premium soda india, mojito masala soda, flavoured soda drink, low sugar fizzy drink, zero sugar beverage, party drink india, masala cola, indian fizzy drink, premium beverage brand, ayurvedic soda, healthy soda alternative, craft soda india, artisan beverages, gen z drinks, youth beverage, premium mixer, mocktail base, party beverage, celebration drink, festive drink india, new age beverage, modern indian drink" />
         <meta name="author" content="Freshozz India" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
@@ -42,7 +42,7 @@ export default function Home() {
         <meta property="og:url" content="https://freshozz.in" />
         <meta property="og:site_name" content="Freshozz" />
         <meta property="og:title" content="Freshozz - Premium Soda India Never Had | Mojito Masala Fizz" />
-        <meta property="og:description" content="Mojito energy × Masala soul × High fizz. India's first flavoured soda culture. Clean caffeine, low sugar, premium quality. Coming soon." />
+        <meta property="og:description" content="Mojito energy × Masala soul × High fizz. India's first flavoured soda culture. zero sugar, low sugar, premium quality. Coming soon." />
         <meta property="og:image" content="https://freshozz.in/og-home.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -91,7 +91,7 @@ export default function Home() {
             "name": "Freshozz",
             "alternateName": ["Freshozz India", "Freshozz Soda", "Freshozz Beverage"],
             "url": "https://freshozz.in",
-            "description": "India's first premium mojito-style masala soda with clean caffeine and low sugar",
+            "description": "India's first premium mojito-style masala soda with zero sugar and low sugar",
             "potentialAction": {
               "@type": "SearchAction",
               "target": "https://freshozz.in/search?q={search_term_string}",

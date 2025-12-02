@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
             "alternateName": "Freshozz India",
             "url": "https://freshozz.in",
             "logo": "https://freshozz.in/logo.png",
-            "description": "India's first premium mojito-style masala soda. Clean caffeine, low sugar, high fizz beverage brand.",
+            "description": "India's first premium mojito-style masala soda. zero sugar, low sugar, high fizz beverage brand.",
             "foundingDate": "2024",
             "address": {
               "@type": "PostalAddress",
