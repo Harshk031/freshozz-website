@@ -3,103 +3,56 @@ import { useState, useEffect } from 'react';
 
 export default function SplashScreen() {
   const [isVisible, setIsVisible] = useState(true);
-  const [hasInteracted, setHasInteracted] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    // TEMPORARILY DISABLED - Always show splash for testing
-    // const hasSeenSplash = sessionStorage.getItem('freshozzSplashV2');
-    // if (hasSeenSplash) {
-    //   setIsVisible(false);
-    //   return;
-    // }
+    // Check if already seen this session
+    const hasSeenSplash = sessionStorage.getItem('freshozzSplashV3');
+    if (hasSeenSplash) {
+      setIsVisible(false);
+      return;
+    }
 
+    // Auto-hide after 2.5 seconds
     const timer = setTimeout(() => {
-      if (!hasInteracted) {
-        hideSplash();
-      }
-    }, 4000);
+      setIsVisible(false);
+      sessionStorage.setItem('freshozzSplashV3', 'true');
+    }, 2500);
 
     return () => clearTimeout(timer);
-  }, [hasInteracted]);
-
-  const hideSplash = () => {
-    setIsVisible(false);
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('freshozzSplashV2', 'true');
-    }
-  };
-
-  const handleInteraction = () => {
-    setHasInteracted(true);
-    hideSplash();
-  };
+  }, []);
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-bg-cream cursor-pointer overflow-hidden"
-          onClick={handleInteraction}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-cream cursor-pointer"
+          onClick={() => {
+            setIsVisible(false);
+            sessionStorage.setItem('freshozzSplashV3', 'true');
+          }}
         >
-          {/* Subtle gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-cream via-cream to-muddy/20" />
-          
-          {/* Earth glow effect */}
+          {/* Simple centered text */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.2, scale: 1.5 }}
-            transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-copper/20 rounded-full blur-[150px]"
-          />
-
-          <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-8">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 2, delay: 0.3 }}
-              className="text-center"
-            >
-              {/* Main brand reveal */}
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <h1 className="text-7xl md:text-9xl font-display font-bold text-earth tracking-tighter mb-6 leading-none">
-                  FRESHOZZ
-                </h1>
-              </motion.div>
-
-              {/* Tagline */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, delay: 1.8 }}
-                className="space-y-6"
-              >
-                <div className="w-16 h-[1px] bg-copper mx-auto" />
-                <p className="text-lg md:text-xl text-copper font-display tracking-[0.2em] uppercase">
-                  Coming Soon
-                </p>
-              </motion.div>
-
-              {/* Click hint */}
-              <motion.p 
-                className="text-earth/40 text-xs font-body tracking-[0.25em] uppercase mt-20"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 0.6, 0] }}
-                transition={{ duration: 2.5, delay: 2.5, repeat: Infinity, ease: "easeInOut" }}
-              >
-                Click Anywhere
-              </motion.p>
-            </motion.div>
-          </div>
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-center"
+          >
+            <h1 className="text-6xl md:text-8xl font-display font-light text-warm tracking-tight">
+              FRESHOZZ
+            </h1>
+            <motion.div 
+              className="w-12 h-[1px] bg-copper/50 mx-auto mt-6"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
