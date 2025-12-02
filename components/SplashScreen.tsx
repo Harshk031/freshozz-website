@@ -1,5 +1,16 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
+import dynamic from 'next/dynamic';
+
+// Dynamic import for 3D Panda (client-only)
+const Panda3D = dynamic(() => import('./Panda3D'), { 
+  ssr: false,
+  loading: () => (
+    <div className="w-64 h-64 flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-copper/30 border-t-copper rounded-full animate-spin" />
+    </div>
+  )
+});
 
 export default function SplashScreen() {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,16 +20,16 @@ export default function SplashScreen() {
     if (typeof window === 'undefined') return;
     
     // Check if already seen this session
-    const hasSeenSplash = sessionStorage.getItem('freshozzSplashV6');
+    const hasSeenSplash = sessionStorage.getItem('freshozzSplashV7');
     if (hasSeenSplash) {
       setIsVisible(false);
       return;
     }
 
-    // Auto-hide after 2.5 seconds
+    // Auto-hide after 4 seconds (longer for 3D to load)
     const timer = setTimeout(() => {
       handleExit();
-    }, 2500);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,8 +38,8 @@ export default function SplashScreen() {
     setIsExiting(true);
     setTimeout(() => {
       setIsVisible(false);
-      sessionStorage.setItem('freshozzSplashV6', 'true');
-    }, 600);
+      sessionStorage.setItem('freshozzSplashV7', 'true');
+    }, 700);
   };
 
   return (
@@ -37,61 +48,59 @@ export default function SplashScreen() {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-cream cursor-pointer overflow-hidden"
+          transition={{ duration: 0.6 }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-b from-cream via-bg-cream to-muddy/20 cursor-pointer overflow-hidden"
           onClick={handleExit}
         >
-          {/* Premium ripple effect on click */}
-          {isExiting && (
-            <motion.div
-              initial={{ scale: 0, opacity: 0.5 }}
-              animate={{ scale: 8, opacity: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="absolute w-32 h-32 bg-copper/20 rounded-full"
-            />
-          )}
+          {/* Ambient glow */}
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-copper/10 rounded-full blur-3xl" />
 
-          {/* Text Logo with exit animation */}
+          {/* 3D Panda */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ 
+              opacity: isExiting ? 0 : 1, 
+              scale: isExiting ? 0.9 : 1,
+              y: isExiting ? -20 : 0
+            }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="w-72 h-72 md:w-96 md:h-96 relative z-10"
+          >
+            <Suspense fallback={
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="w-8 h-8 border-2 border-copper/30 border-t-copper rounded-full animate-spin" />
+              </div>
+            }>
+              <Panda3D />
+            </Suspense>
+          </motion.div>
+
+          {/* Brand Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ 
               opacity: isExiting ? 0 : 1, 
-              y: isExiting ? -30 : 0,
-              scale: isExiting ? 0.95 : 1
+              y: isExiting ? -10 : 0
             }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center relative z-10"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-center mt-4 relative z-10"
           >
-            <motion.h1 
-              className="text-5xl md:text-7xl font-display font-bold text-warm tracking-tight"
-              whileTap={{ scale: 0.98 }}
-            >
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-warm tracking-tight">
               FRESHOZZ
-            </motion.h1>
-            <motion.div 
-              className="w-16 h-[1px] bg-copper/40 mx-auto mt-4"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: isExiting ? 0 : 1 }}
-              transition={{ duration: 0.4, delay: isExiting ? 0 : 0.3 }}
-            />
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isExiting ? 0 : 1 }}
-              transition={{ delay: isExiting ? 0 : 0.5, duration: 0.3 }}
-              className="text-copper/50 text-xs tracking-[0.25em] uppercase mt-4 font-display"
-            >
+            </h1>
+            <p className="text-copper/50 text-xs tracking-[0.2em] uppercase mt-2 font-display">
               Sip the Freshness
-            </motion.p>
+            </p>
           </motion.div>
 
-          {/* Subtle tap hint */}
+          {/* Tap hint */}
           <motion.p
-            className="absolute bottom-8 text-warm/20 text-[10px] tracking-[0.2em] uppercase"
+            className="absolute bottom-8 text-warm/25 text-[10px] tracking-[0.2em] uppercase"
             initial={{ opacity: 0 }}
-            animate={{ opacity: isExiting ? 0 : [0, 0.4, 0] }}
-            transition={{ duration: 2, delay: 1.5, repeat: Infinity }}
+            animate={{ opacity: isExiting ? 0 : [0, 0.5, 0] }}
+            transition={{ duration: 2, delay: 2, repeat: Infinity }}
           >
-            Tap anywhere
+            Tap to enter
           </motion.p>
         </motion.div>
       )}
