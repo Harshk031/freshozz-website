@@ -13,8 +13,8 @@ export default function CountdownTimer() {
   useEffect(() => {
     setMounted(true);
     
-    // FIXED launch date - January 15, 2025
-    const launchDate = new Date('2025-01-15T00:00:00').getTime();
+    // FIXED launch date - January 15, 2026
+    const launchDate = new Date('2026-01-15T00:00:00').getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
