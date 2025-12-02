@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
-import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,26 +32,25 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex justify-between items-center transition-all duration-700 ${
-          scrolled ? 'py-4' : 'py-8'
+          scrolled ? 'py-4' : 'py-6'
         }`}>
-          {/* Logo - Premium & Prominent */}
+          {/* Text Logo - Clean & Premium */}
           <Link href="/" className="flex items-center group relative">
             <motion.div
-              whileHover={{ scale: 1.08 }}
-              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="relative"
             >
-              {/* Glow effect behind logo */}
-              <div className="absolute inset-0 bg-copper/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -z-10" />
-              
-              <Image
-                src="/logo.png"
-                alt="Freshozz premium flavoured soda India logo with copper design"
-                width={200}
-                height={100}
-                className={`transition-all duration-700 ${scrolled ? 'h-14' : 'h-24'} w-auto`}
-                priority
-              />
+              <span className={`font-display font-bold tracking-tight transition-all duration-500 ${
+                scrolled ? 'text-2xl' : 'text-3xl'
+              } text-warm group-hover:text-copper`}>
+                FRESHOZZ
+              </span>
+              <span className={`block text-[8px] tracking-[0.25em] uppercase transition-all duration-500 ${
+                scrolled ? 'opacity-0 h-0' : 'opacity-60 text-copper/60'
+              }`}>
+                Sip the Freshness
+              </span>
             </motion.div>
           </Link>
 
