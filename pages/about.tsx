@@ -55,7 +55,7 @@ export default function About() {
         </section>
 
         {/* The Why */}
-        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-cream to-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -102,7 +102,7 @@ export default function About() {
         </section>
 
         {/* Philosophy */}
-        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-cream to-muddy/30">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -161,7 +161,7 @@ export default function About() {
         </section>
 
         {/* The Result */}
-        <section className="py-40 px-4 bg-gradient-to-b from-premium-black to-bg-dark">
+        <section className="py-40 px-4 bg-gradient-to-b from-muddy/20 to-bg-cream">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

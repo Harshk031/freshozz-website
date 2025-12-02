@@ -236,7 +236,7 @@ export default function Product() {
 
       <Layout>
         {/* Hero */}
-        <section className="py-32 px-4 bg-gradient-to-b from-black via-premium-black to-bg-dark">
+        <section className="py-32 px-4 bg-gradient-to-b from-bg-cream via-cream to-muddy/20">
           <div className="max-w-5xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -260,7 +260,7 @@ export default function Product() {
         </section>
 
         {/* The Gap We Stepped Into */}
-        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-cream to-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -315,7 +315,7 @@ export default function Product() {
         </section>
 
         {/* The First of Its Kind */}
-        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-cream to-muddy/30">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -358,7 +358,7 @@ export default function Product() {
         </section>
 
         {/* Taste That Thinks */}
-        <section className="py-40 px-4 bg-gradient-to-b from-premium-black to-bg-dark">
+        <section className="py-40 px-4 bg-gradient-to-b from-muddy/20 to-bg-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -410,7 +410,7 @@ export default function Product() {
         </section>
 
         {/* Clean Caffeine */}
-        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-cream to-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -453,7 +453,7 @@ export default function Product() {
         </section>
 
         {/* Low-Sugar Intelligence */}
-        <section className="py-40 px-4 bg-gradient-to-b from-near-black to-premium-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-cream to-muddy/30">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -497,7 +497,7 @@ export default function Product() {
         </section>
 
         {/* Why This Category Matters */}
-        <section className="py-40 px-4 bg-gradient-to-b from-premium-black to-bg-dark">
+        <section className="py-40 px-4 bg-gradient-to-b from-muddy/20 to-bg-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -545,7 +545,7 @@ export default function Product() {
         </section>
 
         {/* What This Says About You */}
-        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-cream to-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -593,7 +593,7 @@ export default function Product() {
         </section>
 
         {/* WHY Section - Pain Points & Solutions */}
-        <section className="py-32 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+        <section className="py-32 px-4 bg-gradient-to-b from-bg-cream to-cream">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

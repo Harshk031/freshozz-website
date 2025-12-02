@@ -44,18 +44,18 @@ export default function SplashScreen() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black cursor-pointer overflow-hidden"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-bg-cream cursor-pointer overflow-hidden"
           onClick={handleInteraction}
         >
           {/* Subtle gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-premium-black to-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-bg-cream via-cream to-muddy/20" />
           
-          {/* Copper glow effect */}
+          {/* Earth glow effect */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.15, scale: 1.5 }}
+            animate={{ opacity: 0.2, scale: 1.5 }}
             transition={{ duration: 3, ease: "easeOut" }}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-copper/30 rounded-full blur-[150px]"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-copper/20 rounded-full blur-[150px]"
           />
 
           <div className="relative z-10 flex flex-col items-center max-w-4xl mx-auto px-8">
@@ -71,7 +71,7 @@ export default function SplashScreen() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                <h1 className="text-7xl md:text-9xl font-display font-bold text-warm tracking-tighter mb-6 leading-none">
+                <h1 className="text-7xl md:text-9xl font-display font-bold text-earth tracking-tighter mb-6 leading-none">
                   FRESHOZZ
                 </h1>
               </motion.div>
@@ -83,17 +83,17 @@ export default function SplashScreen() {
                 transition={{ duration: 1.5, delay: 1.8 }}
                 className="space-y-6"
               >
-                <div className="w-16 h-[1px] bg-copper/50 mx-auto" />
-                <p className="text-lg md:text-xl text-copper/80 font-display tracking-[0.2em] uppercase">
+                <div className="w-16 h-[1px] bg-copper mx-auto" />
+                <p className="text-lg md:text-xl text-copper font-display tracking-[0.2em] uppercase">
                   Coming Soon
                 </p>
               </motion.div>
 
               {/* Click hint */}
               <motion.p 
-                className="text-copper/30 text-xs font-body tracking-[0.25em] uppercase mt-20"
+                className="text-earth/40 text-xs font-body tracking-[0.25em] uppercase mt-20"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 0.5, 0] }}
+                animate={{ opacity: [0, 0.6, 0] }}
                 transition={{ duration: 2.5, delay: 2.5, repeat: Infinity, ease: "easeInOut" }}
               >
                 Click Anywhere

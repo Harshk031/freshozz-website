@@ -13,7 +13,7 @@ export default function ProductShowcase() {
   const imageRotate = useTransform(scrollYProgress, [0, 0.5, 1], [-5, 0, 5]);
 
   return (
-    <section ref={containerRef} className="py-32 px-4 bg-bg-dark relative overflow-hidden">
+    <section ref={containerRef} className="py-32 px-4 bg-muddy/20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}

@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled 
-          ? 'bg-premium-black/98 backdrop-blur-xl border-b border-copper/20 shadow-xl' 
+          ? 'bg-bg-cream/98 backdrop-blur-xl border-b border-copper/20 shadow-soft-cream' 
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -67,8 +67,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`transition-all duration-700 font-display text-sm tracking-[0.15em] uppercase relative group ${
                     isProduct
-                      ? 'text-warm px-6 py-3 bg-gradient-to-r from-copper/20 to-gold/20 border border-copper/40 rounded-lg hover:from-copper/30 hover:to-gold/30 hover:border-copper/60 hover:shadow-[0_0_20px_rgba(184,107,44,0.4)]'
-                      : scrolled ? 'text-warm/70' : 'text-warm/90'
+                      ? 'text-bg-cream px-6 py-3 bg-gradient-to-r from-copper to-earth border border-copper rounded-lg hover:from-earth hover:to-copper hover:shadow-[0_0_20px_rgba(156,123,92,0.4)]'
+                      : scrolled ? 'text-warm/80' : 'text-warm'
                   } ${!isProduct && 'hover:text-copper'}`}
                 >
                   <span className="relative z-10">
@@ -119,7 +119,7 @@ export default function Navbar() {
           {/* Mobile Menu Button - Premium */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-warm/70 hover:text-copper transition-colors p-2"
+            className="md:hidden text-warm hover:text-copper transition-colors p-2"
             aria-label="Toggle menu"
           >
             {isOpen ? (
@@ -142,7 +142,7 @@ export default function Navbar() {
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="md:hidden bg-premium-black/98 backdrop-blur-xl border-b border-copper/20"
+          className="md:hidden bg-bg-cream/98 backdrop-blur-xl border-b border-copper/20 shadow-soft-cream"
         >
           <div className="px-6 py-8 space-y-6">
             {navLinks.map((item, index) => {
@@ -160,8 +160,8 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`block transition-all duration-500 font-display text-lg tracking-[0.15em] uppercase py-3 relative ${
                       isProduct
-                        ? 'text-warm px-6 bg-gradient-to-r from-copper/20 to-gold/20 border border-copper/40 rounded-lg shadow-[0_0_15px_rgba(184,107,44,0.3)]'
-                        : 'text-warm/70 hover:text-copper py-2'
+                        ? 'text-bg-cream px-6 bg-gradient-to-r from-copper to-earth border border-copper rounded-lg shadow-[0_0_15px_rgba(156,123,92,0.3)]'
+                        : 'text-warm/80 hover:text-copper py-2'
                     }`}
                   >
                     {item.label}

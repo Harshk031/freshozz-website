@@ -8,17 +8,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'bg-dark': '#121212',
-        'soil': '#6B4C3B',
-        'copper': '#B86B2C',
-        'gold': '#D4AF37',
-        'warm': '#F5EFE6',
-        'muted-warm': '#C9B896',
-        'premium-black': '#0A0A0A',
-        'near-black': '#1A1A1A',
+        // Premium Muddy White / Cream Theme
+        'bg-dark': '#F8F5F0',        // Main background - warm cream
+        'bg-cream': '#FFFCF7',       // Lighter cream sections
+        'cream': '#F0EBE3',          // Secondary background
+        'muddy': '#D4C8BC',          // Muddy beige tone
+        'soil': '#8B7355',           // Earthy brown
+        'copper': '#9C7B5C',         // Warm terracotta (replaces copper)
+        'gold': '#A67C52',           // Caramel accent
+        'warm': '#2D2420',           // Dark brown text (inverted)
+        'muted-warm': '#6B5D4D',     // Muted brown text
+        'premium-black': '#F5F2ED',  // Premium cream (was black)
+        'near-black': '#EDE8E1',     // Near cream (was black)
+        'earth': '#7A6652',          // Earth brown accent
+        'taupe': '#B5A898',          // Soft taupe
       },
       boxShadow: {
-        'soft-gold': '0 8px 30px rgba(212,175,55,0.10)',
+        'soft-gold': '0 8px 30px rgba(156,123,92,0.15)',
+        'soft-cream': '0 4px 20px rgba(139,115,85,0.08)',
       },
       fontFamily: {
         display: ['Poppins', 'sans-serif'],

@@ -70,7 +70,7 @@ export default function Particles() {
       }
 
       draw(context: CanvasRenderingContext2D) {
-        context.fillStyle = `rgba(212, 175, 55, ${this.opacity})`;
+        context.fillStyle = `rgba(156, 123, 92, ${this.opacity})`;
         context.beginPath();
         context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         context.fill();

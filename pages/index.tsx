@@ -163,7 +163,7 @@ export default function Home() {
           {/* Cinematic background */}
           <motion.div 
             style={{ y: scrollYProgress }}
-            className="absolute inset-0 bg-gradient-to-b from-premium-black via-near-black to-bg-dark"
+            className="absolute inset-0 bg-gradient-to-b from-bg-cream via-cream to-muddy/30"
           />
           
           {/* Subtle copper glow overlay */}
@@ -253,7 +253,7 @@ export default function Home() {
         </section>
 
         {/* Countdown Section - Ultra Minimal */}
-        <section className="py-32 px-4 bg-near-black relative overflow-hidden border-y border-copper/10">
+        <section className="py-32 px-4 bg-cream relative overflow-hidden border-y border-earth/15">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -270,7 +270,7 @@ export default function Home() {
         </section>
 
         {/* The Market Gap */}
-        <section className="py-40 px-4 bg-bg-dark relative overflow-hidden">
+        <section className="py-40 px-4 bg-bg-cream relative overflow-hidden">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -311,7 +311,7 @@ export default function Home() {
         </section>
 
         {/* The Freshozz Mindset */}
-        <section className="py-32 px-4 bg-gradient-to-b from-bg-dark to-near-black relative">
+        <section className="py-32 px-4 bg-gradient-to-b from-bg-cream to-cream relative">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -351,7 +351,7 @@ export default function Home() {
         </section>
 
         {/* WHY Freshozz - USP & Trust Section */}
-        <section className="py-40 px-4 bg-gradient-to-b from-near-black via-premium-black to-bg-dark relative overflow-hidden">
+        <section className="py-40 px-4 bg-gradient-to-b from-cream via-muddy/20 to-bg-cream relative overflow-hidden">
           {/* Premium background elements */}
           <div className="absolute inset-0 bg-gradient-radial from-copper/5 via-transparent to-transparent opacity-40" />
           
@@ -508,7 +508,7 @@ export default function Home() {
         <ProductShowcase />
 
         {/* Tribe Call */}
-        <section id="waitlist" className="py-40 px-4 bg-near-black border-t border-copper/10">
+        <section id="waitlist" className="py-40 px-4 bg-cream border-t border-earth/15">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -543,7 +543,7 @@ export default function Home() {
                 href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-12 py-4 bg-copper text-warm font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper/90 transition-all duration-500 hover:tracking-[0.25em]"
+                className="inline-block px-12 py-4 bg-earth text-bg-cream font-display font-medium text-sm tracking-[0.2em] uppercase hover:bg-copper transition-all duration-500 hover:tracking-[0.25em]"
               >
                 Join the Waitlist
               </a>

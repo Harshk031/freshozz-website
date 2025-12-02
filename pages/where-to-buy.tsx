@@ -75,7 +75,7 @@ export default function WhereToBuy() {
         </section>
 
         {/* Waitlist */}
-        <section className="py-40 px-4 bg-gradient-to-b from-bg-dark to-near-black">
+        <section className="py-40 px-4 bg-gradient-to-b from-bg-cream to-cream">
           <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
