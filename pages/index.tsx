@@ -244,10 +244,10 @@ export default function Home() {
             {/* Product Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
               {[
-                { value: "40%", label: "Less Sugar" },
-                { value: "250ml", label: "Per Bottle" },
-                { value: "90", label: "Day Freshness" },
-                { value: "₹120", label: "Per Bottle" }
+                { value: "0", label: "Calories" },
+                { value: "0", label: "Preservatives" },
+                { value: "0", label: "Colours" },
+                { value: "₹35", label: "Per Bottle" }
               ].map((stat, i) => (
                 <motion.div
                   key={stat.label}

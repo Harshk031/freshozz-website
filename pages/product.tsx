@@ -245,10 +245,10 @@ export default function Product() {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
               {[
-                { value: "250", unit: "ml", label: "Volume" },
-                { value: "40%", unit: "", label: "Less Sugar" },
-                { value: "90", unit: "days", label: "Fresh" },
-                { value: "₹120", unit: "", label: "Price" }
+                { value: "0", unit: "", label: "Calories" },
+                { value: "0", unit: "", label: "Preservatives" },
+                { value: "0", unit: "", label: "Colours" },
+                { value: "₹35", unit: "", label: "Price" }
               ].map((spec, i) => (
                 <motion.div
                   key={spec.label}
