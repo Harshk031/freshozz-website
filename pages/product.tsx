@@ -226,7 +226,7 @@ export default function Product() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              Mojito × Masala × Clean Caffeine
+              Mojito × Masala × Zero Sugar
             </motion.p>
           </motion.div>
         </section>
@@ -330,10 +330,9 @@ export default function Product() {
               The Difference
             </motion.p>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               {[
-                { title: "Clean Caffeine", desc: "Alertness without jitters" },
-                { title: "Low Sugar", desc: "Taste without compromise" },
+                { title: "Zero Sugar", desc: "Taste without compromise" },
                 { title: "Real Spices", desc: "Flavour without artificial" }
               ].map((item, i) => (
                 <motion.div

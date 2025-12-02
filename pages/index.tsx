@@ -171,7 +171,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
               >
-                Mojito × Masala × Clean Caffeine
+                Mojito × Masala × Zero Sugar
               </motion.p>
 
               {/* Minimal Description */}
