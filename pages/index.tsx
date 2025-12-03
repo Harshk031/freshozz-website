@@ -34,6 +34,22 @@ const BrandStory = dynamic(() => import('@/components/BrandStory'), {
   ssr: false,
 });
 
+const Awards = dynamic(() => import('@/components/Awards'), {
+  ssr: false,
+});
+
+const PressMentions = dynamic(() => import('@/components/PressMentions'), {
+  ssr: false,
+});
+
+const Timeline = dynamic(() => import('@/components/Timeline'), {
+  ssr: false,
+});
+
+const FounderNote = dynamic(() => import('@/components/FounderNote'), {
+  ssr: false,
+});
+
 export default function Home() {
   const heroRef = useRef(null);
 
@@ -153,6 +169,18 @@ export default function Home() {
 
         {/* BRAND STORY - Heritage */}
         <BrandStory />
+
+        {/* TIMELINE - Journey */}
+        <Timeline />
+
+        {/* AWARDS - Recognition */}
+        <Awards />
+
+        {/* FOUNDER NOTE - Personal Touch */}
+        <FounderNote />
+
+        {/* PRESS MENTIONS - Credibility */}
+        <PressMentions />
 
         {/* COUNTDOWN - Minimal */}
         <section className="py-24 px-4 bg-cream">

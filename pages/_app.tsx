@@ -13,6 +13,26 @@ const ScrollProgress = dynamic(() => import('@/components/ScrollProgress'), {
   ssr: false,
 });
 
+const CustomCursor = dynamic(() => import('@/components/CustomCursor'), {
+  ssr: false,
+});
+
+const FilmGrain = dynamic(() => import('@/components/FilmGrain'), {
+  ssr: false,
+});
+
+const Preloader = dynamic(() => import('@/components/Preloader'), {
+  ssr: false,
+});
+
+const FloatingCTA = dynamic(() => import('@/components/FloatingCTA'), {
+  ssr: false,
+});
+
+const ScrollPercentage = dynamic(() => import('@/components/ScrollPercentage'), {
+  ssr: false,
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -46,9 +66,14 @@ export default function App({ Component, pageProps }: AppProps) {
           }`}
         </script>
       </Head>
+      <Preloader />
       <SplashScreen />
+      <ScrollProgress />
+      <CustomCursor />
+      <FilmGrain />
+      <ScrollPercentage />
+      <FloatingCTA />
       <Layout>
-        <ScrollProgress />
         <Component {...pageProps} />
       </Layout>
     </>
