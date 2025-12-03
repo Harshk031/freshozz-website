@@ -18,6 +18,22 @@ const CinematicHero = dynamic(() => import('@/components/CinematicHero'), {
   ssr: false,
 });
 
+const ProductHero = dynamic(() => import('@/components/ProductHero'), {
+  ssr: false,
+});
+
+const ImpactStats = dynamic(() => import('@/components/ImpactStats'), {
+  ssr: false,
+});
+
+const HorizontalFeatures = dynamic(() => import('@/components/HorizontalFeatures'), {
+  ssr: false,
+});
+
+const BrandStory = dynamic(() => import('@/components/BrandStory'), {
+  ssr: false,
+});
+
 export default function Home() {
   const heroRef = useRef(null);
 
@@ -126,99 +142,17 @@ export default function Home() {
         {/* CINEMATIC HERO - Ultra Premium */}
         <CinematicHero />
 
-        {/* PRODUCT SPECS - Clean & Minimal */}
-        <section className="py-32 px-4 bg-cream relative">
-          <div className="max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-4">
-                What's Inside
-              </h2>
-              <div className="w-12 h-[1px] bg-copper/40 mx-auto" />
-            </motion.div>
+        {/* PRODUCT HERO - Visual Impact */}
+        <ProductHero />
 
-            {/* Product Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
-              {[
-                { value: "0%", label: "Calories" },
-                { value: "0%", label: "Preservatives" },
-                { value: "0%", label: "Colours" },
-                { value: "₹35", label: "Per Bottle" }
-              ].map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-center group"
-                >
-                  <motion.p 
-                    className="text-4xl md:text-6xl font-display font-light text-copper mb-2"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {stat.value}
-                  </motion.p>
-                  <p className="text-xs text-muted-warm tracking-[0.2em] uppercase">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* IMPACT STATS - Animated Numbers */}
+        <ImpactStats />
 
-        {/* FLAVOUR NOTES - Sensory */}
-        <section className="py-32 px-4 bg-muddy/10 relative overflow-hidden">
-          {/* Floating accent */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-copper/5 rounded-full"
-          />
-          
-          <div className="max-w-4xl mx-auto relative z-10">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              className="text-center"
-            >
-              <p className="text-xs text-copper/50 tracking-[0.3em] uppercase mb-8">Flavour Profile</p>
-              
-              <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                {["Lime", "Spice", "Fizz"].map((note, i) => (
-                  <motion.div
-                    key={note}
-                    initial={{ opacity: 0, x: i === 0 ? -30 : i === 2 ? 30 : 0, y: i === 1 ? 30 : 0 }}
-                    whileInView={{ opacity: 1, x: 0, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 + i * 0.15 }}
-                    className="text-center"
-                  >
-                    <motion.p 
-                      className="text-5xl md:text-7xl font-display font-light text-warm"
-                      whileHover={{ color: "#9C7B5C", scale: 1.02 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {note}
-                    </motion.p>
-                    <p className="text-[10px] text-copper/40 tracking-[0.3em] uppercase mt-2">
-                      {i === 0 ? "Top" : i === 1 ? "Heart" : "Finish"}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+        {/* HORIZONTAL FEATURES - Premium Details */}
+        <HorizontalFeatures />
+
+        {/* BRAND STORY - Heritage */}
+        <BrandStory />
 
         {/* COUNTDOWN - Minimal */}
         <section className="py-24 px-4 bg-cream">
