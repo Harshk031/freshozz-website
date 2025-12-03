@@ -53,10 +53,9 @@ export default function Home() {
     <>
       <Head>
         {/* Primary Meta Tags - Maximum Coverage */}
-        <title>Freshozz - Premium Flavoured Soda India | Mojito Masala Fizz | zero sugar Low Sugar Drink</title>
-        <meta name="title" content="Freshozz - Premium Flavoured Soda India | Mojito Masala Fizz" />
-        <meta name="description" content="India's first premium mojito-style masala soda. zero sugar, low sugar, high fizz. A new category of flavoured drinks. Join the waitlist for exclusive access." />
-        <meta name="keywords" content="premium soda india, mojito masala soda, flavoured soda drink, low sugar fizzy drink, zero sugar beverage, party drink india, masala cola, indian fizzy drink, premium beverage brand, ayurvedic soda, healthy soda alternative, craft soda india, artisan beverages, gen z drinks, youth beverage, premium mixer, mocktail base, party beverage, celebration drink, festive drink india, new age beverage, modern indian drink" />
+        <title>Freshozz - India's First Premium Masala Mojito Soda</title>
+        <meta name="title" content="Freshozz - India's First Premium Masala Mojito Soda" />
+        <meta name="description" content="India's first premium masala-mojito soda with zero sugar calories and real ingredients. High fizz, bold flavor, no compromise. Launching Jan 15, 2026. Join the waitlist for early access." />
         <meta name="author" content="Freshozz India" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
