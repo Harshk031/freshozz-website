@@ -14,6 +14,10 @@ const CountdownTimer = dynamic(() => import('@/components/CountdownTimer'), {
   ssr: false,
 });
 
+const CinematicHero = dynamic(() => import('@/components/CinematicHero'), {
+  ssr: false,
+});
+
 export default function Home() {
   const heroRef = useRef(null);
 
@@ -119,111 +123,8 @@ export default function Home() {
       </Head>
 
       <Layout>
-        {/* Floating Gradient Orbs - Premium Background */}
-        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-          <motion.div
-            animate={{ 
-              x: [0, 100, 0],
-              y: [0, -50, 0],
-              scale: [1, 1.2, 1]
-            }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-radial from-copper/10 via-copper/5 to-transparent rounded-full blur-3xl"
-          />
-          <motion.div
-            animate={{ 
-              x: [0, -80, 0],
-              y: [0, 60, 0],
-              scale: [1.1, 1, 1.1]
-            }}
-            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-radial from-earth/10 via-muddy/5 to-transparent rounded-full blur-3xl"
-          />
-        </div>
-        
-        {/* HERO - First Date Impact */}
-        <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-cream via-cream to-muddy/20" />
-          
-          <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-            {/* Staggered Text Reveal */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              {/* Brand Name - Character by character reveal */}
-              <div className="overflow-hidden mb-6">
-                <motion.h1 
-                  className="text-[12vw] md:text-[10vw] lg:text-[8vw] font-display font-bold text-warm tracking-tighter leading-none"
-                  initial={{ y: 200 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-                >
-                  FRESHOZZ
-                </motion.h1>
-              </div>
-
-              {/* Tagline - Smooth fade */}
-              <motion.p 
-                className="text-xl md:text-3xl text-copper font-display font-light tracking-wide mb-12"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-              >
-                Mojito × Masala × Zero Sugar
-              </motion.p>
-
-              {/* Minimal Description */}
-              <motion.p 
-                className="text-base md:text-lg text-muted-warm max-w-md mx-auto mb-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1 }}
-              >
-                India's first premium flavoured soda
-              </motion.p>
-
-              {/* CTA Button with magnetic hover */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-              >
-                <Link href="#waitlist">
-                  <motion.span 
-                    className="inline-block px-10 py-4 bg-earth text-bg-cream font-display text-sm tracking-[0.2em] uppercase cursor-pointer"
-                    whileHover={{ scale: 1.05, backgroundColor: "#9C7B5C" }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    Join Waitlist
-                  </motion.span>
-                </Link>
-              </motion.div>
-            </motion.div>
-          </div>
-          
-          {/* Scroll Indicator */}
-          <motion.div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-6 h-10 border-2 border-copper/30 rounded-full flex justify-center pt-2"
-            >
-              <motion.div 
-                className="w-1 h-2 bg-copper/50 rounded-full"
-                animate={{ opacity: [1, 0, 1], y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </motion.div>
-          </motion.div>
-        </section>
+        {/* CINEMATIC HERO - Ultra Premium */}
+        <CinematicHero />
 
         {/* PRODUCT SPECS - Clean & Minimal */}
         <section className="py-32 px-4 bg-cream relative">

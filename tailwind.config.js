@@ -22,6 +22,7 @@ module.exports = {
         'near-black': '#EDE8E1',     // Near cream (was black)
         'earth': '#7A6652',          // Earth brown accent
         'taupe': '#B5A898',          // Soft taupe
+        'mint': '#64B48C',           // Cold mint green
       },
       boxShadow: {
         'soft-gold': '0 8px 30px rgba(156,123,92,0.15)',
