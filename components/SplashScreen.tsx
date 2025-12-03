@@ -9,7 +9,7 @@ export default function SplashScreen() {
     
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 2500);
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -28,12 +28,19 @@ export default function SplashScreen() {
           className="fixed inset-0 z-[9999] flex items-center justify-center bg-black cursor-pointer"
           onClick={handleClick}
         >
-          {/* Subtle ambient glow */}
+          {/* Premium multi-layer glow */}
           <div 
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-30"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-20"
             style={{
-              background: 'radial-gradient(circle, rgba(156,123,92,0.15) 0%, transparent 70%)',
-              filter: 'blur(60px)'
+              background: 'radial-gradient(circle, rgba(100,180,140,0.2) 0%, rgba(156,123,92,0.1) 50%, transparent 70%)',
+              filter: 'blur(80px)'
+            }}
+          />
+          <div 
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full opacity-30"
+            style={{
+              background: 'radial-gradient(circle, rgba(156,123,92,0.25) 0%, transparent 60%)',
+              filter: 'blur(40px)'
             }}
           />
 
@@ -61,19 +68,39 @@ export default function SplashScreen() {
             {/* Tagline */}
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="text-white/40 text-[10px] tracking-[0.4em] uppercase font-light"
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-mint/60 text-[10px] tracking-[0.5em] uppercase font-light"
             >
-              Masala × Mojito
+              Born Refreshing
             </motion.p>
           </motion.div>
 
-          {/* Minimal corner accents */}
-          <div className="absolute top-8 left-8 w-6 h-[0.5px] bg-copper/20" />
-          <div className="absolute top-8 left-8 w-[0.5px] h-6 bg-copper/20" />
-          <div className="absolute bottom-8 right-8 w-6 h-[0.5px] bg-copper/20" />
-          <div className="absolute bottom-8 right-8 w-[0.5px] h-6 bg-copper/20" />
+          {/* Luxury corner accents with glow */}
+          <motion.div 
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 0.3, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute top-8 left-8 w-8 h-[0.5px] bg-gradient-to-r from-mint/40 to-transparent origin-left" 
+          />
+          <motion.div 
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 0.3, scaleY: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute top-8 left-8 w-[0.5px] h-8 bg-gradient-to-b from-mint/40 to-transparent origin-top" 
+          />
+          <motion.div 
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 0.3, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute bottom-8 right-8 w-8 h-[0.5px] bg-gradient-to-l from-copper/40 to-transparent origin-right" 
+          />
+          <motion.div 
+            initial={{ opacity: 0, scaleY: 0 }}
+            animate={{ opacity: 0.3, scaleY: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute bottom-8 right-8 w-[0.5px] h-8 bg-gradient-to-t from-copper/40 to-transparent origin-bottom" 
+          />
         </motion.div>
       )}
     </AnimatePresence>
