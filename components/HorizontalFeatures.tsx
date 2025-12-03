@@ -69,7 +69,7 @@ export default function HorizontalFeatures() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex-shrink-0 w-80 md:w-96"
+              className="flex-shrink-0 w-72 sm:w-80 md:w-96"
             >
               <div className="h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-white/20 transition-all group cursor-default">
                 {/* Icon */}

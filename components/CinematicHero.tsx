@@ -109,7 +109,7 @@ export default function CinematicHero() {
                style={{ textShadow: '0 0 40px rgba(100,180,140,0.5)' }}>
               Born Refreshing
             </p>
-            <p className="text-white/40 text-[10px] tracking-[0.4em] uppercase">
+            <p className="text-white/60 text-[10px] tracking-[0.4em] uppercase">
               India's First Premium Masala Mojito
             </p>
           </motion.div>
@@ -134,7 +134,7 @@ export default function CinematicHero() {
                  style={{ background: 'radial-gradient(ellipse, rgba(100,180,140,0.3) 0%, transparent 70%)' }} />
             
             {/* Main brand with premium styling */}
-            <h1 className="relative text-7xl md:text-9xl lg:text-[12rem] font-display font-thin text-white tracking-[0.35em] mb-8"
+            <h1 className="relative text-6xl md:text-9xl lg:text-[12rem] font-display font-thin text-white tracking-[0.35em] mb-8"
                 style={{ 
                   textShadow: '0 0 80px rgba(100,180,140,0.6), 0 0 120px rgba(156,123,92,0.3)',
                   background: 'linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.8) 100%)',
@@ -185,7 +185,7 @@ export default function CinematicHero() {
               >
                 <div className="text-5xl md:text-6xl font-thin text-mint mb-3"
                      style={{ textShadow: '0 0 40px rgba(100,180,140,0.6)' }}>0%</div>
-                <div className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/40">Preservatives</div>
+                <div className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/60">Preservatives</div>
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -195,7 +195,7 @@ export default function CinematicHero() {
               >
                 <div className="text-5xl md:text-6xl font-thin text-mint mb-3"
                      style={{ textShadow: '0 0 40px rgba(100,180,140,0.6)' }}>0%</div>
-                <div className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/40">Sugar Calories</div>
+                <div className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/60">Sugar Calories</div>
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ export default function CinematicHero() {
               >
                 <div className="text-5xl md:text-6xl font-thin text-white mb-3"
                      style={{ textShadow: '0 0 40px rgba(255,255,255,0.4)' }}>100%</div>
-                <div className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/40">Real Flavour</div>
+                <div className="text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-white/60">Real Flavour</div>
               </motion.div>
             </div>
 

@@ -41,6 +41,22 @@ const faqs = [
   {
     question: 'Is it vegetarian/vegan?',
     answer: 'Yes, 100% vegetarian and vegan-friendly. All our ingredients are plant-based.'
+  },
+  {
+    question: 'Does it contain caffeine?',
+    answer: 'No, Freshozz is completely caffeine-free. It\'s a refreshing soda, not an energy drink. Perfect for any time of day without affecting your sleep.'
+  },
+  {
+    question: 'What\'s the shelf life?',
+    answer: '12 months from the date of manufacture when unopened and stored in a cool, dry place. Once opened, consume within 24 hours for best taste.'
+  },
+  {
+    question: 'Can kids drink it?',
+    answer: 'Yes! Since it\'s zero sugar calories, no preservatives, and no caffeine, it\'s suitable for children. However, we recommend moderation as with any carbonated beverage.'
+  },
+  {
+    question: 'Where is it manufactured?',
+    answer: 'Proudly made in India at our state-of-the-art facility that follows international quality and hygiene standards. Every bottle is quality-checked before it reaches you.'
   }
 ];
 
@@ -64,7 +80,7 @@ export default function FAQ() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-[1px] w-12 bg-mint/40" />
-            <span className="text-[10px] tracking-[0.5em] uppercase text-white/40">Got Questions?</span>
+            <span className="text-[10px] tracking-[0.5em] uppercase text-white/50">Got Questions?</span>
             <div className="h-[1px] w-12 bg-mint/40" />
           </div>
           <h2 className="text-5xl md:text-7xl font-display font-thin text-white tracking-tight">
@@ -94,7 +110,7 @@ export default function FAQ() {
                   <motion.div
                     animate={{ rotate: openIndex === index ? 45 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-mint text-2xl"
+                    className="flex-shrink-0 w-11 h-11 flex items-center justify-center text-mint text-2xl"
                   >
                     +
                   </motion.div>

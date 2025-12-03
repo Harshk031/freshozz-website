@@ -64,18 +64,24 @@ export default function SocialProof() {
 
             {/* Grid preview placeholder */}
             <div className="grid grid-cols-3 gap-3 mb-8">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="aspect-square bg-gradient-to-br from-copper/10 via-mint/10 to-copper/10 rounded-xl flex items-center justify-center text-4xl hover:scale-105 transition-transform cursor-pointer"
-                >
-                  {['🥤', '🌿', '🔥', '✨', '💚', '🚀'][i - 1]}
-                </motion.div>
-              ))}
+              {[1, 2, 3, 4, 5, 6].map((i) => {
+                const emojis = ['🥤', '🌿', '🔥', '✨', '💚', '🚀'];
+                const labels = ['Product', 'Ingredients', 'Flavor', 'Premium', 'Natural', 'Launch'];
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="aspect-square bg-gradient-to-br from-copper/10 via-mint/10 to-copper/10 rounded-xl flex items-center justify-center text-4xl hover:scale-105 transition-transform cursor-pointer"
+                    role="img"
+                    aria-label={labels[i - 1]}
+                  >
+                    {emojis[i - 1]}
+                  </motion.div>
+                );
+              })}
             </div>
 
             {/* CTA */}
@@ -100,8 +106,8 @@ export default function SocialProof() {
                 <span className="text-white/80 text-xs">Exclusive Updates</span>
               </a>
 
-              <p className="text-muted-warm/60 text-xs tracking-wide mt-6">
-                Join 1000+ followers staying updated on our launch
+              <p className="text-muted-warm text-xs tracking-wide mt-6">
+                Join our growing community for exclusive launch updates
               </p>
             </motion.div>
           </motion.div>

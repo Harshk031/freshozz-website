@@ -64,7 +64,7 @@ export default function Ingredients() {
         >
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-[1px] w-12 bg-mint/40" />
-            <span className="text-[10px] tracking-[0.5em] uppercase text-white/40">What's Inside</span>
+            <span className="text-[10px] tracking-[0.5em] uppercase text-white/50">What's Inside</span>
             <div className="h-[1px] w-12 bg-mint/40" />
           </div>
           <h2 className="text-5xl md:text-7xl font-display font-thin text-white tracking-tight mb-6">
@@ -91,6 +91,8 @@ export default function Ingredients() {
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   className="text-6xl mb-6"
+                  role="img"
+                  aria-label={ingredient.name}
                 >
                   {ingredient.icon}
                 </motion.div>
