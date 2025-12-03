@@ -1,19 +1,153 @@
-# FRESHOZZ – Ultra-Premium Video Advertisement Brief
+# FRESHOZZ – Ultra-Premium Cinematic Intro (10–15 seconds)
 
 ## Overview
-**Duration:** 30-45 seconds  
-**Style:** Luxury, Cinematic, International  
-**Mood:** Premium, Cool, Gen-Z Sophisticated  
-**Reference Brands:** Perrier, San Pellegrino, Fever-Tree, Japanese whisky ads
+**Duration:** 10-15 seconds  
+**Style:** Red Bull × Perrier × Prime Hydration  
+**Mood:** Minimal, Moody, Atmospheric, Masculine Premium  
+**Panda Character:** Mature, Sleek, Sophisticated - NOT cute/childish  
+**Camera:** 4K DSLR, 50fps slow-motion, macro shots
 
 ---
 
 ## Color Palette
-- **Primary:** Matte Black (#0a0a0a)
-- **Accent 1:** Mint Green (#64B48C)
-- **Accent 2:** Copper/Gold (#9C7B5C)
-- **Highlight:** White (#ffffff)
-- **NO bright colors, NO Indian street aesthetic**
+- **Deep blacks** - Charcoal (#0a0a0a)
+- **Soil brown** - Rich earth tones
+- **Cold mint** - Subtle highlights (#64B48C)
+- **Premium gold** - Reflections only (#C9A772)
+- **Matte textures** - NO shiny cartoon elements
+
+---
+
+## Scene-by-Scene Breakdown (10-15s Total)
+
+### Scene 1 (0-2s): Black Fade-In
+```
+Pure black screen
+Slow ambient lighting appears
+Soft glow, no product visible
+Deep ambient hum sound (optional)
+```
+
+### Scene 2 (2-4s): Fizz Bubbles Macro
+```
+Closeup of carbonation bubbles rising
+Macro cinematic, 4K DSLR texture
+Slow-motion, soft rimlight
+High detail CO2 particles
+```
+
+### Scene 3 (4-6s): Panda Silhouette Reveal
+```
+Panda appears - tall, composed, minimal movement
+Realistic matte texture, NOT cartoonish
+No shiny fur - sleek brand guardian
+Calm, confident, high-status posture
+```
+
+### Scene 4 (6-8s): Bottle Reveal
+```
+200ml glass bottle (milk-bottle shape)
+Plastic capsule cap (NOT crown cap)
+Condensation droplets forming
+Cold fog, soft reflections
+High-end 3D realism
+```
+
+### Scene 5 (8-10s): "Turn Down. Taste Up."
+```
+Panda gently tilts bottle upside down once
+Realistic physics, correct gravity
+Slow, smooth, controlled movement
+NO cartoon flipping
+```
+
+### Scene 6 (10-11s): Premium Cap Opening
+```
+Panda opens bottle - clean CO2 release
+Tight, elegant puff of vapor
+Soft fizzy sparkle
+NO unrealistic explosion
+```
+
+### Scene 7 (11-12s): Sip Moment
+```
+Cinematic pour or sip at panda's mouth
+Subtle, classy, no exaggeration
+Realistic and premium
+```
+
+### Scene 8 (12-14s): Brand Text Overlay
+```
+Ultra-minimal text appears:
+"FRESHOZZ"
+"Premium Masala–Mojito Soda"
+"0% Preservatives • 0% Sugar Calories"
+"Born Refreshing."
+```
+
+### Scene 9 (14-15s): Hero Shot + Loop
+```
+Bottle floating in center
+Premium lighting, glass reflections
+Fade to black
+Seamless loop back to Scene 1
+```
+
+---
+
+## AI Generation Prompts (Copy-Paste Ready)
+
+### Scene 1 Prompt (Runway/Kling):
+```
+Cinematic 4K, pure black screen fading to subtle ambient glow, deep charcoal atmosphere, soft moody lighting emerging from darkness, premium brand intro style, no subjects visible, atmospheric fog particles, Red Bull commercial aesthetic
+```
+
+### Scene 2 Prompt (Runway):
+```
+Extreme macro closeup of carbonation bubbles rising in dark liquid, 4K DSLR texture, slow motion 120fps, soft rim lighting, high detail CO2 particles, luxury beverage commercial, black background, cinematic depth of field, Perrier style
+```
+
+### Scene 3 Prompt (Midjourney + Runway):
+```
+Midjourney: Realistic matte-textured panda, tall sophisticated posture, minimal movement, sleek brand guardian aesthetic, NOT cute, NOT cartoon, calm confident expression, luxury mascot, dark moody lighting, standing upright, masculine premium feel --ar 16:9 --v 6 --style raw
+
+Runway: Silhouette reveal of sophisticated panda mascot, matte texture, tall composed stance, minimal movement, luxury brand ambassador, dark atmospheric lighting, NOT childish, serious expression
+```
+
+### Scene 4 Prompt (Runway/Kling):
+```
+200ml glass milk-bottle shape soda bottle, plastic capsule cap, condensation droplets forming realistically, cold vapor fog, soft reflections, premium 3D product photography, dark background, luxury beverage commercial, 4K DSLR quality
+```
+
+### Scene 5 Prompt (Runway):
+```
+Sophisticated panda mascot gently tilting premium glass bottle upside down, realistic physics, smooth controlled movement, luxury brand commercial, "Turn Down Taste Up" motion, NO cartoon style, slow motion, professional product demonstration
+```
+
+### Scene 6 Prompt (Runway):
+```
+Closeup of plastic bottle cap opening, clean elegant CO2 release, tight controlled vapor puff, soft fizzy sparkle particles, premium beverage commercial, realistic physics, NO explosion, luxury aesthetic, 4K macro shot
+```
+
+### Scene 7 Prompt (Runway/Kling):
+```
+Cinematic pour shot or sophisticated panda sipping from premium bottle, subtle classy movement, realistic liquid physics, luxury beverage commercial, soft lighting, depth of field, NO exaggeration, mature aesthetic
+```
+
+### Scene 8 Prompt (After Effects/CapCut):
+```
+Add minimal sans-serif typography overlay:
+- "FRESHOZZ" (ultra-thin, wide tracking)
+- "Premium Masala–Mojito Soda" (small, light)
+- "0% Preservatives • 0% Sugar Calories" (hairline text)
+- "Born Refreshing." (tagline)
+Color: White with 40% opacity, fade in/out
+```
+
+### Scene 9 Prompt (Runway):
+```
+Premium glass bottle floating in center frame, luxury product photography, soft reflections on glass, dark gradient background, premium gold and mint accent lighting, cinematic fade to black, seamless loop ending
+```
 
 ---
 
@@ -21,124 +155,108 @@
 
 ### 1. **Runway Gen-3 Alpha** (Best for cinematic)
 - Website: runway.ml
-- Use for: Slow-motion macro shots, product reveals
-- Prompt style: "Cinematic 4K, slow motion, luxury lighting"
+- Use for: All scenes, macro shots, product reveals
+- Best for realistic motion and premium aesthetics
 
-### 2. **Pika Labs**
-- Website: pika.art
-- Use for: Quick product animations
+### 2. **Kling AI**
+- Website: klingai.com
+- Best for: Photorealistic panda character scenes
+- Use for Scene 3, 5, 6, 7
 
-### 3. **Kling AI**
-- Best for photorealistic content
-- Can create realistic panda character
+### 3. **Midjourney v6**
+- Website: midjourney.com
+- Use for: Generating panda character stills (then animate in Runway)
+- Critical: Use `--style raw` for realism
 
-### 4. **Midjourney** (for stills/frames)
-- Create key frames, then animate in Runway
-- Prompt: "photorealistic panda, luxury brand ambassador, soft lighting, minimal background --ar 16:9 --v 6"
-
-### 5. **Leonardo AI**
-- Good for consistent character creation
-
----
-
-## Scene-by-Scene Prompts
-
-### Scene 1: Opening Macro Shot
-```
-Runway Prompt:
-"Ultra slow motion macro shot of fresh mint leaves, lime zest, and warm spices falling through darkness, soft cinematic lighting, tiny carbonation bubbles rising like diamonds, matte black background, 4K luxury commercial style"
-```
-
-### Scene 2: Panda Ambassador Reveal
-```
-Midjourney Prompt:
-"Photorealistic elegant panda standing in minimalist studio, soft fur texture, gentle expression, luxury brand ambassador style, subtle mint green and copper neon glow behind, clean background, professional lighting, NOT cartoon, NOT cute, sophisticated and calm --ar 16:9 --v 6 --style raw"
-```
-
-### Scene 3: Bottle Reveal
-```
-Runway Prompt:
-"Ultra slow cinematic rotation of premium glass soda bottle, condensation droplets forming on glass, matte black background with mint green accent lighting, luxury beverage commercial, 4K product photography style"
-```
-
-### Scene 4: Ingredients Motion
-```
-Runway Prompt:
-"Slow motion explosion of fresh mint leaves into mist, lemon wedges slicing through air, swirl of warm spices, carbonation bubbles rising like champagne, copper gold color accents, luxury food commercial style, dark background"
-```
-
-### Scene 5: Panda Interaction
-```
-Kling AI / Runway:
-"Photorealistic panda gently pushing glass bottle forward with one paw, sophisticated subtle movement, luxury brand ambassador, soft studio lighting, minimal background, NOT cartoon, elegant and calm"
-```
-
-### Scene 6: Pour Shot
-```
-Runway Prompt:
-"Ultra close up of bottle cap opening, CO2 mist releasing, slow motion pour into glass with ice, fizz cascade, lime mint garnish dropping, luxury beverage commercial, 4K cinematic"
-```
-
-### Scene 7: Hero Shot
-```
-Midjourney + Runway:
-"Photorealistic panda standing beside glowing premium soda bottle, soft luxury lighting, dark minimal background, international beverage advertisement style, calm confident expression --ar 16:9 --v 6"
-```
+### 4. **CapCut Pro / DaVinci Resolve**
+- For: Final editing, text overlays, color grading
+- Add dark moody color grade
+- Fade transitions between scenes
 
 ---
 
-## Text Overlays (Add in CapCut/Premiere)
+## Technical Specs
 
-**Scene 1:** "Freshness, Reimagined."  
-**Scene 4:** "Masala × Mint × Citrus × Crisp Soda."  
-**Scene 5:** "A Refreshing Twist from India to the World."  
-**Scene 6:** "Turn Down. Taste Up."  
-**Final:** 
+| Specification | Requirement |
+|--------------|-------------|
+| **Resolution** | 4K (3840×2160) |
+| **Frame Rate** | 50fps (slow-motion) |
+| **Aspect Ratio** | 16:9 |
+| **Duration** | 10-15 seconds |
+| **Loop** | Seamless (end = start) |
+| **Color Grade** | Dark, moody, high contrast |
+| **Audio** | Optional: Deep ambient hum |
+
+---
+
+## Production Workflow
+
+### Step 1: Generate Panda Character (Midjourney)
 ```
-FRESHOZZ
-Premium Masala Mojito Soda
-A New Kind of Cool.
+Realistic matte-textured panda, tall sophisticated posture, minimal movement, sleek brand guardian aesthetic, NOT cute, NOT cartoon, calm confident expression, luxury mascot, dark moody lighting, standing upright, masculine premium feel --ar 16:9 --v 6 --style raw --quality 2
 ```
+Generate 4-5 variations, pick the most sophisticated one.
+
+### Step 2: Animate Scenes (Runway Gen-3)
+- Upload Midjourney panda image
+- Use prompts above for each scene
+- Generate 2-3 second clips per scene
+- Download in 4K
+
+### Step 3: Product Shots (Runway/Kling)
+- Generate bottle scenes separately
+- Focus on macro details: condensation, bubbles, reflections
+- Keep dark moody lighting consistent
+
+### Step 4: Edit (CapCut Pro / DaVinci Resolve)
+1. Import all clips
+2. Arrange in sequence (Scene 1 → 9)
+3. Add fade transitions (0.5s each)
+4. Color grade: Dark, high contrast, desaturate slightly
+5. Add text overlays (Scene 8)
+6. Ensure seamless loop (Scene 9 fades to Scene 1)
+
+### Step 5: Audio (Optional)
+- Add deep ambient hum (barely audible)
+- Subtle fizz sound for Scene 6
+- No music - keep it minimal
+
+### Step 6: Export
+- Format: MP4 (H.264)
+- Resolution: 4K (3840×2160)
+- Frame Rate: 50fps
+- Bitrate: High (20-30 Mbps)
 
 ---
 
-## Music Recommendations
-- Style: Ambient, Modern, Minimal, Atmospheric
-- Search: "Luxury commercial music" / "Premium brand ambient"
-- Websites: Artlist.io, Epidemic Sound, Musicbed
+## Critical Don'ts
+
+❌ NO cute panda expressions  
+❌ NO cartoon movements or physics  
+❌ NO bright colors or Indian street aesthetic  
+❌ NO fast movements or shaky cam  
+❌ NO unrealistic explosions or effects  
+❌ NO crown cap (use plastic capsule cap only)  
+❌ NO childish music or sound effects  
+
+## Critical Do's
+
+✅ Mature, sophisticated panda (think luxury mascot)  
+✅ Slow, controlled, elegant movements  
+✅ Dark moody lighting throughout  
+✅ Realistic physics and liquid dynamics  
+✅ Premium minimal typography  
+✅ Seamless loop (end = start)  
+✅ 4K DSLR quality with shallow depth of field  
 
 ---
 
-## Typography
-- Font: Sans-serif, Light weight
-- Tracking: Wide letter spacing
-- Style: Minimal, European luxury
+## Brand Vibe Reference
+Think: **Red Bull × Perrier × Prime × Japanese Whisky Ads**
 
----
-
-## Editing Software
-- **CapCut** (Free, good for quick edits)
-- **DaVinci Resolve** (Free, professional)
-- **Adobe Premiere Pro** (Paid, industry standard)
-
----
-
-## Workflow
-1. Generate key frames in Midjourney
-2. Animate frames in Runway Gen-3
-3. Generate product shots in Runway
-4. Create panda scenes in Kling AI
-5. Edit together in CapCut/Premiere
-6. Add text overlays
-7. Add music
-8. Color grade (dark, moody, luxury)
-
----
-
-## Important Notes
-- Keep panda photorealistic, NOT cartoon
-- All movements should be SLOW and ELEGANT
-- Lighting: Soft, cinematic, moody
-- Color grade: Dark with copper/mint accents
-- NO bright colors, NO Indian street aesthetic
-- Think: Japanese whisky ad meets European sparkling water
+- Minimal
+- Moody
+- Atmospheric
+- Masculine premium
+- International appeal
+- NOT Indian soda aesthetic
