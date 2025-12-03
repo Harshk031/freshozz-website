@@ -111,8 +111,8 @@ export default function Home() {
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Freshozz" />
         <meta name="application-name" content="Freshozz" />
-        <meta name="theme-color" content="#B86B2C" />
-        <meta name="msapplication-TileColor" content="#B86B2C" />
+        <meta name="theme-color" content="#64B48C" />
+        <meta name="msapplication-TileColor" content="#64B48C" />
         
         {/* Website Schema */}
         <script type="application/ld+json">
@@ -183,7 +183,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <p className="text-xs text-copper/50 tracking-[0.3em] uppercase mb-8">Launching In</p>
+              <p className="text-xs text-copper tracking-[0.3em] uppercase mb-8">Launching In</p>
               <CountdownTimer />
             </motion.div>
           </div>
@@ -201,11 +201,14 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-2xl mx-auto text-center relative z-10"
           >
-            <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-6">
-              Be First
+            <h2 className="text-4xl md:text-6xl font-display font-light text-warm mb-4">
+              Join the Waitlist
             </h2>
-            <p className="text-lg text-muted-warm mb-12">
-              Early access. No spam. Just fizz.
+            <p className="text-sm text-copper/80 tracking-wide mb-2">
+              ₹35 per bottle • Launching Jan 15, 2026
+            </p>
+            <p className="text-base text-muted-warm mb-12">
+              Get exclusive early access and launch offers.
             </p>
             
             <motion.a
@@ -221,13 +224,13 @@ export default function Home() {
             </motion.a>
             
             <motion.p 
-              className="text-copper/40 text-xs tracking-[0.2em] uppercase mt-16"
+              className="text-copper/60 text-xs tracking-[0.2em] uppercase mt-16"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              Taste the Threshold
+              Limited Quantities Available
             </motion.p>
           </motion.div>
         </section>

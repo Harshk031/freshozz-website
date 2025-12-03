@@ -105,12 +105,15 @@ export default function CinematicHero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="w-24 h-[1px] bg-gradient-to-r from-transparent via-mint/60 to-transparent mx-auto mb-8"
             />
-            <p className="text-mint/80 text-base tracking-[0.6em] uppercase font-light mb-4"
+            <p className="text-mint/80 text-base tracking-[0.6em] uppercase font-light mb-2"
                style={{ textShadow: '0 0 40px rgba(100,180,140,0.5)' }}>
               Born Refreshing
             </p>
-            <p className="text-white/60 text-[10px] tracking-[0.4em] uppercase">
-              India's First Premium Masala Mojito
+            <p className="text-white/70 text-sm mb-2">
+              India's First Premium Masala Mojito Soda
+            </p>
+            <p className="text-white/50 text-xs tracking-wide">
+              ₹35 • Zero Sugar • 100% Natural
             </p>
           </motion.div>
         </motion.div>

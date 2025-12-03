@@ -108,21 +108,22 @@ export default function HorizontalFeatures() {
           ))}
         </div>
 
-        {/* Scroll hint */}
+        {/* Scroll hint - more visible */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex items-center gap-2 text-white/20 text-xs tracking-[0.3em] uppercase">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/20 rounded-full">
             <motion.div
               animate={{ x: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
+              className="text-mint text-lg"
             >
               →
             </motion.div>
-            <span>Scroll to explore</span>
+            <span className="text-white/60 text-sm tracking-wide">Swipe to see more</span>
           </div>
         </motion.div>
       </div>
