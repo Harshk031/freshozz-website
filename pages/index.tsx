@@ -34,19 +34,15 @@ const BrandStory = dynamic(() => import('@/components/BrandStory'), {
   ssr: false,
 });
 
-const Awards = dynamic(() => import('@/components/Awards'), {
+const SocialProof = dynamic(() => import('@/components/SocialProof'), {
   ssr: false,
 });
 
-const PressMentions = dynamic(() => import('@/components/PressMentions'), {
+const Ingredients = dynamic(() => import('@/components/Ingredients'), {
   ssr: false,
 });
 
-const Timeline = dynamic(() => import('@/components/Timeline'), {
-  ssr: false,
-});
-
-const FounderNote = dynamic(() => import('@/components/FounderNote'), {
+const FAQ = dynamic(() => import('@/components/FAQ'), {
   ssr: false,
 });
 
@@ -170,17 +166,14 @@ export default function Home() {
         {/* BRAND STORY - Heritage */}
         <BrandStory />
 
-        {/* TIMELINE - Journey */}
-        <Timeline />
+        {/* INGREDIENTS - Transparency */}
+        <Ingredients />
 
-        {/* AWARDS - Recognition */}
-        <Awards />
+        {/* SOCIAL PROOF - Instagram */}
+        <SocialProof />
 
-        {/* FOUNDER NOTE - Personal Touch */}
-        <FounderNote />
-
-        {/* PRESS MENTIONS - Credibility */}
-        <PressMentions />
+        {/* FAQ - Common Questions */}
+        <FAQ />
 
         {/* COUNTDOWN - Minimal */}
         <section className="py-24 px-4 bg-cream">
