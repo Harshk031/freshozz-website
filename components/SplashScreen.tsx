@@ -9,11 +9,12 @@ export default function SplashScreen() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    const hasSeenSplash = sessionStorage.getItem('freshozzSplashV10');
-    if (hasSeenSplash) {
-      setIsVisible(false);
-      return;
-    }
+    // TESTING MODE - Always show splash (remove for production)
+    // const hasSeenSplash = sessionStorage.getItem('freshozzSplashV10');
+    // if (hasSeenSplash) {
+    //   setIsVisible(false);
+    //   return;
+    // }
 
     // Scene transitions
     const timers = [
@@ -31,7 +32,8 @@ export default function SplashScreen() {
     setIsExiting(true);
     setTimeout(() => {
       setIsVisible(false);
-      sessionStorage.setItem('freshozzSplashV10', 'true');
+      // TESTING MODE - Don't save to sessionStorage
+      // sessionStorage.setItem('freshozzSplashV10', 'true');
     }, 1000);
   };
 
