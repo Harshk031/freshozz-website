@@ -13,10 +13,19 @@ export default function Navbar() {
     });
   }, [scrollY]);
 
+  const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('waitlist');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    setIsOpen(false);
+  };
+
   const navLinks = [
-    { href: '/', label: 'Home', isExternal: false, isSpecial: false },
-    { href: '#waitlist', label: 'Join Waitlist', isExternal: false, isSpecial: true },
-    { href: 'https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4', label: 'Instagram', isExternal: true, isSpecial: false },
+    { href: '/', label: 'Home', isExternal: false, isSpecial: false, onClick: null },
+    { href: '#waitlist', label: 'Join Waitlist', isExternal: false, isSpecial: true, onClick: handleWaitlistClick },
+    { href: 'https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4', label: 'Instagram', isExternal: true, isSpecial: false, onClick: null },
   ];
 
   return (
@@ -56,12 +65,14 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const Component = link.isExternal ? 'a' : Link;
               const extraProps = link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+              const clickProps = link.onClick ? { onClick: link.onClick } : {};
               
               return (
                 <Component
                   key={link.href}
                   href={link.href}
                   {...extraProps}
+                  {...clickProps}
                   className={`transition-all duration-700 font-display text-sm tracking-[0.15em] uppercase relative group ${
                     link.isSpecial
                       ? 'text-bg-cream px-6 py-3 bg-gradient-to-r from-copper to-mint border border-copper/20 rounded-full hover:shadow-[0_0_20px_rgba(100,180,140,0.4)]'
@@ -128,6 +139,7 @@ export default function Navbar() {
             {navLinks.map((item, index) => {
               const Component = item.isExternal ? 'a' : Link;
               const extraProps = item.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+              const clickProps = item.onClick ? { onClick: item.onClick } : { onClick: () => setIsOpen(false) };
               
               return (
                 <motion.div
@@ -139,7 +151,7 @@ export default function Navbar() {
                   <Component
                     href={item.href}
                     {...extraProps}
-                    onClick={() => setIsOpen(false)}
+                    {...clickProps}
                     className={`block transition-all duration-500 font-display text-lg tracking-[0.15em] uppercase py-3 relative ${
                       item.isSpecial
                         ? 'text-bg-cream px-6 bg-gradient-to-r from-copper to-mint border border-copper/20 rounded-lg shadow-[0_0_15px_rgba(100,180,140,0.3)]'

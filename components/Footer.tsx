@@ -1,6 +1,14 @@
 import Link from 'next/link';
 
 export default function Footer() {
+  const handleWaitlistClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('waitlist');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-b from-cream to-muddy/30 border-t border-earth/20 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -48,7 +56,8 @@ export default function Footer() {
               <li>
                 <a 
                   href="#waitlist" 
-                  className="text-muted-warm hover:text-copper transition-colors text-sm font-body"
+                  onClick={handleWaitlistClick}
+                  className="text-muted-warm hover:text-copper transition-colors text-sm font-body cursor-pointer"
                 >
                   Join Waitlist
                 </a>
@@ -73,7 +82,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Freshozz. All rights reserved.
             </p>
             <p className="text-copper/60 text-xs font-display italic tracking-wide">
-              Taste the Threshold
+              Born Refreshing
             </p>
           </div>
         </div>

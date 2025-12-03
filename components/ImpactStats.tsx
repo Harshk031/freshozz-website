@@ -50,7 +50,7 @@ function AnimatedStat({ end, suffix, label, delay }: StatProps) {
       </div>
 
       {/* Label */}
-      <div className="text-white/40 text-xs tracking-[0.4em] uppercase">
+      <div className="text-white/60 text-xs tracking-[0.4em] uppercase">
         {label}
       </div>
 
