@@ -81,7 +81,7 @@ export default function HorizontalFeatures() {
                 </motion.div>
 
                 {/* Subtitle */}
-                <div className={`text-${feature.color}/60 text-[9px] tracking-[0.4em] uppercase mb-2`}>
+                <div className={`text-[9px] tracking-[0.4em] uppercase mb-2 ${feature.color === 'mint' ? 'text-mint/60' : 'text-copper/60'}`}>
                   {feature.subtitle}
                 </div>
 
@@ -101,7 +101,7 @@ export default function HorizontalFeatures() {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 + 0.5 }}
-                  className={`h-[1px] bg-${feature.color}/20 mt-6 origin-left`}
+                  className={`h-[1px] mt-6 origin-left ${feature.color === 'mint' ? 'bg-mint/20' : 'bg-copper/20'}`}
                 />
               </div>
             </motion.div>

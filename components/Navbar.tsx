@@ -14,12 +14,9 @@ export default function Navbar() {
   }, [scrollY]);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/product', label: 'Product' },
-    { href: '/about', label: 'About' },
-    { href: '/how', label: 'How It\'s Made' },
-    { href: '/where-to-buy', label: 'Where to Buy' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: 'Home', isExternal: false, isSpecial: false },
+    { href: '#waitlist', label: 'Join Waitlist', isExternal: false, isSpecial: true },
+    { href: 'https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4', label: 'Instagram', isExternal: true, isSpecial: false },
   ];
 
   return (
@@ -49,7 +46,7 @@ export default function Navbar() {
               <span className={`block text-[8px] tracking-[0.25em] uppercase transition-all duration-500 ${
                 scrolled ? 'opacity-0 h-0' : 'opacity-60 text-copper/60'
               }`}>
-                Sip the Freshness
+                Born Refreshing
               </span>
             </motion.div>
           </Link>
@@ -57,22 +54,23 @@ export default function Navbar() {
           {/* Desktop Navigation - Premium Minimal */}
           <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => {
-              const isProduct = link.href === '/product';
+              const Component = link.isExternal ? 'a' : Link;
+              const extraProps = link.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {};
               
               return (
-                <Link
+                <Component
                   key={link.href}
                   href={link.href}
+                  {...extraProps}
                   className={`transition-all duration-700 font-display text-sm tracking-[0.15em] uppercase relative group ${
-                    isProduct
-                      ? 'text-bg-cream px-6 py-3 bg-gradient-to-r from-copper to-earth border border-copper rounded-lg hover:from-earth hover:to-copper hover:shadow-[0_0_20px_rgba(156,123,92,0.4)]'
+                    link.isSpecial
+                      ? 'text-bg-cream px-6 py-3 bg-gradient-to-r from-copper to-mint border border-copper/20 rounded-full hover:shadow-[0_0_20px_rgba(100,180,140,0.4)]'
                       : scrolled ? 'text-warm/80' : 'text-warm'
-                  } ${!isProduct && 'hover:text-copper'}`}
+                  } ${!link.isSpecial && 'hover:text-copper'}`}
                 >
                   <span className="relative z-10">
                     {link.label}
-                    {/* Special badge for Product */}
-                    {isProduct && (
+                    {link.isSpecial && (
                       <motion.span
                         animate={{ 
                           opacity: [0.5, 1, 0.5],
@@ -83,33 +81,17 @@ export default function Navbar() {
                           repeat: Infinity,
                           ease: "easeInOut"
                         }}
-                        className="absolute -top-1 -right-1 w-2 h-2 bg-copper rounded-full shadow-[0_0_8px_rgba(184,107,44,0.8)]"
+                        className="absolute -top-1 -right-1 w-2 h-2 bg-mint rounded-full shadow-[0_0_8px_rgba(100,180,140,0.8)]"
                       />
                     )}
                   </span>
                   
-                  {/* Regular dot indicator for non-product links */}
-                  {!isProduct && (
+                  {!link.isSpecial && (
                     <motion.span 
                       className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-copper rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     />
                   )}
-
-                  {/* Glowing background for Product */}
-                  {isProduct && (
-                    <motion.div
-                      animate={{ 
-                        opacity: [0.3, 0.5, 0.3]
-                      }}
-                      transition={{ 
-                        duration: 3, 
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                      className="absolute inset-0 bg-gradient-to-r from-copper/10 to-gold/10 rounded-lg blur-sm -z-10"
-                    />
-                  )}
-                </Link>
+                </Component>
               );
             })}
           </div>
@@ -144,7 +126,8 @@ export default function Navbar() {
         >
           <div className="px-6 py-8 space-y-6">
             {navLinks.map((item, index) => {
-              const isProduct = item.href === '/product';
+              const Component = item.isExternal ? 'a' : Link;
+              const extraProps = item.isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {};
               
               return (
                 <motion.div
@@ -153,18 +136,18 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <Link
+                  <Component
                     href={item.href}
+                    {...extraProps}
                     onClick={() => setIsOpen(false)}
                     className={`block transition-all duration-500 font-display text-lg tracking-[0.15em] uppercase py-3 relative ${
-                      isProduct
-                        ? 'text-bg-cream px-6 bg-gradient-to-r from-copper to-earth border border-copper rounded-lg shadow-[0_0_15px_rgba(156,123,92,0.3)]'
+                      item.isSpecial
+                        ? 'text-bg-cream px-6 bg-gradient-to-r from-copper to-mint border border-copper/20 rounded-lg shadow-[0_0_15px_rgba(100,180,140,0.3)]'
                         : 'text-warm/80 hover:text-copper py-2'
                     }`}
                   >
                     {item.label}
-                    {/* Glowing badge for mobile Product */}
-                    {isProduct && (
+                    {item.isSpecial && (
                       <motion.span
                         animate={{ 
                           opacity: [0.5, 1, 0.5],
@@ -175,10 +158,10 @@ export default function Navbar() {
                           repeat: Infinity,
                           ease: "easeInOut"
                         }}
-                        className="absolute top-2 right-2 w-2 h-2 bg-copper rounded-full shadow-[0_0_8px_rgba(184,107,44,0.8)]"
+                        className="absolute top-2 right-2 w-2 h-2 bg-mint rounded-full shadow-[0_0_8px_rgba(100,180,140,0.8)]"
                       />
                     )}
-                  </Link>
+                  </Component>
                 </motion.div>
               );
             })}

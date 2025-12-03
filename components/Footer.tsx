@@ -41,13 +41,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Info */}
           <div>
-            <h4 className="text-earth/60 font-display text-xs tracking-[0.3em] uppercase mb-6">Legal</h4>
+            <h4 className="text-earth/60 font-display text-xs tracking-[0.3em] uppercase mb-6">Info</h4>
             <ul className="space-y-3">
-              <li><Link href="/contact" className="text-muted-warm hover:text-copper transition-colors text-sm font-body">Contact</Link></li>
-              <li><Link href="/legal/privacy" className="text-muted-warm hover:text-copper transition-colors text-sm font-body">Privacy</Link></li>
-              <li><Link href="/legal/terms" className="text-muted-warm hover:text-copper transition-colors text-sm font-body">Terms</Link></li>
+              <li>
+                <a 
+                  href="#waitlist" 
+                  className="text-muted-warm hover:text-copper transition-colors text-sm font-body"
+                >
+                  Join Waitlist
+                </a>
+              </li>
+              <li>
+                <span className="text-muted-warm text-sm font-body">
+                  Launch: Jan 15, 2026
+                </span>
+              </li>
+              <li>
+                <span className="text-muted-warm text-sm font-body">
+                  Made in India
+                </span>
+              </li>
             </ul>
           </div>
         </div>

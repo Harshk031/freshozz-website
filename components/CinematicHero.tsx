@@ -194,11 +194,12 @@ export default function CinematicHero() {
               transition={{ delay: 0.5 }}
             >
               <motion.button
+                onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white text-xs tracking-[0.3em] uppercase font-light hover:bg-white/10 transition-all"
+                className="px-8 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white text-xs tracking-[0.3em] uppercase font-light hover:bg-white/10 transition-all cursor-pointer"
               >
-                Turn Down. Taste Up.
+                Discover More ↓
               </motion.button>
             </motion.div>
           </motion.div>

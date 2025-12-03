@@ -128,16 +128,19 @@ export default function ProductHero() {
             </div>
 
             {/* CTA */}
-            <motion.button
+            <motion.a
+              href="https://www.instagram.com/fresh_ozz19?igsh=NXpzcmd1MmY0Ynd4"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2 }}
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(100, 180, 140, 0.2)' }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm tracking-[0.3em] uppercase font-light hover:border-mint/40 transition-all"
+              className="inline-block px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm tracking-[0.3em] uppercase font-light hover:border-mint/40 transition-all cursor-pointer"
             >
-              Pre-Order Now
-            </motion.button>
+              Join Waitlist →
+            </motion.a>
           </motion.div>
         </div>
       </motion.div>
